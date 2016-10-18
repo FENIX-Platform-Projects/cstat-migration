@@ -1,0 +1,731 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<tree>
+  <lastID>931</lastID>
+  <node id="1" name="Statistiques nationales - module de base" cod="C">
+    <node id="7" name="Production" cod="CPD">
+      <table id="59" file="233CPD020" />
+      <table id="352" file="233CPD070" />
+      <table id="353" file="233CPD060" />
+      <table id="354" file="233CPD055" />
+      <table id="355" file="233CPD050" />
+      <table id="356" file="233CPD045" />
+      <table id="357" file="233CPD035" />
+      <table id="649" file="233CPD065" />
+      <table id="650" file="233CPD040" />
+      <table id="701" file="233CPD016" />
+      <table id="702" file="233CPD010" />
+    </node>
+    <node id="8" name="Commerce" cod="CTR">
+      <table id="62" file="233CTR055" />
+      <table id="653" file="233CTR045" />
+      <table id="655" file="233CTR040" />
+      <table id="657" file="233CTR015" />
+      <table id="659" file="233CTR010" />
+    </node>
+    <node id="9" name="Disponibilité alimentaire" cod="CFA" />
+    <node id="10" name="Prix" cod="CPR">
+      <table id="63" file="233CPR010" />
+    </node>
+    <node id="11" name="Terres et irrigation" cod="CLI">
+      <table id="661" file="233CLI010" />
+    </node>
+    <node id="12" name="Population" cod="CPO">
+      <table id="651" file="233CPO010" />
+    </node>
+    <node id="13" name="Travail" cod="CLA">
+      <table id="65" file="233CLA010" />
+    </node>
+    <node id="14" name="Engrais" cod="CFE">
+      <table id="66" file="233CFE030" />
+    </node>
+    <node id="15" name="Pesticides" cod="CPE"></node>
+    <node id="16" name="Machines" cod="CMA">
+      <table id="68" file="233CMA010" />
+    </node>
+    <node id="17" name="Forêts" cod="CFO" />
+    <node id="18" name="Pêches" cod="CFI">
+      <table id="69" file="233CFI010" />
+      <table id="70" file="233CFI030" />
+    </node>
+    <node id="19" name="Eau" cod="CWA">
+      <table id="678" file="233CWA015" />
+    </node>
+    <node id="20" name="Valeur ajoutée" cod="CVA">
+      <table id="676" file="233CVA010" />
+      <table id="677" file="233CVA020" />
+    </node>
+  </node>
+  <node id="2" name="Statistiques locales" cod="S">
+    <node id="21" name="Production" cod="SPD">
+      <table id="76" file="233SPD035" />
+      <table id="77" file="233SPD045" />
+      <table id="342" file="233SPD010" />
+    </node>
+    <node id="22" name="Commerce" cod="STR">
+      <table id="79" file="233STR002" />
+      <table id="80" file="233STR055" />
+    </node>
+    <node id="23" name="Disponibilité alimentaire" cod="SFA" />
+    <node id="24" name="Prix" cod="SPR" />
+    <node id="25" name="Terres et irrigation" cod="SLI">
+      <table id="81" file="233SLI001" />
+    </node>
+    <node id="26" name="Population" cod="SPO">
+      <table id="82" file="233SPO110" />
+    </node>
+    <node id="27" name="Travail" cod="SLA">
+      <table id="83" file="233SLA001" />
+    </node>
+    <node id="28" name="Engrais" cod="SFE">
+      <table id="84" file="233SFE130" />
+    </node>
+    <node id="29" name="Pesticides" cod="SPE" />
+    <node id="30" name="Machines" cod="SMA">
+      <table id="85" file="233SMA010" />
+    </node>
+    <node id="31" name="Forêts" cod="SFO" />
+    <node id="32" name="Pêches" cod="SFI">
+      <table id="86" file="233SFI001" />
+      <table id="87" file="233SFI002" />
+      <table id="88" file="233SFI003" />
+      <table id="89" file="233SFI004" />
+      <table id="90" file="233SFI005" />
+    </node>
+    <node id="33" name="Eau" cod="SWA">
+      <table id="91" file="233SWA001" />
+      <table id="92" file="233SWA002" />
+      <table id="93" file="233SWA020" />
+    </node>
+    <node id="34" name="Valeur ajoutée" cod="SVA" />
+  </node>
+  <node id="3" name="Stratégie Mondiale ensemble minimal de données de base" cod="G">
+    <node id="35" name="Economique">
+      <node id="36" name="Produit">
+        <table id="94" file="233CFI010" />
+        <table id="95" file="233CFI030" />
+      </node>
+      <node id="37" name="Commerce">
+        <table id="99" file="233CTR055" />
+      </node>
+      <node id="38" name="Stock de ressources" />
+      <node id="39" name="Inputs">
+        <table id="100" file="233CFE030" />
+        <table id="101" file="233CPD020" />
+      </node>
+      <node id="40" name="Transformation agro-alimentaire" />
+      <node id="41" name="Prix">
+        <table id="102" file="233CPR010" />
+      </node>
+      <node id="42" name="Dépense finale" />
+      <node id="43" name="Infrastructure rurale(capital stock)" />
+      <node id="44" name="Transfert international" />
+    </node>
+    <node id="45" name="Social">
+      <node id="46" name="Démographie de la population urbaine et rurale" />
+    </node>
+    <node id="47" name="Environnemental">
+      <node id="48" name="Terre" />
+      <node id="49" name="Eau" />
+      <node id="50" name="Air" />
+    </node>
+    <node id="51" name="Localisation géographique">
+      <node id="52" name="SIG coordonnées" />
+      <node id="53" name="Niveau d'urbanisation" />
+    </node>
+  </node>
+  <node id="370" name="Recensements et enquêtes agricoles">
+    <node id="371" name="Recensements">
+      <node id="378" name="Enquête Nationale sur les Statistiques Agricoles de 1993">
+        <table id="392" file="233ensa15" />
+        <table id="393" file="233ensa14" />
+        <table id="394" file="233ensa13" />
+        <table id="395" file="233ensa12" />
+        <table id="396" file="233ensa11" />
+        <table id="397" file="233ensa10" />
+        <table id="398" file="233ensa09" />
+        <table id="399" file="233ensa08" />
+        <table id="400" file="233ensa07" />
+        <table id="401" file="233ensa06" />
+        <table id="402" file="233ensa05" />
+        <table id="403" file="233ensa04" />
+        <table id="404" file="233ensa03" />
+        <table id="405" file="233ensa02" />
+        <table id="406" file="233ensa01" />
+      </node>
+      <node id="379" name="Recensement Général de l'Agriculture Phase Inventaire 2006">
+        <node id="381" name="Recensement des ménages">
+          <table id="538" file="233RGA1RGPH05" />
+          <table id="540" file="233RGA1RGPH07" />
+          <table id="546" file="233RGA1RGPH13" />
+          <table id="547" file="233RGA1RGPH15" />
+          <table id="834" file="233RGA1RGPH01" />
+          <table id="835" file="233RGA1RGPH02" />
+          <table id="836" file="233RGA1RGPH03" />
+          <table id="837" file="233RGA1RGPH04" />
+          <table id="838" file="233RGA1RGPH06" />
+          <table id="839" file="233RGA1RGPH08" />
+          <table id="840" file="233RGA1RGPH09" />
+          <table id="841" file="233RGA1RGPH10" />
+          <table id="842" file="233RGA1RGPH11" />
+          <table id="843" file="233RGA1RGPH12" />
+          <table id="844" file="233RGA1RGPH16" />
+          <table id="845" file="233RGA1RGPH17" />
+          <table id="852" file="233RGA1RGPH18" />
+        </node>
+        <node id="382" name="Inventaire des sites de cultures irriguées">
+          <table id="499" file="233RGA1CI002" />
+          <table id="503" file="233RGA1CI006" />
+          <table id="519" file="233RGA1IMA002" />
+          <table id="520" file="233RGA1IMA003" />
+          <table id="521" file="233RGA1IMA004" />
+          <table id="522" file="233RGA1IMA005" />
+          <table id="524" file="233RGA1IMA007" />
+          <table id="525" file="233RGA1IMA008" />
+          <table id="526" file="233RGA1IMA009" />
+          <table id="527" file="233RGA1IMA010" />
+          <table id="528" file="233RGA1IMA011" />
+          <table id="561" file="233RGA1CI003" />
+          <table id="562" file="233RGA1CI004" />
+          <table id="563" file="233RGA1CI005" />
+          <table id="564" file="233RGA1CI007" />
+          <table id="566" file="233RGA1CI009" />
+          <table id="868" file="233RGA1CI001" />
+          <table id="869" file="233RGA1CI008" />
+          <table id="870" file="233RGA1IMA001" />
+          <table id="871" file="233RGA1IMA006" />
+        </node>
+        <node id="383" name="Inventaire des sites de riziculture">
+          <table id="507" file="233RGA1IRI001" />
+          <table id="513" file="233RGA1IRI007" />
+          <table id="514" file="233RGA1IRI008" />
+          <table id="515" file="233RGA1IRI009" />
+          <table id="516" file="233RGA1IRI010" />
+          <table id="872" file="233RGA1IRI002" />
+          <table id="873" file="233RGA1IRI003" />
+          <table id="874" file="233RGA1IRI004" />
+          <table id="875" file="233RGA1IRI005" />
+          <table id="876" file="233RGA1IRI006" />
+          <table id="877" file="233RGA1IRI011" />
+        </node>
+        <node id="384" name="Inventaire des exploitations agricoles">
+          <table id="551" file="233RGA1IEXP001" />
+          <table id="552" file="233RGA1IEXP002" />
+          <table id="553" file="233RGA1IEXP003" />
+          <table id="554" file="233RGA1IEXP004" />
+          <table id="556" file="233RGA1IEXP006" />
+          <table id="557" file="233RGA1IEXP007" />
+          <table id="558" file="233RGA1IEXP008" />
+          <table id="559" file="233RGA1IEXP009" />
+          <table id="568" file="233RGA1IEXP005" />
+        </node>
+      </node>
+      <node id="380" name="Recensement Général de l'Agriculture Phase Modulaire 2008">
+        <node id="385" name="Module socio-économie">
+          <table id="468" file="233rga2tro6" />
+          <table id="475" file="233rga2tro12" />
+          <table id="476" file="233rga2tro13" />
+          <table id="481" file="233rga2tro18" />
+          <table id="488" file="" />
+          <table id="897" file="233RGA2TRO01" />
+          <table id="898" file="233RGA2TRO02" />
+          <table id="899" file="233RGA2TRO03" />
+          <table id="900" file="233RGA2TRO04" />
+          <table id="901" file="233RGA2TRO05" />
+          <table id="902" file="233RGA2TRO06" />
+          <table id="903" file="233RGA2TRO07" />
+          <table id="904" file="233RGA2TRO08" />
+          <table id="905" file="233RGA2TRO09" />
+          <table id="906" file="233RGA2TRO10" />
+          <table id="907" file="233RGA2TRO11" />
+          <table id="908" file="233RGA2TRO14" />
+          <table id="909" file="233RGA2TRO15" />
+          <table id="910" file="233RGA2TRO16" />
+          <table id="911" file="233RGA2TRO17" />
+          <table id="912" file="233RGA2TRO19" />
+          <table id="913" file="233RGA2TRO20" />
+          <table id="914" file="233RGA2TRO21" />
+          <table id="915" file="233RGA2TRO22" />
+          <table id="916" file="233RGA2TRO23" />
+          <table id="917" file="233RGA2TRO24" />
+        </node>
+        <node id="386" name="Module cultures pluviales">
+          <table id="495" file="233rga2plu07" />
+          <table id="496" file="233rga2plu08" />
+          <table id="878" file="233RGA2PLUO01" />
+          <table id="891" file="233RGA2PLU02" />
+          <table id="892" file="233RGA2PLU03" />
+          <table id="893" file="233RGA2PLU04" />
+          <table id="894" file="233RGA2PLU05" />
+          <table id="895" file="233RGA2PLU06" />
+          <table id="896" file="233RGA2PLU09" />
+        </node>
+        <node id="387" name="Module élevage">
+          <table id="424" file="233rgaev012" />
+          <table id="918" file="233RGAEV001" />
+          <table id="919" file="233RGAEV002" />
+          <table id="920" file="233RGAEV003" />
+          <table id="921" file="233RGAEV004" />
+          <table id="922" file="233RGAEV005" />
+          <table id="923" file="233RGAEV006" />
+          <table id="924" file="233RGAEV008" />
+          <table id="925" file="233RGAEV009" />
+          <table id="926" file="233RGAEV010" />
+          <table id="927" file="233RGAEV011" />
+          <table id="928" file="233RGAEV013" />
+          <table id="929" file="233RGAEV014" />
+          <table id="930" file="233RGAEV015" />
+          <table id="931" file="233RGAEV0107" />
+        </node>
+        <node id="388" name="Module arboriculture fruitière">
+          <table id="409" file="233rg2arbo06" />
+          <table id="411" file="233rg2arbo4" />
+          <table id="412" file="233rg2arbo03" />
+          <table id="413" file="233rg2arbo02" />
+          <table id="419" file="233rg2arbo09" />
+          <table id="859" file="233RG2ARBO01" />
+          <table id="860" file="233RG2ARBO05" />
+          <table id="861" file="233RG2ARBO07" />
+          <table id="862" file="233RG2ARBO08" />
+          <table id="863" file="233RG2ARBO10" />
+          <table id="864" file="233RG2ARBO11" />
+          <table id="865" file="233RG2ARBO12" />
+          <table id="866" file="233RG2ARBO13" />
+          <table id="867" file="233RG2ARBO14" />
+        </node>
+        <node id="389" name="Module cultures irriguées">
+          <table id="437" file="233rga2ma30" />
+          <table id="438" file="233rga2ma29" />
+          <table id="439" file="233rga2ma028" />
+          <table id="440" file="233rga2ma27" />
+          <table id="441" file="233rga2ma26" />
+          <table id="442" file="233rga2ma025" />
+          <table id="443" file="233rga2ma24" />
+          <table id="444" file="233rga2ma23" />
+          <table id="445" file="233rga2ma22" />
+          <table id="447" file="233rga2ma17" />
+          <table id="450" file="233rga2ma14" />
+          <table id="454" file="233rga2ma10" />
+          <table id="462" file="233rga2ma01" />
+          <table id="853" file="233RGA2MA02" />
+          <table id="854" file="233RGA2MA03" />
+          <table id="855" file="233RGA2MA05" />
+          <table id="879" file="233RGA2MA06" />
+          <table id="880" file="233RGA2MA07" />
+          <table id="882" file="233RGA2MA08" />
+          <table id="883" file="233RGA2MA09" />
+          <table id="884" file="233RGA2MA11" />
+          <table id="885" file="233RGA2MA12" />
+          <table id="886" file="233RGA2MA13" />
+          <table id="887" file="233RGA2MA15" />
+          <table id="888" file="233RGA2MA16" />
+          <table id="889" file="233RGA2MA19" />
+          <table id="890" file="233RGA2MA31" />
+        </node>
+      </node>
+    </node>
+    <node id="377" name="Enquêtes">
+      <node id="390" name="Enquêtes Permanentes Agricoles 1993-2012">
+        <table id="573" file="233EPA01" />
+        <table id="575" file="233EPA02" />
+        <table id="578" file="233EPA03" />
+        <table id="587" file="233EPA06" />
+        <table id="590" file="233EPA07" />
+        <table id="593" file="233EPA08" />
+        <table id="599" file="233EPA10" />
+        <table id="602" file="233EPA11" />
+        <table id="605" file="233EPA12" />
+        <table id="608" file="233EPA13" />
+        <table id="614" file="233EPA15" />
+        <table id="619" file="233EPA05" />
+      </node>
+      <node id="391" name="Enquêtes Maraîchères 1993-2012">
+        <table id="581" file="233EPA04" />
+        <table id="596" file="233EPA09" />
+        <table id="611" file="233EPA14" />
+      </node>
+    </node>
+  </node>
+  <node id="56" name="Annuaires Statistiques">
+    <table id="373" file="233epa01" />
+    <node id="569" name="Annuaire statistique agricole 1993-2012">
+      <table id="572" file="233EPA16" />
+      <table id="574" file="233EPA01" />
+      <table id="576" file="233EPA02" />
+      <table id="579" file="233EPA03" />
+      <table id="582" file="233EPA04" />
+      <table id="588" file="233EPA06" />
+      <table id="591" file="233EPA07" />
+      <table id="594" file="233EPA08" />
+      <table id="597" file="233EPA09" />
+      <table id="600" file="233EPA10" />
+      <table id="603" file="233EPA11" />
+      <table id="606" file="233EPA12" />
+      <table id="609" file="233EPA13" />
+      <table id="612" file="233EPA14" />
+      <table id="615" file="233EPA15" />
+      <table id="617" file="233EPA05" />
+    </node>
+    <node id="570" name="Annuaire statistique de l'élevage 1996-2011">
+      <table id="620" file="233ANELA01" />
+      <table id="624" file="233ANELA03" />
+      <table id="628" file="233ANELA05" />
+      <table id="640" file="233ANRN04" />
+      <table id="846" file="233ANELA02" />
+      <table id="848" file="233ANELA04" />
+      <table id="850" file="233ANELA06" />
+    </node>
+    <node id="571" name="Annuaire statistique de l'environnement 1996-2011">
+      <table id="632" file="233ANRN01" />
+      <table id="635" file="233ANRN02" />
+      <table id="638" file="233ANRN03" />
+      <table id="642" file="233ANR5" />
+      <table id="644" file="233ANR06" />
+    </node>
+  </node>
+  <node id="54" name="Bilans Alimentaires">
+    <table id="713" file="233MASA35" />
+    <table id="715" file="233MASA30" />
+  </node>
+  <node id="4" name="Modules thématiques" cod="T">
+    <node id="369" name="Dépenses Publiques" />
+    <node id="275" name="Indicateurs de suivi de la PAU">
+      <details lCode="fr">
+        <title>Indicateurs de suivi de la PAU</title>
+      </details>
+      <node id="276" name="Indicateurs des filieres prioritaires">
+        <details lCode="fr">
+          <title>Indicateurs des filières prioritaires</title>
+        </details>
+        <node id="277" name="Filiere Coton">
+          <details lCode="fr">
+            <title>Filière Coton</title>
+          </details>
+        </node>
+       
+      </node>
+    </node>
+    <node id="833" name="tables - work in progress">
+      <table id="745" file="233APEXB02" />
+      <table id="746" file="233MASACFA035" />
+      <table id="747" file="233MASACFA030" />
+      <table id="748" file="233MASACFA025" />
+      <table id="749" file="233MASACFA020" />
+      <table id="750" file="233MASACFA015" />
+      <table id="751" file="233MASACFA010" />
+      <table id="752" file="233MEAHEAU7" />
+      <table id="753" file="233MEAHEAU6" />
+      <table id="754" file="233MEAHEAU5" />
+      <table id="755" file="233MEAHEAU4" />
+      <table id="756" file="233MEAHEAU3" />
+      <table id="757" file="233MEAHAEAU3" />
+      <table id="758" file="233MEAHEAU1" />
+      <table id="759" file="233IHPCMENSUEL2008" />
+      <table id="760" file="233IHPCMENSUEL2008-2014" />
+      <table id="761" file="233IHPCANNUEL2008-2014" />
+      <table id="762" file="233DSS001" />
+
+      <table id="681" file="233CRT031" />
+      <table id="682" file="233CRT032" />
+      <table id="683" file="233CRT033" />
+      <table id="684" file="233CRT034" />
+      <table id="685" file="233CTR013" />
+      <table id="686" file="233CTR021" />
+      <table id="687" file="233CTR022" />
+      <table id="688" file="233CTR024" />
+      <table id="689" file="233CTR035" />
+      <table id="690" file="233IEB001" />
+      <table id="691" file="233ieb0011" />
+      <table id="692" file="233PD010" />
+    </node>
+  </node>
+  <node id="5" name="Institutions nationales" cod="N">
+    <node id="272" name="BUNASOLS" />
+    <node id="103" name="CONASUR" />
+    <node id="104" name="COTECNA">
+      <table id="140" file="233ITR012" />
+    </node>
+    <node id="105" name="Statistiques environnementales">
+      <table id="141" file="233IFO001" />
+      <table id="142" file="233IWA001" />
+      <table id="706" file="233MEDD01" />
+    </node>
+    <node id="106" name="Statistiques de la santé ">
+      <table id="143" file="233ISA001" />
+      <table id="144" file="233ISA002" />
+      <table id="145" file="233ISA003" />
+      <table id="146" file="233ISA004" />
+      <table id="147" file="233ISA005" />
+      <table id="148" file="233ISA006" />
+      <table id="149" file="233ISA007" />
+      <table id="150" file="233ISA008" />
+      <table id="151" file="233ISA009" />
+      <table id="152" file="233ISA010" />
+    </node>
+    <node id="107" name="Statistiques du transport ">
+      <table id="153" file="233ITR005" />
+      <table id="154" file="233ITR006" />
+      <table id="155" file="233ITR007" />
+      <table id="156" file="233ITR008" />
+      <table id="157" file="233ITR009" />
+      <table id="158" file="tr008" />
+      <table id="159" file="tr009" />
+      <table id="160" file="tr011" />
+      <table id="161" file="tr012" />
+      <table id="162" file="tr013" />
+      <table id="163" file="tr014" />
+    </node>
+    <node id="108" name="DEPSI ">
+      <table id="164" file="233IIV001" />
+      <table id="165" file="233IIV002" />
+      <table id="166" file="Projets_du_MAHRH_pr_country_stat" />
+      <table id="671" file="233CVA014" />
+      <table id="673" file="233CVA013" />
+      <table id="675" file="233CVA010" />
+      <table id="679" file="233IVA011" />
+      <table id="680" file="233IVA012" />
+    </node>
+    <node id="109" name="Données météorologiques">
+      <table id="167" file="233IWA002" />
+      <table id="168" file="233IWA003" />
+      <table id="322" file="233CWA015DGRE" />
+      <table id="633" file="233ANRN01" />
+      <table id="636" file="233ANRN02" />
+      <table id="639" file="233ANRN03" />
+      <table id="641" file="233ANRN04" />
+      <table id="643" file="233ANR5" />
+      <table id="645" file="233ANR06" />
+    </node>
+    <node id="110" name="Direction Générale des Amenagements et du Développement de l'Irrigation" />
+    <node id="111" name="DGFOMR ">
+      <table id="169" file="233IPO022" />
+      <table id="170" file="233IPO024" />
+    </node>
+    <node id="112" name="DGESS-MASA">
+      <node id="124" name="EP">
+        <node id="127" name="EMA">
+          <table id="171" file="233IRE001" />
+          <table id="583" file="233EPA04" />
+          <table id="598" file="233EPA09" />
+          <table id="613" file="233EPA14" />
+        </node>
+        <node id="128" name="EPA">
+          <table id="172" file="233IFE001" />
+          <table id="173" file="233IFA001" />
+          <table id="174" file="233IMA001" />
+          <table id="175" file="233IPD001" />
+          <table id="316" file="233SPDO117DGPER" />
+          <table id="317" file="233SPDO116DGPER" />
+          <table id="358" file="233spd10" />
+          <table id="359" file="233spd16" />
+          <table id="374" file="233epa01" />
+          <table id="577" file="233EPA02" />
+          <table id="580" file="233EPA03" />
+          <table id="589" file="233EPA06" />
+          <table id="592" file="233EPA07" />
+          <table id="595" file="233EPA08" />
+          <table id="601" file="233EPA10" />
+          <table id="604" file="233EPA11" />
+          <table id="607" file="233EPA12" />
+          <table id="610" file="233EPA13" />
+          <table id="616" file="233EPA15" />
+          <table id="618" file="233EPA05" />
+          <table id="652" file="233sli01" />
+          <table id="662" file="233CLI010" />
+          <table id="714" file="233MASA35" />
+          <table id="716" file="233MASA30" />
+          <table id="858" file="233EPA010" />
+        </node>
+      </node>
+      <node id="125" name="FINANCEMENT" />
+      <node id="126" name="RECENSEMENT">
+        <node id="129" name="ENSA 1993">
+          <table id="176" file="233ILI001" />
+          <table id="177" file="233IMA001" />
+          <table id="178" file="233IPD001" />
+          <table id="179" file="233IPO013" />
+          <table id="180" file="233IPO014" />
+          <table id="181" file="233IPO015" />
+          <table id="182" file="233IPO016" />
+          <table id="183" file="233IPO017" />
+          <table id="184" file="233IPO018" />
+          <table id="185" file="233IPO019" />
+        </node>
+        <node id="130" name="RGA 2006-2010">
+          <table id="273" file="233ILA001" />
+          <table id="186" file="233IPO001" />
+          <table id="187" file="233IPO002" />
+          <table id="188" file="233IPO003" />
+          <table id="189" file="233IPO004" />
+          <table id="190" file="233IPO005" />
+          <table id="191" file="233IPO006" />
+          <table id="192" file="233IPO007" />
+          <table id="193" file="233IPO008" />
+          <table id="194" file="233IPO009" />
+          <table id="195" file="233IPO010" />
+          <table id="196" file="233IPO011" />
+          <table id="197" file="233IPO012" />
+        </node>
+        <node id="856" name="RNA 2008">
+          <table id="857" file="233EPA005" />
+          <table id="881" file="233RGA026" />
+        </node>
+      </node>
+    </node>
+    <node id="113" name="Statistiques de l'élevage">
+      <table id="198" file="233IPD010" />
+      <table id="199" file="233IPD011" />
+      <table id="200" file="233IPD012" />
+      <table id="202" file="233IPD015" />
+      <table id="203" file="233IPD017" />
+      <table id="204" file="233IPD018" />
+      <table id="205" file="233IPD019" />
+      <table id="206" file="233IPD020" />
+      <table id="207" file="233IPD021" />
+      <table id="208" file="233IPD022" />
+      <table id="209" file="233IPD023" />
+      <table id="210" file="233IPR010" />
+      <table id="211" file="233IPR011" />
+      <table id="212" file="233IPR013" />
+      <table id="213" file="233IPR014" />
+      <table id="214" file="233IPR015" />
+      <table id="215" file="233IPR017" />
+      <table id="216" file="233IPR018" />
+      <table id="217" file="233IPR019" />
+      <table id="218" file="233IPR020" />
+      <table id="219" file="233ITR010" />
+      <table id="320" file="233SPD050DGPSE" />
+      <table id="338" file="233CPD070DGPSE" />
+      <table id="339" file="233CPD065DGPSE" />
+      <table id="340" file="233CPD055DGPSE" />
+      <table id="621" file="233ANELA01" />
+      <table id="625" file="233ANELA03" />
+      <table id="629" file="233ANELA05" />
+      <table id="710" file="233MRA045" />
+      <table id="847" file="233ANELA02" />
+      <table id="849" file="233ANELA04" />
+      <table id="851" file="233ANELA06" />
+    </node>
+    <node id="114" name="DGPV">
+      <table id="220" file="233ILI001" />
+      <table id="221" file="233IPE001" />
+      <table id="222" file="233ITR011" />
+      <table id="665" file="233IPE011" />
+    </node>
+    <node id="115" name="DGRE">
+      <table id="634" file="233ANRN01" />
+      <table id="637" file="233ANRN02" />
+    </node>
+    <node id="116" name="Statistiques sur la Pêche et l'Aquaculture">
+      <table id="223" file="233IFI005" />
+      <table id="224" file="233IFI010" />
+      <table id="225" file="233IFI011" />
+      <table id="226" file="233IFI013" />
+    </node>
+    <node id="117" name="Statistiques douanières">
+      <table id="323" file="233CTR045DOUANE" />
+      <table id="325" file="233CTR040DOUANE" />
+      <table id="329" file="233CTR015DOUANE" />
+      <table id="333" file="233CTR010DOUANE" />
+      <table id="654" file="233CTR045" />
+      <table id="656" file="233CTR040" />
+      <table id="658" file="233CTR015" />
+      <table id="660" file="233CTR010" />
+    </node>
+    <node id="118" name="Statistiques de l'éducation">
+      <node id="131" name="Statistiques de l'enseignement de base">
+        <table id="227" file="233IEB002" />
+        <table id="228" file="233IEB003" />
+        <table id="229" file="233IEB004" />
+        <table id="230" file="233IEB005" />
+        <table id="231" file="233IEB006" />
+        <table id="232" file="233IEB007" />
+        <table id="233" file="233IEB008" />
+        <table id="234" file="233IEB009" />
+        <table id="235" file="233IEB010" />
+        <table id="236" file="233IEB011" />
+        <table id="237" file="233IEB012" />
+        <table id="238" file="233IEB013" />
+        <table id="239" file="233IEB014" />
+        <table id="240" file="233IEB015" />
+        <table id="241" file="233IEB016" />
+      </node>
+      <node id="132" name="Statistiques de l'Enseignement Secondaire et Supérieur">
+        <table id="242" file="233IES001" />
+        <table id="243" file="233IES002" />
+        <table id="244" file="233IES003" />
+        <table id="245" file="233IES004" />
+        <table id="246" file="233IES005" />
+        <table id="247" file="233IES006" />
+        <table id="248" file="233IES007" />
+        <table id="249" file="233IES008" />
+        <table id="250" file="233IES009" />
+      </node>
+    </node>
+    <node id="119" name="IGAE" />
+    <node id="120" name="INERA">
+    </node>
+    <node id="121" name="Institut National de la Statistique et de la Démographie">
+      <node id="133" name="INSD_DCSFR">
+        <table id="251" file="233IPO030" />
+        <table id="709" file="233DSCVM2" />
+      </node>
+      <node id="135" name="INSD_DD">
+        <table id="252" file="233ILA010" />
+        <table id="253" file="233ILA012" />
+        <table id="254" file="233ILA013" />
+        <table id="255" file="233IPO010" />
+        <table id="256" file="233IPO012" />
+        <table id="257" file="233IPO013" />
+        <table id="315" file="233SPDO001INSD" />
+        <table id="337" file="233CPO010INSD" />
+        <table id="664" file="233ILA011" />
+      </node>
+      <node id="136" name="INSS_DSSE">
+        <table id="326" file="233CTR040DOUANE" />
+        <table id="330" file="233CTR015DOUANE" />
+        <table id="334" file="233CTR010DOUANE" />
+        <table id="703" file="233DSSE04" />
+        <table id="704" file="233DSSE01" />
+        <table id="712" file="233DSEE03" />
+      </node>
+      <node id="137" name="INSD_DIMIS" />
+      <node id="138" name="INSD_DSCVM">
+        <table id="707" file="233DSCVM1" />
+        <table id="708" file="233DSCVM2" />
+      </node>
+      <node id="139" name="INSD_DSSE">
+        <table id="327" file="233CTR040DOUANE" />
+        <table id="331" file="233CTR015DOUANE" />
+        <table id="335" file="233CTR010DOUANE" />
+      </node>
+    </node>
+    <node id="122" name="Commerce Extérieur">
+      <table id="260" file="233IPD014" />
+      <table id="261" file="233IPD015" />
+      <table id="262" file="233IPD016" />
+      <table id="263" file="233ITR001" />
+      <table id="264" file="233ITR002" />
+      <table id="265" file="233ITR003" />
+      <table id="266" file="233ITR004" />
+      <table id="324" file="233CTR045DOUANE" />
+      <table id="328" file="233CTR040DOUANE" />
+      <table id="332" file="233CTR015DOUANE" />
+      <table id="336" file="233CTR010DOUANE" />
+      <table id="717" file="233APEXB1" />
+      <table id="718" file="233APEXB2" />
+    </node>
+    <node id="123" name="SONAGESS">
+      <table id="267" file="233IPR001" />
+      <table id="268" file="233IPR002" />
+      <table id="269" file="233IPR003" />
+      <table id="270" file="233IPR004" />
+      <table id="711" file="233SONAGESS1" />
+    </node>
+    <node id="697" name="Statistiques d'eau, d'amenagements hydrauliques et d'assainissement">
+      <table id="719" file="233MEAHA02" />
+    </node>
+  </node>
+  <node id="6" name="Partenaires internationaux" cod="I">
+    <table id="271" file="233SLA003" />
+  </node>
+</tree>

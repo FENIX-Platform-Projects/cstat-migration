@@ -1,0 +1,17 @@
+{
+  "country":"BFA",
+  "logics":{
+    "override_CL":true,
+    "override_DS":true
+  },
+  "filter":{
+    "codelist":{
+      "include":[],
+      "exclude":[]
+    },
+    "dataset":{
+      "include":[],
+      "exclude":[]
+    }
+  }
+}
