@@ -73,9 +73,9 @@ public class XMLParser {
             // there should be a code attribute into the node
             if (nodeList.item(j) != null && nodeList.item(j).hasAttributes() && nodeList.item(j).getAttributes().getLength() > 0 &&
                     nodeList.item(j).getAttributes().getNamedItem("cod") != null
-                    &&  nodeList.item(j).hasChildNodes() && nodeList.item(j).getChildNodes().getLength()>0) {
+                    && nodeList.item(j).hasChildNodes() && nodeList.item(j).getChildNodes().getLength() > 0) {
 
-                if(nodeList.item(j).getAttributes().getNamedItem("cod").getNodeValue() == "CPE"){
+                if (nodeList.item(j).getAttributes().getNamedItem("cod").getNodeValue() == "CPE") {
                     System.out.println("hh");
                 }
                 result.put(nodeList.item(j).getAttributes().getNamedItem("cod").getNodeValue(), getDatasets(nodeList.item(j).getChildNodes()));
@@ -100,5 +100,59 @@ public class XMLParser {
         return result;
     }
 
+
+    public Map<String, List<String>> trasformFlatData(Map<String, Map<String, List<String>>> originalData) {
+
+        Map<String, List<String>> result = new HashMap<>();
+        for (String key : originalData.keySet()) {
+
+            List<String> values = new LinkedList<>();
+            Map<String, List<String>> tmp = originalData.get(key);
+            for (String tmpkey : tmp.keySet()) {
+                if (tmp.get(tmpkey).size() > 0)
+                    values.addAll(tmp.get(tmpkey));
+            }
+            result.put(key, values);
+        }
+        return result;
+    }
+
+
+    public Map<String, List<String>> trasformFlatData(Map<String, Map<String, List<String>>> originalData, Set<String> denied, Set<String> allowed) {
+
+        Map<String, List<String>> result = new HashMap<>();
+        for (String key : originalData.keySet()) {
+
+            List<String> values = new LinkedList<>();
+            Map<String, List<String>> tmp = originalData.get(key);
+            for (String tmpkey : tmp.keySet()) {
+                if (tmp.get(tmpkey).size() > 0) {
+                    List<String> allowedDatasets = new LinkedList<>();
+                    List<String> tmpValues = tmp.get(tmpkey);
+                    for (int i = 0; i < tmpValues.size(); i++)
+                        if ((denied == null && allowed.contains(tmpValues.get(i))) || (allowed == null && !denied.contains(tmpValues.get(i))))
+                            allowedDatasets.add(tmpValues.get(i));
+                    values.addAll(allowedDatasets);
+
+                }
+            }
+            result.put(key, values);
+        }
+        return result;
+    }
+
+
+    public List<String> filterDataOnRegexp(String regExp, List<String> data) {
+        List<String> result = new ArrayList<String>();
+        for (int i = 0; i < data.size(); i++) {
+            if (data.get(i).matches(regExp)) { // matches uses regex
+                // TODO: ADD into the logger
+                System.out.println("The uid " + data.get(i) + " matches the regexp " + regExp);
+                result.add(data.get(i));
+            }
+        }
+        return result;
+
+    }
 
 }

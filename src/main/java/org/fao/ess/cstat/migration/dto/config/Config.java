@@ -1,4 +1,4 @@
-package org.fao.ess.cstat.migration.dto;
+package org.fao.ess.cstat.migration.dto.config;
 
 
 public class Config {

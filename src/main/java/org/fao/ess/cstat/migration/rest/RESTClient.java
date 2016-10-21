@@ -1,4 +1,4 @@
-package org.fao.ess.cstat.migration.tools.d3s;
+package org.fao.ess.cstat.migration.rest;
 
 import org.fao.fenix.commons.find.dto.filter.FieldFilter;
 import org.fao.fenix.commons.find.dto.filter.IdFilter;
@@ -19,7 +19,7 @@ import java.net.URLEncoder;
 import java.util.*;
 
 @ApplicationScoped
-public class D3SClient {
+public class RESTClient {
 
     public Collection<MeIdentification<DSDDataset>> retrieveMetadata(String baseUrl) throws Exception {
         //Create filter
@@ -126,10 +126,10 @@ public class D3SClient {
             throw new Exception("Error from D3S updating datasets metadata last update date");
     }
 
-    private Response sendRequest(String url, Object entity, String method) throws Exception {
+    public Response sendRequest(String url, String method) throws Exception {
         Client client = ClientBuilder.newClient();
         WebTarget target = client.target(url);
-        return target.request(MediaType.APPLICATION_JSON_TYPE).build(method.trim().toUpperCase(), javax.ws.rs.client.Entity.json(entity)).invoke();
+        return target.request(MediaType.APPLICATION_JSON_TYPE).build(method.trim().toUpperCase()).invoke();
     }
 
     private String addQueryParameters (String url, Map<String,String> parameters) throws UnsupportedEncodingException {
@@ -142,7 +142,11 @@ public class D3SClient {
         }
         return sb.toString();
     }
-
+    public Response sendRequest(String url, Object entity, String method) throws Exception {
+        Client client = ClientBuilder.newClient();
+        WebTarget target = client.target(url);
+        return target.request(MediaType.APPLICATION_JSON_TYPE).build(method.trim().toUpperCase(), javax.ws.rs.client.Entity.json(entity)).invoke();
+    }
 
 
     private <T> Collection<Collection<T>>  splitCollection(Collection<T> list, int segmentSize) {

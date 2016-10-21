@@ -3,13 +3,20 @@ package org.fao.ess.cstat.migration.logic.impl;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.fao.ess.cstat.migration.dao.InputDao;
+import org.fao.ess.cstat.migration.db.DBAdapter;
 import org.fao.ess.cstat.migration.logic.Command;
 import org.fao.ess.cstat.migration.logic.Logic;
 import org.fao.ess.cstat.migration.utils.xml.XMLParser;
 
+import javax.inject.Inject;
+
 @Command("codelist")
 public class Codelists implements Logic {
     private static final Logger LOGGER = LogManager.getLogger("Codelists");
+    private @Inject InputDao input;
+    private @Inject DBAdapter dbAdapter;
+
 
     @Override
     public void execute(String... args) throws Exception {
@@ -21,6 +28,14 @@ public class Codelists implements Logic {
 
         XMLParser.getAllDatasetFromSchema("BFA");
 
+        //Resource<DSDCodelist, Code> codelistCodeResource = input.loadCodelist("CS_FoodSupply","1.0");
+
+
+        input.loadDataset("233CPD010");
+
+        String[] columns= new String[]{"one","two","three"};
+        String[] types= new String[]{"customCode","year","number"};
+        System.out.println(dbAdapter.createTable("test",columns,types ));
 
 
     }

@@ -10,6 +10,8 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <jackson.version>2.3.2</jackson.version>
         <orient.version>2.0.13</orient.version>
+        <jdb.postgres.version>9.3-1102-jdbc41</jdb.postgres.version>
+
     </properties>
 
     <build>
@@ -103,6 +105,22 @@
             <groupId>com.google.gwt</groupId>
             <artifactId>gwt-dev</artifactId>
             <version>2.0.3</version>
+        </dependency>
+
+        <!-- RESTEASY -->
+        <dependency>
+            <groupId>org.jboss.resteasy</groupId>
+            <artifactId>resteasy-client</artifactId>
+            <version>3.0.2.Final</version>
+        </dependency>
+
+
+        <!-- JDBC -->
+        <!-- JDBC -->
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>${jdb.postgres.version}</version>
         </dependency>
 
 
