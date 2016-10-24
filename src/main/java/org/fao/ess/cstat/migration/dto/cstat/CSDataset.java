@@ -17,7 +17,7 @@ public class CSDataset {
     @JsonProperty private Date creationDate;
     @JsonProperty private Date updateDate;
     @JsonProperty private CSDSD dsd;
-    private Collection<Object> data;
+    @JsonProperty private Collection<Object> data;
 
     public String getUid() {
         return uid;

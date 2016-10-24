@@ -3,6 +3,8 @@ package org.fao.ess.cstat.migration.dto.cstat;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
+
+import java.util.Collection;
 import java.util.Map;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
@@ -13,6 +15,7 @@ public class CSColumn {
     @JsonProperty private Map<String,String> title;
     @JsonProperty private CSDimension dimension;
     @JsonProperty private CSCodeSystem codeSystem;
+    @JsonProperty private Collection<CSValue> valuesCountrystat;
 
     public String getColumnId() {
         return columnId;
@@ -52,5 +55,13 @@ public class CSColumn {
 
     public void setCodeSystem(CSCodeSystem codeSystem) {
         this.codeSystem = codeSystem;
+    }
+
+    public Collection<CSValue> getValuesCountrystat() {
+        return valuesCountrystat;
+    }
+
+    public void setValuesCountrystat(Collection<CSValue> valuesCountrystat) {
+        this.valuesCountrystat = valuesCountrystat;
     }
 }

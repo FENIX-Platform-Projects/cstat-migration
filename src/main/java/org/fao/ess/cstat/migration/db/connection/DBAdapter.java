@@ -1,4 +1,4 @@
-package org.fao.ess.cstat.migration.db;
+package org.fao.ess.cstat.migration.db.connection;
 
 
 import org.fao.fenix.commons.utils.database.DatabaseUtils;

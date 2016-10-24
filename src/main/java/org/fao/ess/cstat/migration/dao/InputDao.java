@@ -3,7 +3,7 @@ package org.fao.ess.cstat.migration.dao;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.fao.ess.cstat.migration.dto.cstat.CSDataset;
-import org.fao.ess.cstat.migration.rest.RESTClient;
+import org.fao.ess.cstat.migration.db.rest.RESTClient;
 import org.fao.ess.cstat.migration.utils.translator.CodelistTranslator;
 import org.fao.fenix.commons.msd.dto.data.Resource;
 import org.fao.fenix.commons.msd.dto.full.Code;

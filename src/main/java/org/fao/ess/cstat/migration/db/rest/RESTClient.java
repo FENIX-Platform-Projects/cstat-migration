@@ -1,4 +1,4 @@
-package org.fao.ess.cstat.migration.rest;
+package org.fao.ess.cstat.migration.db.rest;
 
 import org.fao.fenix.commons.find.dto.filter.FieldFilter;
 import org.fao.fenix.commons.find.dto.filter.IdFilter;
