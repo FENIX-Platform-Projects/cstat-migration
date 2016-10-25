@@ -12,6 +12,9 @@ public class CSColumn {
 
     @JsonProperty private String columnId;
     @JsonProperty private String dataType;
+    @JsonProperty private String virtualColumn;
+    @JsonProperty private Collection<Object> values;
+
     @JsonProperty private Map<String,String> title;
     @JsonProperty private CSDimension dimension;
     @JsonProperty private CSCodeSystem codeSystem;
@@ -63,5 +66,21 @@ public class CSColumn {
 
     public void setValuesCountrystat(Collection<CSValue> valuesCountrystat) {
         this.valuesCountrystat = valuesCountrystat;
+    }
+
+    public String getVirtualColumn() {
+        return virtualColumn;
+    }
+
+    public void setVirtualColumn(String virtualColumn) {
+        this.virtualColumn = virtualColumn;
+    }
+
+    public Collection<Object> getValues() {
+        return values;
+    }
+
+    public void setValues(Collection<Object> values) {
+        this.values = values;
     }
 }
