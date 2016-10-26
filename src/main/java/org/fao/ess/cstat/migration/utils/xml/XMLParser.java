@@ -26,6 +26,7 @@ public class XMLParser {
     }
 
 
+    // get all uid with domain and subdomain
     public static Map<String, Map<String, List<String>>> getAllDatasetFromSchema(String isoCountry) {
 
         Map<String, Map<String, List<String>>> result = new HashMap<>();
@@ -66,6 +67,65 @@ public class XMLParser {
     }
 
 
+    // get all uid with domain
+    public static Map<String, List<String>> trasformFlatData(Map<String, Map<String, List<String>>> originalData) {
+
+        Map<String, List<String>> result = new HashMap<>();
+        for (String key : originalData.keySet()) {
+
+            List<String> values = new LinkedList<>();
+            Map<String, List<String>> tmp = originalData.get(key);
+            for (String tmpkey : tmp.keySet()) {
+                if (tmp.get(tmpkey).size() > 0)
+                    values.addAll(tmp.get(tmpkey));
+            }
+            result.put(key, values);
+        }
+        return result;
+    }
+
+
+    // get all uid with domain and restrictions (allowed and denied uid)
+    public static Map<String, List<String>> trasformFlatData(Map<String, Map<String, List<String>>> originalData, List<String> denied, List<String> allowed) {
+
+        Map<String, List<String>> result = new HashMap<>();
+        for (String key : originalData.keySet()) {
+
+            List<String> values = new LinkedList<>();
+            Map<String, List<String>> tmp = originalData.get(key);
+            for (String tmpkey : tmp.keySet()) {
+                if (tmp.get(tmpkey).size() > 0) {
+                    List<String> allowedDatasets = new LinkedList<>();
+                    List<String> tmpValues = tmp.get(tmpkey);
+                    for (int i = 0; i < tmpValues.size(); i++)
+                        if ((denied == null && allowed.contains(tmpValues.get(i))) || (allowed == null && !denied.contains(tmpValues.get(i))))
+                            allowedDatasets.add(tmpValues.get(i));
+                    values.addAll(allowedDatasets);
+
+                }
+            }
+            result.put(key, values);
+        }
+        return result;
+    }
+
+
+    // get all uid with restriction based on regexp(TODO)
+    public List<String> filterDataOnRegexp(String regExp, List<String> data) {
+        List<String> result = new ArrayList<String>();
+        for (int i = 0; i < data.size(); i++) {
+            if (data.get(i).matches(regExp)) { // matches uses regex
+                // TODO: ADD into the logger
+                System.out.println("The uid " + data.get(i) + " matches the regexp " + regExp);
+                result.add(data.get(i));
+            }
+        }
+        return result;
+
+    }
+
+
+    // Utils
     private static Map<String, List<String>> getChildNodesBySubdomain(NodeList nodeList) {
 
         Map<String, List<String>> result = new HashMap<>();
@@ -98,61 +158,6 @@ public class XMLParser {
             }
         }
         return result;
-    }
-
-
-    public Map<String, List<String>> trasformFlatData(Map<String, Map<String, List<String>>> originalData) {
-
-        Map<String, List<String>> result = new HashMap<>();
-        for (String key : originalData.keySet()) {
-
-            List<String> values = new LinkedList<>();
-            Map<String, List<String>> tmp = originalData.get(key);
-            for (String tmpkey : tmp.keySet()) {
-                if (tmp.get(tmpkey).size() > 0)
-                    values.addAll(tmp.get(tmpkey));
-            }
-            result.put(key, values);
-        }
-        return result;
-    }
-
-
-    public Map<String, List<String>> trasformFlatData(Map<String, Map<String, List<String>>> originalData, Set<String> denied, Set<String> allowed) {
-
-        Map<String, List<String>> result = new HashMap<>();
-        for (String key : originalData.keySet()) {
-
-            List<String> values = new LinkedList<>();
-            Map<String, List<String>> tmp = originalData.get(key);
-            for (String tmpkey : tmp.keySet()) {
-                if (tmp.get(tmpkey).size() > 0) {
-                    List<String> allowedDatasets = new LinkedList<>();
-                    List<String> tmpValues = tmp.get(tmpkey);
-                    for (int i = 0; i < tmpValues.size(); i++)
-                        if ((denied == null && allowed.contains(tmpValues.get(i))) || (allowed == null && !denied.contains(tmpValues.get(i))))
-                            allowedDatasets.add(tmpValues.get(i));
-                    values.addAll(allowedDatasets);
-
-                }
-            }
-            result.put(key, values);
-        }
-        return result;
-    }
-
-
-    public List<String> filterDataOnRegexp(String regExp, List<String> data) {
-        List<String> result = new ArrayList<String>();
-        for (int i = 0; i < data.size(); i++) {
-            if (data.get(i).matches(regExp)) { // matches uses regex
-                // TODO: ADD into the logger
-                System.out.println("The uid " + data.get(i) + " matches the regexp " + regExp);
-                result.add(data.get(i));
-            }
-        }
-        return result;
-
     }
 
 }

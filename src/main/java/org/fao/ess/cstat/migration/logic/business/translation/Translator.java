@@ -1,23 +1,27 @@
-package org.fao.ess.cstat.migration.logic.business;
+package org.fao.ess.cstat.migration.logic.business.translation;
 
 
 import org.fao.ess.cstat.migration.dto.cstat.CSColumn;
 import org.fao.ess.cstat.migration.dto.cstat.CSDSD;
 import org.fao.ess.cstat.migration.dto.cstat.CSDataset;
 import org.fao.ess.cstat.migration.dto.cstat.CSValue;
+import org.fao.ess.cstat.migration.logic.business.transcode.CodelistD3S;
+import org.fao.fenix.commons.mdsd.annotations.Subject;
 import org.fao.fenix.commons.msd.dto.data.Resource;
 import org.fao.fenix.commons.msd.dto.full.*;
 import org.fao.fenix.commons.msd.dto.type.DataType;
+
 import java.util.*;
 
 public class Translator {
 
     private static final HashMap<String, String> subjects = new HashMap<>();
-    private HashMap<String, Object> virtualColumnsValues;
-    private HashMap<String, String> codelistMap;
+    private static final Set<String> keySubjects = new HashSet<>();
 
-    private List<String> columnsID;
-    private List<String> datatypes;
+    private HashMap<String, Object> virtualColumnsValues;
+    private HashMap<String, String> codelistToColumnID;
+    private Set<String> keyColumns;
+    private List<String> columnsID, datatypes;
     private String lang;
 
     static {
@@ -28,16 +32,20 @@ public class Translator {
         subjects.put("ITEM", "item");
         subjects.put("INDICATOR", "indicator");
         subjects.put("FLAG", "flag");
+        subjects.put("TIME", "time");
+
+        keySubjects.addAll(new LinkedList<>(Arrays.asList("geo", "time", "indicator", "item")));
     }
 
 
     // init
-    public Resource translateDAO(CSDataset dataset, String countryISO, String lang) throws Exception {
+    public Resource translateDAO(CSDataset dataset, String countryISO, String lang, Map<String, List<String>> errors) throws Exception {
+        keyColumns = new HashSet<>();
         this.lang = lang;
         Resource<DSDDataset, Object[]> resource = new Resource<>();
         try {
-            resource.setMetadata(setMetadata(dataset, countryISO));
-            resource.setData(setData(resource.getMetadata().getDsd(), dataset.getData()));
+            resource.setMetadata(setMetadata(dataset, countryISO, errors));
+            resource.setData(setData(resource.getMetadata().getDsd(), dataset.getData(), errors, resource.getMetadata().getUid()));
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -46,7 +54,8 @@ public class Translator {
 
 
     // business
-    private MeIdentification<DSDDataset> setMetadata(CSDataset dataset, String countryISO) throws Exception {
+    private MeIdentification<DSDDataset> setMetadata(CSDataset dataset, String countryISO, Map<String, List<String>> errors) throws Exception {
+
 
         MeIdentification<DSDDataset> metadata = new MeIdentification<>();
 
@@ -59,21 +68,23 @@ public class Translator {
         // creation date, update date and dsd
         metadata.setCreationDate(dataset.getCreationDate());
         metadata.setLastUpdate(dataset.getUpdateDate());
-        metadata.setDsd(setDSD(dataset.getDsd(), countryISO));
+        metadata.setDsd(setDSD(dataset.getDsd(), countryISO, errors, metadata.getUid()));
         return metadata;
     }
 
 
-    private DSDDataset setDSD(CSDSD oldDSD, String countryISO) throws Exception {
+    private DSDDataset setDSD(CSDSD oldDSD, String countryISO,Map<String, List<String>> errors, String uid) throws Exception {
+
+        Map<String, String> subjectsToID = new HashMap<>();
 
         virtualColumnsValues = new HashMap<>();
-        codelistMap = new HashMap<>();
+        codelistToColumnID = new HashMap<>();
         columnsID = new ArrayList<>();
         datatypes = new ArrayList<>();
 
         // context system
         DSDDataset dsdDataset = new DSDDataset();
-        dsdDataset.setContextSystem("cstat_" + countryISO);
+        dsdDataset.setContextSystem("cstat_" + countryISO.toLowerCase());
 
         Collection<DSDColumn> columns = new LinkedList<>();
 
@@ -82,12 +93,24 @@ public class Translator {
             String columnSubject = csColumn.getDimension() != null ? csColumn.getDimension().getName() : null;
 
             //if the subject is other
-            if (columnSubject == "OTHER")
-                throw new Exception("DSD ERROR: this dataset contains in the column " + csColumn.getColumnId() + " the subject equals to OTHER");
+            if (columnSubject == "OTHER") {
+                handleErrors(errors, uid, "DSD ERROR: the dataset contains the subject equals to OTHER in the column " + csColumn.getColumnId());
+                throw new Exception("OTHER column present in dataset: "+uid+  " and the column is "+ csColumn.getColumnId());
+            }
+            //if the subject is NULL
+            if (columnSubject == null)
+                handleErrors(errors, uid,"DSD ERROR: the dataset contains the subject equals to NULL in the column " + csColumn.getColumnId());
+
 
             // if the subject is ok!
             if (columnSubject != null && subjects.keySet().contains(columnSubject)) {
                 DSDColumn column = new DSDColumn();
+
+                // ERROR if there are SUBJECT not unique
+                if(subjectsToID.containsKey(columnSubject)) {
+                    handleErrors(errors,uid,"The subject "+ columnSubject+ " is replicated into these columns: "+subjectsToID.get(columnSubject)+" AND "+ csColumn.getColumnId());
+
+                }
 
                 // set id, title, datatype
                 column.setId(csColumn.getColumnId());
@@ -95,12 +118,24 @@ public class Translator {
                 column.setDataType(DataType.valueOf(csColumn.getDataType()));
                 column.setSubject(subjects.get(csColumn.getDimension().getName()));
 
+                //add eventually KEY COLUMNS
+                if (keySubjects.contains(column.getSubject())) {
+                    column.setKey(true);
+                    keyColumns.add(column.getId());
+                }
+
                 // utils variables
                 columnsID.add(column.getId());
                 datatypes.add(csColumn.getDataType());
 
+                // ERROR with customCode
+                if (column.getDataType() == DataType.customCode) {
+                    handleErrors(errors, uid, "DSD ERROR: the dataset contains the datatype equals to customCode in the column " + csColumn.getColumnId());
+                    //TODO there is a custom code into one dataset
+//                    throw new Exception("CUSTOM CODE");
+                }
                 // different between different datatypes
-                if (column.getDataType() == DataType.code || column.getDataType() == DataType.customCode) {
+                if (column.getDataType() == DataType.code) {
                     OjCodeList codeList = new OjCodeList();
 
                     //if it is a virtual column
@@ -108,7 +143,7 @@ public class Translator {
                         checkVirtualColumnCondition(csColumn, column.getId());
                         LinkedHashMap<String, String> codedValues = (LinkedHashMap<String, String>) ((List) csColumn.getValues()).get(0);
                         if (codedValues.get("code") == null)
-                            throw new Exception("DSD ERROR: this column" + column.getId() + "should not have the field code empty into the values section");
+                            handleErrors(errors, uid,"DSD ERROR: this column" + column.getId() + "should not have the field code empty into the values section");
                         virtualColumnsValues.put(column.getId(), codedValues.get("code"));
                     }
 
@@ -117,18 +152,18 @@ public class Translator {
 
                         // check the codelist has the id
                         if (csColumn.getCodeSystem().getSystem() == null)
-                            throw new Exception("DSD ERROR: codelist on columns:" + column.getId() + " should have an id to be identified");
+                            handleErrors(errors, uid,"DSD ERROR: codelist on columns:" + column.getId() + " should have an id to be identified");
 
                         //set id, title, description, version of the codelist
-                        codeList.setIdCodeList(csColumn.getCodeSystem().getSystem());
-                        codeList.setVersion(csColumn.getCodeSystem().getVersion());
+                        codeList.setIdCodeList(CodelistD3S.valueOf(csColumn.getCodeSystem().getSystem()).getCodelistID());
+                        codeList.setVersion(CodelistD3S.valueOf(csColumn.getCodeSystem().getSystem()).getVersion());
                         codeList.setExtendedName(csColumn.getTitle());
-                        codelistMap.put(csColumn.getCodeSystem().getSystem(), column.getId());
+                        codelistToColumnID.put(csColumn.getCodeSystem().getSystem(), column.getId());
                     }
                     //if it is a customCode column
                     else if (column.getDataType() == DataType.customCode) {
                         if (csColumn.getValuesCountrystat() == null)
-                            throw new Exception("there should be codes into the dsd for the column " + csColumn.getColumnId());
+                            handleErrors(errors, uid,"there should be codes into the dsd for the column " + csColumn.getColumnId());
 
                         // put codes into the new customCode column of the D3S
                         Collection<OjCode> codes = new LinkedList<>();
@@ -158,7 +193,7 @@ public class Translator {
     }
 
 
-    private Collection<Object[]> setData(DSDDataset dataset, Collection<Object> csData) throws Exception {
+    private Collection<Object[]> setData(DSDDataset dataset, Collection<Object> csData, Map<String, List<String>> errors, String uid) throws Exception {
 
         Collection<Object[]> data = new LinkedList<>();
 
@@ -173,10 +208,18 @@ public class Translator {
             // for each column in the new dsd
             for (int j = 0, columnsSize = dataset.getColumns().size(); j < columnsSize; j++) {
                 Object val = virtualColumnsValues.get(rowsDSD.get(j).getId()) != null ? virtualColumnsValues.get(rowsDSD.get(j).getId()) : originalRow.get(rowsDSD.get(j).getId());
+
+                // parse data with subject equals to time to INTEGER
+                if (rowsDSD.get(j).getSubject() == "time")
+                    val = Integer.parseInt(val.toString());
+
+                // PROBLEM WITH ARRAY
                 if (val instanceof List) {
                     List<Object> arrayVal = (List<Object>) val;
-                    if (arrayVal.size() > 1)
-                        throw new Exception("The size of the value for the column " + rowsDSD.get(j).getId() + " is greater than 1");
+                    if (arrayVal.size() > 1) {
+                        handleErrors(errors, uid,"The size of the value for the column " + rowsDSD.get(j).getId() + "  at row: " + i + " , is greater than 1");
+                        throw new Exception("The size of the value for the column " + rowsDSD.get(j).getId() + "  at row: " + i + " , is greater than 1");
+                    }
                     val = arrayVal.get(0);
                 }
                 newRow[j] = val;
@@ -195,7 +238,6 @@ public class Translator {
             throw new Exception("this column " + columnId + " must have the size of values field  == 1");
     }
 
-
     public List<String> getColumnsID() {
         return columnsID;
     }
@@ -204,7 +246,20 @@ public class Translator {
         return datatypes;
     }
 
-    public HashMap<String, String> getCodelistMap() {
-        return codelistMap;
+    public HashMap<String, String> getCodelistToColumnID() {
+        return codelistToColumnID;
     }
+
+    public Set<String> getKeyColumns() {
+        return keyColumns;
+    }
+
+    private void handleErrors (Map<String, List<String>> errors, String uid, String messageError) {
+        List<String> values = new LinkedList<>();
+        if(errors.containsKey(uid))
+            values = errors.get(uid);
+        values.add(messageError);
+        errors.put(uid,values);
+    }
+
 }

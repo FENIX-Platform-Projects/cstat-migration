@@ -1,7 +1,6 @@
 package org.fao.ess.cstat.migration.db.connection;
 
 
-import org.fao.ess.cstat.migration.logic.business.Transcode;
 import org.fao.fenix.commons.utils.database.DatabaseUtils;
 
 import javax.inject.Inject;
@@ -40,6 +39,7 @@ public class DBAdapter {
     //business
     public void createTable(String uid, List<String> columns, List<String> types) throws Exception {
 
+        Exception exception = null;
         // validation
         this.columns = columns;
         this.types = types;
@@ -49,8 +49,10 @@ public class DBAdapter {
         // query
         List<String> dbDatatypes = createDBDataType(types);
         StringBuilder query = new StringBuilder("CREATE TABLE cstat." + '"' + uid + '"' +  " ( ");
-        for (int i = 0; i < columns.size(); i++)
-            query.append(columns.get(i) + " " + dbDatatypes.get(i) + " , ");
+        for (int i = 0; i < columns.size(); i++) {
+            String column = '"' + columns.get(i) + '"';
+            query.append(column + " " + dbDatatypes.get(i) + " , ");
+        }
         query.setLength(query.length() - 2);
         query.append(" )");
 
@@ -61,6 +63,7 @@ public class DBAdapter {
             statement.execute();
         }catch (SQLException e) {
 
+            exception = e;
             System.out.println(e.getMessage());
         }
 
@@ -71,16 +74,24 @@ public class DBAdapter {
             if (connection != null) {
                 connection.close();
             }
+            if(exception!= null)
+             throw new Exception(exception.toString());
         }
     }
 
-    public void insertValues (String uidDataset, Collection<Object[]> data) throws Exception {
+    public void insertValues (String uidDataset, Collection<Object[]> data, List<String> types) throws Exception {
+
+        System.out.println("here");
 
         Connection connection = getConnection();
         // build string
         StringBuilder insertQuery = new StringBuilder("INSERT INTO cstat." + '"' + uidDataset + '"' + " ( ");
-        for (int i = 0; i < columns.size(); i++)
-            insertQuery.append(columns.get(i) + " , ");
+
+        for (int i = 0; i < columns.size(); i++) {
+            String column = '"' + columns.get(i) + '"';
+            insertQuery.append(column + " , ");
+        }
+
         insertQuery.setLength(insertQuery.length() - 2);
         insertQuery.append(" )");
         insertQuery.append(" VALUES (");
@@ -97,7 +108,7 @@ public class DBAdapter {
 
         for (int i = 0; i < data.size(); i++) {
             for (int j = 0; j < ((List<Object[]>) data).get(i).length; j++)
-                statement.setObject(j+1, ((List<Object[]>) data).get(i)[j]);
+                statement.setObject(j+1, ((List<Object[]>) data).get(i)[j], DBType.valueOf(types.get(j)).getDBType());
             statement.addBatch();
         }
         statement.executeBatch();
@@ -126,10 +137,11 @@ public class DBAdapter {
 
         }
 
-        System.out.println("here");
     }
 
     public void deleteTable(String uid) throws Exception {
+        Exception exception = null;
+
         Connection connection = getConnection();
 
         StringBuilder query = new StringBuilder("DROP TABLE cstat." + '"' + uid + '"');
@@ -138,6 +150,7 @@ public class DBAdapter {
         try {
             statement.execute();
         }catch (SQLException e) {
+            exception = e;
 
             System.out.println(e.getMessage());
         }
@@ -149,22 +162,27 @@ public class DBAdapter {
             if (connection != null) {
                 connection.close();
             }
+            if(exception!= null)
+                throw new Exception(exception.toString());
         }
     }
 
     public void transcodeData(String uid,String column, String joinDB) throws Exception {
 
+        Exception exception = null;
         StringBuilder updateQuery = new StringBuilder("UPDATE cstat." + '"' + uid + '"' + " AS V ");
-        updateQuery.append(" SET " + column + " = " + joinDB+".new , ");
+        String columnDB = '"' + column + '"';
+        updateQuery.append(" SET " + columnDB + " = " + joinDB+".new , ");
         updateQuery.setLength(updateQuery.length() - 2);
         updateQuery.append(" FROM cstat."+joinDB );
-        updateQuery.append(" WHERE V."+column+ " =  cstat."+joinDB+".old");
+        updateQuery.append(" WHERE V."+columnDB+ " =  cstat."+joinDB+".old");
         Connection connection = getConnection();
         PreparedStatement statement = connection.prepareStatement(updateQuery.toString());
         try {
             statement.execute();
         }catch (SQLException e) {
 
+            exception = e;
             System.out.println(e.getMessage());
         }
 
@@ -175,6 +193,8 @@ public class DBAdapter {
             if (connection != null) {
                 connection.close();
             }
+            if(exception!= null)
+                throw new Exception(exception.toString());
         }
 
         System.out.println("here");
@@ -186,8 +206,11 @@ public class DBAdapter {
 
      public Collection<Object[]> getData(String uid) throws Exception {
 
+         Exception exception = null;
+
+
          Collection<Object[]> data = null;
-        StringBuilder getQuery = new StringBuilder("SELECT * from cstat." + '"' + uid + '"');
+         StringBuilder getQuery = new StringBuilder("SELECT * from cstat." + '"' + uid + '"');
          Connection connection = getConnection();
 
 
@@ -198,6 +221,7 @@ public class DBAdapter {
             data = dbUtils.getDataCollection(rs);
         }catch (SQLException e) {
 
+            exception = e;
             System.out.println(e.getMessage());
         }
 
@@ -208,6 +232,93 @@ public class DBAdapter {
             if (connection != null) {
                 connection.close();
             }
+            if(exception!= null)
+                throw new Exception(exception.toString());
+        }
+
+        return data;
+    }
+
+
+    // check columns key
+    public Collection<Object[]> getNotConstaintRows(String uid, Set<String> columns) throws Exception {
+
+        Exception exception = null;
+
+        Collection<Object[]> data = null;
+
+        StringBuilder columnsString= new StringBuilder();
+        for(String s: columns)
+            columnsString.append(" "+ '"' + s + '"'+" ,");
+        columnsString.setLength(columnsString.length() - 2);
+
+
+        StringBuilder getQuery = new StringBuilder("SELECT "+ columnsString+" from cstat." + '"' + uid + '"');
+        getQuery.append("group by "+columnsString + " having count(*)>1 ");
+
+
+        Connection connection = getConnection();
+
+
+        ResultSet rs= null;
+        PreparedStatement statement = connection.prepareStatement(getQuery.toString());
+        try {
+            rs = statement.executeQuery();
+            data = dbUtils.getDataCollection(rs);
+        }catch (SQLException e) {
+            exception = e;
+
+            System.out.println(e.getMessage());
+        }
+
+        finally {
+            if (statement != null) {
+                statement.close();
+            }
+            if (connection != null) {
+                connection.close();
+            }if(exception!= null)
+                throw new Exception(exception.toString());
+        }
+
+        return data;
+    }
+
+
+    public Collection<Object[]> getNotMatchingCodes(String uid,String column, String joinDB) throws Exception {
+        Exception exception = null;
+
+        Collection<Object[]> data = null;
+
+        String columnDB = '"' + column + '"';
+
+        StringBuilder getQuery = new StringBuilder("SELECT DISTINCT "+ columnDB+" from cstat." + '"' + uid + '"');
+        getQuery.append(" LEFT JOIN cstat."+joinDB+ " ON "+ "cstat." + '"' + uid + '"').append("."+columnDB);
+        getQuery.append(" =  cstat."+joinDB+".old WHERE  cstat."+joinDB+".old IS NULL");
+        System.out.println(getQuery);
+
+        Connection connection = getConnection();
+
+
+        ResultSet rs= null;
+        PreparedStatement statement = connection.prepareStatement(getQuery.toString());
+        try {
+            rs = statement.executeQuery();
+            data = dbUtils.getDataCollection(rs);
+        }catch (SQLException e) {
+            exception = e;
+
+            System.out.println(e.getMessage());
+        }
+
+        finally {
+            if (statement != null) {
+                statement.close();
+            }
+            if (connection != null) {
+                connection.close();
+            }if(exception!= null)
+                throw new Exception(exception.toString());
         }
 
         return data;
@@ -240,5 +351,8 @@ public class DBAdapter {
         }
         return dbDatatypes;
     }
+
+
+
 
 }

@@ -4,9 +4,11 @@
     <!-- Define custom levels before using them for filtering below. -->
     <CustomLevels>
 
-        <CustomLevel name="VERBOSE" intLevel="50" />
-        <CustomLevel name="NOTICE" intLevel="40" />
-        <CustomLevel name="ALERT" intLevel="30" />
+        <CustomLevel name="X" intLevel="50" />
+        <CustomLevel name="Y" intLevel="40" />
+        <CustomLevel name="Z" intLevel="30" />
+        <CustomLevel name="NOTICE" intLevel="350" />
+
 
     </CustomLevels>
 
@@ -24,9 +26,9 @@
         </RollingFile>
 
         <RollingFile name="External" fileName="./logs/external/external.log" filePattern="./logs/external/_%d{yyyyMMdd}/log-%d{yyyyMMdd-HH_mm}.log" >
-            <PatternLayout pattern="%d{yyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+            <PatternLayout pattern="%msg"/>
             <Policies>
-                <TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+                <TimeBasedTriggeringPolicy interval="2" modulate="true"/>
                 <SizeBasedTriggeringPolicy size="100 MB"/>
             </Policies>
         </RollingFile>
@@ -39,8 +41,8 @@
      </Appenders>-->
     <Loggers>
         <Root level="debug">
-            <AppenderRef ref="External" level="verbose"/>
-            <AppenderRef ref="Internal" level="debug"/>
+            <AppenderRef ref="External" level="X"/>
+            <AppenderRef ref="Internal" level="NOTICE"/>
         </Root>
     </Loggers>
 </Configuration>

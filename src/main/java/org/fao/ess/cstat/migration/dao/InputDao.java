@@ -13,6 +13,9 @@ import javax.inject.Inject;
 import javax.ws.rs.core.Response;
 import java.io.IOException;
 import java.util.Collection;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
 
 public class InputDao {
 
@@ -43,7 +46,7 @@ public class InputDao {
     }
 
 
-    public CSDataset loadDataset(String uid) throws Exception {
+    public CSDataset loadDataset(String uid, Map<String, List<String>> errors ) throws Exception {
 
         //TODO: logger system
         System.out.println("PROCESSING THIS UID: " + uid);
@@ -52,14 +55,24 @@ public class InputDao {
         CSDataset dataset = new CSDataset();
         Response responseMetadata = client.sendRequest(urlMetadata, "GET");
         Response responseData = client.sendRequest(urlData, "GET");
-        try {
-            dataset = new ObjectMapper().readValue(responseMetadata.readEntity(String.class), CSDataset.class);
-            dataset.setData(new ObjectMapper().readValue(responseData.readEntity(String.class), Collection.class));
-        } catch (IOException e) {
-            e.printStackTrace();
+
+        if(responseMetadata.getStatus() != 200)
+            handleErrors(errors,uid,"The response of the server for the metadata of this dataset is "+responseMetadata.getStatus());
+
+        if(responseData.getStatus() != 200)
+            handleErrors(errors,uid,"The response of the server for the metadata of this dataset is "+responseData.getStatus());
+
+        if(responseData.getStatus() == 200 && responseMetadata.getStatus() == 200) {
+
+            try {
+                dataset = new ObjectMapper().readValue(responseMetadata.readEntity(String.class), CSDataset.class);
+                dataset.setData(new ObjectMapper().readValue(responseData.readEntity(String.class), Collection.class));
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            System.out.println("The Dataset " + uid + " has been setted");
+
         }
-        //TODO: logger system
-        System.out.println("The Dataset " + uid + " has been setted");
         return dataset;
     }
 
@@ -67,4 +80,13 @@ public class InputDao {
     Collection<String> getList(String uidRegExp) throws Exception {
         return null;
     }
+
+    private void handleErrors (Map<String, List<String>> errors, String uid, String messageError) {
+        List<String> values = new LinkedList<>();
+        if(errors.containsKey(uid))
+            values = errors.get(uid);
+        values.add(messageError);
+        errors.put(uid,values);
+    }
+
 }

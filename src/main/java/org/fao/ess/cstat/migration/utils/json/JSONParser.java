@@ -7,6 +7,7 @@ import com.fasterxml.jackson.databind.JavaType;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.type.TypeFactory;
 
+import java.io.File;
 import java.io.Reader;
 import java.io.Writer;
 import java.lang.reflect.Type;
@@ -15,7 +16,6 @@ import java.util.Map;
 
 public class JSONParser {
 
-    private static final String URL_CONFIG = "/home/faber-cst/Projects/cstat-migration/config/start/config.json";
 
     private static JsonFactory jsonFactory = new JsonFactory();
     private static ObjectMapper mapper = new ObjectMapper();
@@ -38,6 +38,9 @@ public class JSONParser {
     public static void toJSON(Object obj, JsonGenerator generator) throws Exception {
         mapper.writeValue(generator, obj);
     }
+
+    public static <T> T toObject(File file, Class<T> objClass) throws Exception { return mapper.readValue(file, objClass); }
+
 
     public static <T> T toObject(String json, Class<T> objClass) throws Exception { return mapper.readValue(json, objClass); }
     public static <T> T updateObject(String json, T obj) throws Exception { return mapper.readerForUpdating(obj).readValue(json); }

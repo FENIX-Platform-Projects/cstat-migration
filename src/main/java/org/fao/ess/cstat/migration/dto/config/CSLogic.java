@@ -1,10 +1,12 @@
 package org.fao.ess.cstat.migration.dto.config;
 
 
-public class Logic {
+import com.fasterxml.jackson.annotation.JsonProperty;
 
-    private boolean overrideCL;
-    private boolean overrideDS;
+public class CSLogic {
+
+     @JsonProperty private boolean overrideCL;
+     @JsonProperty private boolean overrideDS;
 
     public boolean isOverrideCL() {
         return overrideCL;
