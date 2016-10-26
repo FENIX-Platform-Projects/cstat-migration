@@ -41,7 +41,7 @@ public class Datasets implements Logic {
     public void execute(String... args) throws Exception {
 
         errors = new HashMap<>();
-        csLogManager.writeBothMessage(LOGGER, 1, "********** START ***********");
+        csLogManager.writeInternalMessage(LOGGER, 1, "********** START ***********");
 
         csConfig = JSONParser.toObject(getConfigFile(), CSConfig.class);
         if (csConfig == null || csConfig.getCountry() == null)
@@ -80,22 +80,17 @@ public class Datasets implements Logic {
                 if (inputDataset != null && inputDataset.getUid()!= null) {
                     Resource<DSDDataset, Object[]> resource = translator.translateDAO(inputDataset, csConfig.getCountry(), csConfig.getLanguage(), errors);
 
-
-
                     // create table
                     dbAdapter.createTable(resource.getMetadata().getUid(), translator.getColumnsID(), translator.getDatatypes());
 
-
                     // insert data
                     dbAdapter.insertValues(resource.getMetadata().getUid(), resource.getData(), translator.getDatatypes());
-
 
                     Map<String, String> codelistToColumnID = translator.getCodelistToColumnID();
 
                     int sizeBeforeColumnCheck = errors.containsKey(resource.getMetadata().getUid()) ? errors.get(resource.getMetadata().getUid()).size() : 0;
 
                     for (String codelist : codelistToColumnID.keySet()) {
-
 
                         if (CodelistDB.contains(codelist) && CodelistDB.valueOf(codelist).getDataset() != null) {
                             Collection<Object[]> notMatchingCodes = dbAdapter.getNotMatchingCodes(resource.getMetadata().getUid(), codelistToColumnID.get(codelist), CodelistDB.valueOf(codelist).getDataset());
@@ -135,8 +130,6 @@ public class Datasets implements Logic {
         }
 
         printFinalReport();
-
-
     }
 
 
@@ -165,20 +158,31 @@ public class Datasets implements Logic {
     private void printFinalReport () {
 
         csLogManager.writeBothMessage(LOGGER,3, "************ REPORT RESULT*****************");
+        csLogManager.writeBothMessage(LOGGER, 3, "\n");
+        csLogManager.writeBothMessage(LOGGER, 3, "\n");
+
 
         for(String uid: errors.keySet()) {
             if (errors.get(uid).size() > 0) {
-                csLogManager.writeBothMessage(LOGGER, 3, "DATASET : " + uid + " ");
-                csLogManager.writeBothMessage(LOGGER, 3, "----------------------------------------------------------------------------");
+                csLogManager.writeBothMessage(LOGGER, 3, "==========================================================================");
+                csLogManager.writeBothMessage(LOGGER, 3, "\n");
+                csLogManager.writeBothMessage(LOGGER, 3, "DATASET : " + uid + "  \n");
 
-                for (String error : errors.get(uid))
-                    csLogManager.writeBothMessage(LOGGER, 3, error);
-                csLogManager.writeBothMessage(LOGGER, 3, "----------------------------------------------------------------------------");
+                for (int i=0, size = errors.get(uid).size(); i<size; i++) {
+                    csLogManager.writeBothMessage(LOGGER, 3, "\n");
+                    csLogManager.writeBothMessage(LOGGER, 3, i+1 +")" + "\n");
+                    csLogManager.writeBothMessage(LOGGER, 3, errors.get(uid).get(i) + "\n");
+                    csLogManager.writeBothMessage(LOGGER, 3, "--------");
+                }
+                csLogManager.writeBothMessage(LOGGER, 3, "\n");
+                csLogManager.writeBothMessage(LOGGER, 3, "==========================================================================");
+                csLogManager.writeBothMessage(LOGGER, 3, "\n");
+                csLogManager.writeBothMessage(LOGGER, 3, "\n");
                 csLogManager.writeBothMessage(LOGGER, 3, "\n");
                 csLogManager.writeBothMessage(LOGGER, 3, "\n");
             }
         }
-        csLogManager.writeBothMessage(LOGGER,3, "********************************");
+        csLogManager.writeBothMessage(LOGGER,3, "********************  END   ********************");
 
 
     }

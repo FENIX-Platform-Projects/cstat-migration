@@ -57,10 +57,10 @@ public class InputDao {
         Response responseData = client.sendRequest(urlData, "GET");
 
         if(responseMetadata.getStatus() != 200)
-            handleErrors(errors,uid,"The response of the server for the metadata of this dataset is "+responseMetadata.getStatus());
+            handleErrors(errors,uid,"The response of the server for the METADATA of this dataset is "+responseMetadata.getStatus());
 
         if(responseData.getStatus() != 200)
-            handleErrors(errors,uid,"The response of the server for the metadata of this dataset is "+responseData.getStatus());
+            handleErrors(errors,uid,"The response of the server for the DATA of this dataset is "+responseData.getStatus());
 
         if(responseData.getStatus() == 200 && responseMetadata.getStatus() == 200) {
 

@@ -18,7 +18,7 @@ public class Validator {
         if(dataNotMatching!= null && dataNotMatching.size()>0) {
 
             List<String> values = new LinkedList<>();
-            StringBuilder stringBuilder = new StringBuilder(" There are some problems with these rows do not respect the integrity :");
+            StringBuilder stringBuilder = new StringBuilder("There are some problems with these rows do not respect the integrity :");
 
             for(Object[] rows: dataNotMatching) {
                 stringBuilder.append("\n");
@@ -45,12 +45,13 @@ public class Validator {
         if(notMatchingCodes!= null && notMatchingCodes.size()>0) {
 
             List<String> values = new LinkedList<>();
-            StringBuilder stringBuilder = new StringBuilder(" This codelist "+ codelist+ " does not have these respondent codes into the transcoded file :");
+            StringBuilder stringBuilder = new StringBuilder("The codelist "+ codelist+ " does not have these codes in the transcoded file :");
 
-            for(Object[] data: notMatchingCodes)
-                stringBuilder.append(data[0]+ " , ");
-            stringBuilder.setLength(stringBuilder.length() - 2);
-
+            stringBuilder.append("\n");
+            for(Object[] data: notMatchingCodes) {
+                stringBuilder.append(data[0]);
+                stringBuilder.append("\n");
+            }
             if(errors.containsKey(uid))
                 values = errors.get(uid);
             values.add(stringBuilder.toString());
