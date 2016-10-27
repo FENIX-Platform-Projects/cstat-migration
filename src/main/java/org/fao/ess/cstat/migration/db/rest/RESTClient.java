@@ -1,11 +1,14 @@
 package org.fao.ess.cstat.migration.db.rest;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.fao.fenix.commons.find.dto.filter.FieldFilter;
 import org.fao.fenix.commons.find.dto.filter.IdFilter;
 import org.fao.fenix.commons.find.dto.filter.StandardFilter;
 import org.fao.fenix.commons.msd.dto.data.ReplicationFilter;
 import org.fao.fenix.commons.msd.dto.data.Resource;
 import org.fao.fenix.commons.msd.dto.full.*;
+import org.jboss.resteasy.client.ClientRequest;
+import org.jboss.resteasy.client.ClientResponse;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.ws.rs.client.Client;
@@ -14,7 +17,8 @@ import javax.ws.rs.client.WebTarget;
 import javax.ws.rs.core.GenericType;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
-import java.io.UnsupportedEncodingException;
+import java.io.*;
+import java.net.MalformedURLException;
 import java.net.URLEncoder;
 import java.util.*;
 
@@ -169,19 +173,54 @@ public class RESTClient {
     }
 
 
+    public void insertResource(Resource<DSDDataset, Object[]> resource, boolean override, Map<String, List<String>> errors) {
+        try {
 
-}
+            ClientRequest request = new ClientRequest(
+                    "http://localhost:7777/v2/msd/resources");
+            request.accept("application/json");
 
+            ObjectMapper mapper = new ObjectMapper();
+            String input = mapper.writeValueAsString(resource);
 
+            request.body("application/json", input);
 
+            ClientResponse<String> response = (override)?request.put(String.class):request.post(String.class);
 
+            if (response.getStatus() != 201 && response.getStatus() != 200) {
+                handleErrors(errors,resource.getMetadata().getUid(),"This dataset could not be saved in the server; the response of the D3S is "+response.getStatus());
+            }
 
+            BufferedReader br = new BufferedReader(new InputStreamReader(
+                    new ByteArrayInputStream(response.getEntity().getBytes())));
 
-/*
-    public static void main(String[] args) throws Exception {
-        D3SClient client = new D3SClient();
-        Collection<MeIdentification<DSDDataset>> metadata = client.retrieveMetadata("http://localhost:7777/v2/");
-        System.out.println(metadata.size());
-//        client.deleteMetadata("http://localhost:7777/v2/",metadata);
+            String output;
+            System.out.println("Output from Server .... \n");
+            while ((output = br.readLine()) != null) {
+                System.out.println(output);
+            }
+
+        } catch (MalformedURLException e) {
+
+            e.printStackTrace();
+
+        } catch (IOException e) {
+
+            e.printStackTrace();
+
+        } catch (Exception e) {
+
+            e.printStackTrace();
+
+        }
     }
-*/
+
+
+    private void handleErrors (Map<String, List<String>> errors, String uid, String messageError) {
+        List<String> values = new LinkedList<>();
+        if(errors.containsKey(uid))
+            values = errors.get(uid);
+        values.add(messageError);
+        errors.put(uid,values);
+    }
+}

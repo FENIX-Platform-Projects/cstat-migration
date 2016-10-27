@@ -28,7 +28,7 @@
         <RollingFile name="External" fileName="./logs/external/external.log" filePattern="./logs/external/_%d{yyyyMMdd}/log-%d{yyyyMMdd-HH_mm}.log" >
             <PatternLayout pattern="%msg"/>
             <Policies>
-                <TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+                <TimeBasedTriggeringPolicy interval="1" />
                 <SizeBasedTriggeringPolicy size="100 MB"/>
             </Policies>
         </RollingFile>

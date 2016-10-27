@@ -42,7 +42,8 @@ public class JSONParser {
     public static <T> T toObject(File file, Class<T> objClass) throws Exception { return mapper.readValue(file, objClass); }
 
 
-    public static <T> T toObject(String json, Class<T> objClass) throws Exception { return mapper.readValue(json, objClass); }
+    public static <T> T toObject(String json, Class<T> objClass) throws Exception {
+        return mapper.readValue(json, objClass); }
     public static <T> T updateObject(String json, T obj) throws Exception { return mapper.readerForUpdating(obj).readValue(json); }
 
     public static JsonParser createParser(Reader reader) throws Exception { return jsonFactory.createJsonParser(reader); }

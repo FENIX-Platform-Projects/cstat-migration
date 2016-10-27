@@ -3,10 +3,12 @@ package org.fao.ess.cstat.migration.logic.impl;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.fao.ess.cstat.migration.dao.InputDao;
+import org.fao.ess.cstat.migration.dao.OutputDao;
 import org.fao.ess.cstat.migration.db.connection.DBAdapter;
 import org.fao.ess.cstat.migration.dto.config.CSConfig;
 import org.fao.ess.cstat.migration.dto.config.CSFilter;
 import org.fao.ess.cstat.migration.dto.cstat.CSDataset;
+import org.fao.ess.cstat.migration.dto.subjects.SubjectTitle;
 import org.fao.ess.cstat.migration.logic.Command;
 import org.fao.ess.cstat.migration.logic.Logic;
 import org.fao.ess.cstat.migration.logic.business.transcode.CodelistDB;
@@ -25,25 +27,38 @@ import java.util.*;
 @Command("dataset")
 public class Datasets implements Logic {
     private static final Logger LOGGER = LogManager.getLogger("Controller");
+    private @Inject CSLogManager csLogManager;
+
     private @Inject InputDao input;
+    private @Inject OutputDao outputDao;
     private @Inject DBAdapter dbAdapter;
     private @Inject Translator translator;
-    private @Inject CSLogManager csLogManager;
     private @Inject Validator validator;
     private static final String URL_CONFIG = "/home/faber-cst/Projects/cstat-migration/config/start/config.json";
+    private static final String URL_SUBJECTS = "/home/faber-cst/Projects/cstat-migration/config/subjectTitles/titles.json";
 
     private CSConfig csConfig;
+    private SubjectTitle subjectTitles;
     private Map<String, List<String>> datasets;
     private Map<String, List<String>> errors;
+    private HashSet<String> goodUids;
 
 
     @Override
     public void execute(String... args) throws Exception {
 
+        List<Resource> resources = new LinkedList<>();
+
+        goodUids = new HashSet<>();
+
+
+        System.out.println("--------------STARTED---------------"+"\n");
         errors = new HashMap<>();
         csLogManager.writeInternalMessage(LOGGER, 1, "********** START ***********");
 
         csConfig = JSONParser.toObject(getConfigFile(), CSConfig.class);
+        subjectTitles = JSONParser.toObject(getUrlSubjects(), SubjectTitle.class);
+
         if (csConfig == null || csConfig.getCountry() == null)
             handleException("CONFIGURATION ERROR : config file does not have a country");
 
@@ -59,26 +74,29 @@ public class Datasets implements Logic {
 
         // PROBLEM with XML
         if (datasets.keySet().size() != 2)
-            handleException("XML PARSER PROBLEM: there should be at least two domain in the dataset taken");
+            throw new Exception("XML PARSER PROBLEM: there should be at least two domain in the dataset taken");
 
         // for each domain
         for (String key : datasets.keySet()) {
 
             // PROBLEM with XML
             if (datasets.get(key).size() == 0)
-                handleException("XML PARSER PROBLEM: there should be at least one dataset fot the domain " + key);
+                throw new Exception("XML PARSER PROBLEM: there should be at least one dataset for the domain " + key);
 
             List<String> uids = datasets.get(key);
             // for each uid
             for (int i = 0, size = uids.size(); i < size; i++) {
                 csLogManager.writeInternalMessage(LOGGER, 1, "------------------- START DATASET: " + uids.get(i) + "--------");
 
+
                 //translate input dao
                 CSDataset inputDataset = input.loadDataset(uids.get(i), errors);
 
                 // if the dataset has veen loaded correctly
-                if (inputDataset != null && inputDataset.getUid()!= null) {
-                    Resource<DSDDataset, Object[]> resource = translator.translateDAO(inputDataset, csConfig.getCountry(), csConfig.getLanguage(), errors);
+                if (inputDataset != null && inputDataset.getUid()!= null && inputDataset.getData()!= null && inputDataset.getData().size()>0) {
+                    Resource<DSDDataset, Object[]> resource = translator.translateDAO(inputDataset, csConfig.getCountry(), csConfig.getLanguage(), errors, subjectTitles);
+
+                    System.out.println("Processing dataset: "+resource.getMetadata().getUid());
 
                     // create table
                     dbAdapter.createTable(resource.getMetadata().getUid(), translator.getColumnsID(), translator.getDatatypes());
@@ -90,52 +108,78 @@ public class Datasets implements Logic {
 
                     int sizeBeforeColumnCheck = errors.containsKey(resource.getMetadata().getUid()) ? errors.get(resource.getMetadata().getUid()).size() : 0;
 
+                    // column transcode check
                     for (String codelist : codelistToColumnID.keySet()) {
-
                         if (CodelistDB.contains(codelist) && CodelistDB.valueOf(codelist).getDataset() != null) {
                             Collection<Object[]> notMatchingCodes = dbAdapter.getNotMatchingCodes(resource.getMetadata().getUid(), codelistToColumnID.get(codelist), CodelistDB.valueOf(codelist).getDataset());
                             validator.checkCodelistCodes(notMatchingCodes, errors, resource.getMetadata().getUid(), codelistToColumnID.get(codelist));
-                            System.out.println("here");
                         }
                     }
-
 
                     int newSize = errors.containsKey(resource.getMetadata().getUid()) ? errors.get(resource.getMetadata().getUid()).size() : 0;
 
                     if ( /*newSize == sizeBeforeColumnCheck*/ 1 == 1) {
                         // // TODO: 26/10/16: when you will have the codelist, you will change this condition 1==1
 
+                            // transcode data
+                            for (String codelist : codelistToColumnID.keySet()) {
+                                csLogManager.writeInternalMessage(LOGGER, 1, "TRANSCODING this codelist: " + codelist + " into the dataset " + resource.getMetadata().getUid());
 
-                        // transcode data
-                        for (String codelist : codelistToColumnID.keySet()) {
-                            csLogManager.writeInternalMessage(LOGGER, 1, "TRANSCODING this codelist: " + codelist + " into the dataset " + resource.getMetadata().getUid());
+                                if (CodelistDB.contains(codelist) && CodelistDB.valueOf(codelist).getDataset() != null)
+                                    dbAdapter.transcodeData(resource.getMetadata().getUid(), codelistToColumnID.get(codelist), CodelistDB.valueOf(codelist).getDataset());
+                            }
 
-                            if (CodelistDB.contains(codelist) && CodelistDB.valueOf(codelist).getDataset() != null)
-                                dbAdapter.transcodeData(resource.getMetadata().getUid(), codelistToColumnID.get(codelist), CodelistDB.valueOf(codelist).getDataset());
+                        // if there are NOT errors on DSD
+                             if(!translator.isErrorsOnDSD()) {
+                                // integrity check
+                                Collection<Object[]> notMatchingCodes = dbAdapter.getNotConstaintRows(resource.getMetadata().getUid(), translator.getKeyColumns());
+                                validator.checkIntegrityCostraints(notMatchingCodes, errors, resource.getMetadata().getUid(), translator.getKeyColumns());
+
                         }
-
-                        // integrity check
-                        Collection<Object[]> notMatchingCodes = dbAdapter.getNotConstaintRows(resource.getMetadata().getUid(), translator.getKeyColumns());
-                        validator.checkIntegrityCostraints(notMatchingCodes, errors, resource.getMetadata().getUid());
-
                         // set data in the output dao
                         resource.setData(dbAdapter.getData(resource.getMetadata().getUid()));
+                        System.out.println("End dataset: "+resource.getMetadata().getUid());
+
 
                     }
                     // delete the table
                     dbAdapter.deleteTable(resource.getMetadata().getUid());
+                    resources.add(resource);
+                    System.out.println("Delete table : "+resource.getMetadata().getUid());
+
                     csLogManager.writeInternalMessage(LOGGER, 1, "------------------- END DATASET: " + uids.get(i) + "--------");
                 }
             }
         }
 
+        Set<String> toBeSaved = new HashSet<>();
+        for(Resource dataset: resources ){
+            if(!errors.containsKey(dataset.getMetadata().getUid())) {
+                toBeSaved.add(dataset.getMetadata().getUid());
+                System.out.println("here");
+                outputDao.storeDataset(dataset, csConfig.getLogics().isOverrideDS(), errors);
+            }
+        }
+
+        for(String s: toBeSaved) {
+            if(!errors.containsKey(s))
+                goodUids.add(s);
+        }
+
+
         printFinalReport();
+        System.out.println("--------------FINISH---------------"+"\n");
+
     }
 
 
     // Utils
     private File getConfigFile() {
         return new File(URL_CONFIG);
+    }
+
+    public File getUrlSubjects() {
+        return new File(URL_SUBJECTS);
     }
 
 
@@ -157,8 +201,38 @@ public class Datasets implements Logic {
 
     private void printFinalReport () {
 
+        int totalSize = goodUids.size()+errors.keySet().size();
+
         csLogManager.writeBothMessage(LOGGER,3, "************ REPORT RESULT*****************");
         csLogManager.writeBothMessage(LOGGER, 3, "\n");
+        csLogManager.writeBothMessage(LOGGER, 3, "\n");
+
+        csLogManager.writeBothMessage(LOGGER, 3, "+++++"+"\n");
+        csLogManager.writeBothMessage(LOGGER, 3, "\n");
+
+        csLogManager.writeBothMessage(LOGGER,3, "The total number of datasets processed was :"+ totalSize+"\n");
+        csLogManager.writeBothMessage(LOGGER, 3, "\n");
+
+        csLogManager.writeBothMessage(LOGGER, 3, "+++++"+"\n");
+        csLogManager.writeBothMessage(LOGGER, 3, "\n");
+
+        csLogManager.writeBothMessage(LOGGER,3, "The successful saved datasets are: :");
+
+        Iterator<String> uids = goodUids.iterator();
+        StringBuilder stringBuilder = new StringBuilder();
+        while (uids.hasNext())
+            stringBuilder.append(uids.next() + ", ");
+        stringBuilder.setLength(stringBuilder.length() - 2);
+
+        csLogManager.writeBothMessage(LOGGER, 3, stringBuilder.toString()+"\n");
+
+        csLogManager.writeBothMessage(LOGGER, 3, "+++++"+"\n");
+
+        csLogManager.writeBothMessage(LOGGER, 3, "\n");
+        csLogManager.writeBothMessage(LOGGER, 3, "\n");
+
+
+        csLogManager.writeBothMessage(LOGGER, 3, "These are the dataset that have not been saved into the D3S");
         csLogManager.writeBothMessage(LOGGER, 3, "\n");
 
 

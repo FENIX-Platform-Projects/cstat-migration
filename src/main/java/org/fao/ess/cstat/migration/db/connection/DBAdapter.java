@@ -81,8 +81,6 @@ public class DBAdapter {
 
     public void insertValues (String uidDataset, Collection<Object[]> data, List<String> types) throws Exception {
 
-        System.out.println("here");
-
         Connection connection = getConnection();
         // build string
         StringBuilder insertQuery = new StringBuilder("INSERT INTO cstat." + '"' + uidDataset + '"' + " ( ");
@@ -196,11 +194,7 @@ public class DBAdapter {
             if(exception!= null)
                 throw new Exception(exception.toString());
         }
-
-        System.out.println("here");
-
-
-        }
+    }
 
 
 
@@ -295,7 +289,6 @@ public class DBAdapter {
         StringBuilder getQuery = new StringBuilder("SELECT DISTINCT "+ columnDB+" from cstat." + '"' + uid + '"');
         getQuery.append(" LEFT JOIN cstat."+joinDB+ " ON "+ "cstat." + '"' + uid + '"').append("."+columnDB);
         getQuery.append(" =  cstat."+joinDB+".old WHERE  cstat."+joinDB+".old IS NULL");
-        System.out.println(getQuery);
 
         Connection connection = getConnection();
 

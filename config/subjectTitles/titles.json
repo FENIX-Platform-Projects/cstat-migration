@@ -1,0 +1,36 @@
+{
+  "geo": {
+    "C": {
+      "EN": "Country",
+      "FR": "Pays"
+    },
+    "S": {
+      "EN": "Administrative level 1",
+      "FR": "Niveau administratif 1"
+    }
+  },
+  "um": {
+    "EN": "Unit of measure",
+    "FR": "Unité de mesure"
+  },
+  "value": {
+    "EN": "Value",
+    "FR": "Valeur"
+  },
+  "item": {
+    "EN": "Products",
+    "FR": "Produits"
+  },
+  "indicator": {
+    "EN": "Indicator",
+    "FR": "Indicateur"
+  },
+  "flag": {
+    "EN": "Flag",
+    "FR": "Drapeau"
+  },
+  "time": {
+    "EN": "Year",
+    "FR": "Année"
+  }
+}

@@ -5,11 +5,13 @@ import org.fao.ess.cstat.migration.dto.cstat.CSColumn;
 import org.fao.ess.cstat.migration.dto.cstat.CSDSD;
 import org.fao.ess.cstat.migration.dto.cstat.CSDataset;
 import org.fao.ess.cstat.migration.dto.cstat.CSValue;
+import org.fao.ess.cstat.migration.dto.subjects.SubjectTitle;
 import org.fao.ess.cstat.migration.logic.business.transcode.CodelistD3S;
 import org.fao.fenix.commons.mdsd.annotations.Subject;
 import org.fao.fenix.commons.msd.dto.data.Resource;
 import org.fao.fenix.commons.msd.dto.full.*;
 import org.fao.fenix.commons.msd.dto.type.DataType;
+import org.fao.fenix.commons.msd.dto.type.RepresentationType;
 
 import java.util.*;
 
@@ -23,6 +25,8 @@ public class Translator {
     private Set<String> keyColumns;
     private List<String> columnsID, datatypes;
     private String lang;
+    private boolean errorsOnDSD ;
+    private SubjectTitle subjectTitles;
 
     static {
         subjects.put("GEO", "geo");
@@ -39,7 +43,9 @@ public class Translator {
 
 
     // init
-    public Resource translateDAO(CSDataset dataset, String countryISO, String lang, Map<String, List<String>> errors) throws Exception {
+    public Resource translateDAO(CSDataset dataset, String countryISO, String lang, Map<String, List<String>> errors, SubjectTitle subjectTitles) throws Exception {
+        this.subjectTitles = subjectTitles;
+        errorsOnDSD= false;
         keyColumns = new HashSet<>();
         this.lang = lang;
         Resource<DSDDataset, Object[]> resource = new Resource<>();
@@ -49,6 +55,7 @@ public class Translator {
         } catch (Exception e) {
             e.printStackTrace();
         }
+        errorsOnDSD = errorsOnDSD;
         return resource;
     }
 
@@ -65,8 +72,11 @@ public class Translator {
         // uid, title, creation date, update date
         metadata.setUid(dataset.getUid());
         metadata.setTitle(dataset.getTitle());
-        // creation date, update date and dsd
+        // creation date, update date, representationType and dsd
         metadata.setCreationDate(dataset.getCreationDate());
+        MeContent meContent = new MeContent();
+        meContent.setResourceRepresentationType(RepresentationType.dataset);
+        metadata.setMeContent(meContent);
         metadata.setLastUpdate(dataset.getUpdateDate());
         metadata.setDsd(setDSD(dataset.getDsd(), countryISO, errors, metadata.getUid()));
         return metadata;
@@ -82,9 +92,10 @@ public class Translator {
         columnsID = new ArrayList<>();
         datatypes = new ArrayList<>();
 
-        // context system
+        // context system and datasources
         DSDDataset dsdDataset = new DSDDataset();
         dsdDataset.setContextSystem("cstat_" + countryISO.toLowerCase());
+        dsdDataset.setDatasources(new String[]{"D3S"});
 
         Collection<DSDColumn> columns = new LinkedList<>();
 
@@ -93,14 +104,18 @@ public class Translator {
             String columnSubject = csColumn.getDimension() != null ? csColumn.getDimension().getName() : null;
 
             //if the subject is other
-            if (columnSubject == "OTHER") {
+            if (columnSubject.equals("OTHER")) {
+                errorsOnDSD = true;
                 handleErrors(errors, uid, "DSD ERROR: the dataset contains the subject equals to OTHER in the column " + csColumn.getColumnId());
+/*
                 throw new Exception("OTHER column present in dataset: "+uid+  " and the column is "+ csColumn.getColumnId());
+*/
             }
             //if the subject is NULL
-            if (columnSubject == null)
-                handleErrors(errors, uid,"DSD ERROR: the dataset contains the subject equals to NULL in the column " + csColumn.getColumnId());
-
+            if (columnSubject == null) {
+                errorsOnDSD  =true;
+                handleErrors(errors, uid, "DSD ERROR: the dataset contains the subject equals to NULL in the column " + csColumn.getColumnId());
+            }
 
             // if the subject is ok!
             if (columnSubject != null && subjects.keySet().contains(columnSubject)) {
@@ -108,13 +123,15 @@ public class Translator {
 
                 // ERROR if there are SUBJECT not unique
                 if(subjectsToID.containsKey(columnSubject)) {
+                    errorsOnDSD  =true;
                     handleErrors(errors,uid,"The subject "+ columnSubject+ " is replicated into these columns: "+subjectsToID.get(columnSubject)+" AND "+ csColumn.getColumnId());
 
                 }
 
                 // set id, title, datatype
                 column.setId(csColumn.getColumnId());
-                column.setTitle(csColumn.getTitle());
+                Map<String, String> titles= handleTitles(csColumn, uid);
+                column.setTitle(titles);
                 column.setDataType(DataType.valueOf(csColumn.getDataType()));
                 column.setSubject(subjects.get(csColumn.getDimension().getName()));
 
@@ -130,6 +147,7 @@ public class Translator {
 
                 // ERROR with customCode
                 if (column.getDataType() == DataType.customCode) {
+                    errorsOnDSD = true;
                     handleErrors(errors, uid, "DSD ERROR: the dataset contains the datatype equals to customCode in the column " + csColumn.getColumnId());
                     //TODO there is a custom code into one dataset
 //                    throw new Exception("CUSTOM CODE");
@@ -160,8 +178,8 @@ public class Translator {
                         codeList.setExtendedName(csColumn.getTitle());
                         codelistToColumnID.put(csColumn.getCodeSystem().getSystem(), column.getId());
                     }
-                    //if it is a customCode column
-                    else if (column.getDataType() == DataType.customCode) {
+                    //TODO ASAP for handling custom code
+                  /*  else if (column.getDataType() == DataType.customCode) {
                         if (csColumn.getValuesCountrystat() == null)
                             handleErrors(errors, uid,"there should be codes into the dsd for the column " + csColumn.getColumnId());
 
@@ -175,7 +193,7 @@ public class Translator {
                             code.setLabel(labelI18n);
                         }
                         codeList.setCodes(codes);
-                    }
+                    }*/
                 } else {
                     // virtual column for datatypes different from coded ones
                     if (csColumn.getVirtualColumn() != null) {
@@ -193,11 +211,12 @@ public class Translator {
     }
 
 
+
+
     private Collection<Object[]> setData(DSDDataset dataset, Collection<Object> csData, Map<String, List<String>> errors, String uid) throws Exception {
 
         Collection<Object[]> data = new LinkedList<>();
 
-        System.out.println(csData);
         List<Object> originalData = (ArrayList) csData;
 
         // for each row
@@ -262,4 +281,54 @@ public class Translator {
         errors.put(uid,values);
     }
 
+    private Map<String,String> handleTitles(CSColumn csColumn, String uid) {
+
+        Map<String,String> titles = null;
+
+        if(csColumn.getTitle() != null) {
+            titles = csColumn.getTitle();
+        }
+        else if(csColumn.getDimension().getTitle() != null) {
+            titles = csColumn.getDimension().getTitle();
+        }
+        else {
+            switch (csColumn.getDimension().getName()){
+                case "GEO":
+                   titles = subjectTitles.getGeo().get(uid.substring(3,4));
+                    break;
+
+                case "UM":
+                case "UNIT":
+                    titles = subjectTitles.getUm();
+                    break;
+
+                case "VALUE":
+                    titles = subjectTitles.getValue();
+                    break;
+
+                case "ITEM":
+                    titles = subjectTitles.getItem();
+
+                    break;
+                case "INDICATOR":
+                    titles = subjectTitles.getIndicator();
+
+                    break;
+
+                case "FLAG":
+                    titles = subjectTitles.getFlag();
+                    break;
+
+                case "TIME":
+                    titles = subjectTitles.getItem();
+                    break;
+            }
+        }
+        return titles;
+    }
+
+
+    public boolean isErrorsOnDSD() {
+        return errorsOnDSD;
+    }
 }
