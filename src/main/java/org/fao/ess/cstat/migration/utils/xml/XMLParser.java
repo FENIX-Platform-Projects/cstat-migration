@@ -22,7 +22,7 @@ public class XMLParser {
 
     static {
         allowedDomains.add("C");
-        allowedDomains.add("S");
+        //allowedDomains.add("S");
     }
 
 

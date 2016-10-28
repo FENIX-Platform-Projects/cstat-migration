@@ -1,4 +1,4 @@
-package org.fao.ess.cstat.migration.dto.config;
+package org.fao.ess.cstat.migration.dto.config.dataset;
 
 
 import com.fasterxml.jackson.annotation.JsonProperty;

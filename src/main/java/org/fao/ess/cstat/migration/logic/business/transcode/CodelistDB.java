@@ -4,10 +4,26 @@ package org.fao.ess.cstat.migration.logic.business.transcode;
 public enum CodelistDB {
 
     GAUL(null),
-    CS_Units(null),
-    CS_Flags(null),
-    CS_Prod_Trade(null),
-    CS_Indicator("codelist");
+    CS_Units("um"),
+    CS_Flags("flags"),
+    CS_Prod_Trade("codelist"),
+    CS_Indicator("trade"),
+    CS_Machinery("codelist"),
+    CS_Population("codelist"),
+    CS_Prices("codelist"),
+    CS_Fertilizers("codelist"),
+    CS_Fisheries("codelist"),
+    CS_Labour("codelist"),
+    CS_Land("codelist"),
+    CS_ValueAdded("codelist"),
+    CS_Water("codelist"),
+    CS_Forestry("codelist"),
+    CS_CPI("codelist"),
+    CS_Pesticides("codelist"),
+    CS_PPI("codelist"),
+    CS_FoodSupply("codelist"),
+    HS(null),
+    FAOSTAT_CoveregeSectors("codelist");
 
     private String dataset;
 

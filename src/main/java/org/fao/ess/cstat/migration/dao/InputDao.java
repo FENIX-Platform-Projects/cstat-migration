@@ -1,16 +1,13 @@
 package org.fao.ess.cstat.migration.dao;
 
-import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.fao.ess.cstat.migration.dto.codelist.CSCodelist;
 import org.fao.ess.cstat.migration.dto.cstat.CSDataset;
 import org.fao.ess.cstat.migration.db.rest.RESTClient;
 import org.fao.ess.cstat.migration.utils.log.CSLogManager;
-import org.fao.ess.cstat.migration.utils.translator.CodelistTranslator;
-import org.fao.fenix.commons.msd.dto.data.Resource;
-import org.fao.fenix.commons.msd.dto.full.Code;
-import org.fao.fenix.commons.msd.dto.full.DSDCodelist;
+import org.fao.ess.cstat.migration.logic.business.codelist.translation.CodelistTranslator;
 
 import javax.inject.Inject;
 import javax.ws.rs.core.Response;
@@ -32,19 +29,18 @@ public class InputDao {
     private static final String URL_DATA_D3S1 = "http://hqlprfenixapp2.hq.un.fao.org:4242/cstat/dataset/producer/";
 
 
-    public Resource<DSDCodelist, Code> loadCodelist(String uid, String version) throws Exception {
+    public CSCodelist loadCodelist(String uid, String version) throws Exception {
 
-        JsonNode result = null;
+        CSCodelist result = null;
         String finalURL = (version == null) ? URL_CODELIST_D3S1 + uid : URL_CODELIST_D3S1 + uid + "/" + version;
         Response response = client.sendRequest(finalURL, "GET");
         try {
-            result = new ObjectMapper().readValue(response.readEntity(String.class), JsonNode.class);
+            result = new ObjectMapper().readValue(response.readEntity(String.class), CSCodelist.class);
         } catch (IOException e) {
             e.printStackTrace();
         }
 
-        translator.createCodelist(result);
-        return null;
+        return result;
     }
 
 

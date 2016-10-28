@@ -38,41 +38,42 @@ public class RESTClient {
         filter.put("meContent.resourceRepresentationType", fieldFilter);
 
         //Send request
-        Map<String,String> parameters = new HashMap<>();
-        parameters.put("maxSize","1000000");
-        String url = addQueryParameters(baseUrl+"msd/resources/find", parameters);
+        Map<String, String> parameters = new HashMap<>();
+        parameters.put("maxSize", "1000000");
+        String url = addQueryParameters(baseUrl + "msd/resources/find", parameters);
         Response response = sendRequest(url, filter, "post");
         if (response.getStatus() != 200 && response.getStatus() != 201 && response.getStatus() != 204)
             throw new Exception("Error from D3S requiring existing datasets metadata");
 
         //Parse response
-        return response.getStatus()!=204 ? response.readEntity(new GenericType<Collection<MeIdentification<DSDDataset>>>(){}) : new LinkedList<MeIdentification<DSDDataset>>();
+        return response.getStatus() != 204 ? response.readEntity(new GenericType<Collection<MeIdentification<DSDDataset>>>() {
+        }) : new LinkedList<MeIdentification<DSDDataset>>();
     }
 
-    public void insertMetadata (String baseUrl, Collection<MeIdentification<DSDDataset>> metadataList) throws Exception {
-        if (metadataList==null || metadataList.size()==0)
+    public void insertMetadata(String baseUrl, Collection<MeIdentification<DSDDataset>> metadataList) throws Exception {
+        if (metadataList == null || metadataList.size() == 0)
             return;
         //Send requests
-        for (Collection<MeIdentification<DSDDataset>> segment : splitCollection(metadataList,25)) {
+        for (Collection<MeIdentification<DSDDataset>> segment : splitCollection(metadataList, 25)) {
             Response response = sendRequest(baseUrl + "msd/resources/massive", segment, "post");
             if (response.getStatus() != 200 && response.getStatus() != 201)
                 throw new Exception("Error from D3S adding datasets metadata");
         }
     }
 
-    public void updateMetadata (String baseUrl, Collection<MeIdentification<DSDDataset>> metadataList) throws Exception {
-        if (metadataList==null || metadataList.size()==0)
+    public void updateMetadata(String baseUrl, Collection<MeIdentification<DSDDataset>> metadataList) throws Exception {
+        if (metadataList == null || metadataList.size() == 0)
             return;
         //Send request
-        for (Collection<MeIdentification<DSDDataset>> segment : splitCollection(metadataList,25)) {
+        for (Collection<MeIdentification<DSDDataset>> segment : splitCollection(metadataList, 25)) {
             Response response = sendRequest(baseUrl + "msd/resources/massive", segment, "put");
             if (response.getStatus() != 200 && response.getStatus() != 201)
                 throw new Exception("Error from D3S adding datasets metadata");
         }
     }
 
-    public void deleteMetadata (String baseUrl, Collection<MeIdentification<DSDDataset>> metadataList) throws Exception {
-        if (metadataList==null || metadataList.size()==0)
+    public void deleteMetadata(String baseUrl, Collection<MeIdentification<DSDDataset>> metadataList) throws Exception {
+        if (metadataList == null || metadataList.size() == 0)
             return;
 
         //Create filter
@@ -84,23 +85,24 @@ public class RESTClient {
         filter.put("id", fieldFilter);
 
         //Send request
-        Response response = sendRequest(baseUrl+"msd/resources/massive/delete", filter, "post");
+        Response response = sendRequest(baseUrl + "msd/resources/massive/delete", filter, "post");
         if (response.getStatus() != 200 && response.getStatus() != 201)
             throw new Exception("Error from D3S requiring existing datasets metadata");
     }
 
-    public void updateCodelists (String baseUrl, Collection<Resource<DSDCodelist, Code>> resourceList) throws Exception {
-        if (resourceList==null || resourceList.size()==0)
+    public void updateCodelists(String baseUrl, Collection<Resource<DSDCodelist, Code>> resourceList) throws Exception {
+        if (resourceList == null || resourceList.size() == 0)
             return;
         //Send request
         for (Resource<DSDCodelist, Code> resource : resourceList) {
             Response response = sendRequest(baseUrl + "msd/resources", resource, "put");
             if (response.getStatus() != 200 && response.getStatus() != 201)
-                throw new Exception("Error from D3S updating codelist "+resource.getMetadata().getUid());
+                throw new Exception("Error from D3S updating codelist " + resource.getMetadata().getUid());
         }
     }
-    public void updateDatasetMetadataUpdateDate (String baseUrl, String contextSystem) throws Exception {
-        if (contextSystem==null)
+
+    public void updateDatasetMetadataUpdateDate(String baseUrl, String contextSystem) throws Exception {
+        if (contextSystem == null)
             return;
         //Create filter
         StandardFilter filter = new StandardFilter();
@@ -125,7 +127,7 @@ public class RESTClient {
         updateFilter.setMetadata(metadata);
 
         //Send request
-        Response response = sendRequest(baseUrl+"msd/resources/replication", updateFilter, "patch");
+        Response response = sendRequest(baseUrl + "msd/resources/replication", updateFilter, "patch");
         if (response.getStatus() != 200 && response.getStatus() != 201 && response.getStatus() != 204)
             throw new Exception("Error from D3S updating datasets metadata last update date");
     }
@@ -136,16 +138,17 @@ public class RESTClient {
         return target.request(MediaType.APPLICATION_JSON_TYPE).build(method.trim().toUpperCase()).invoke();
     }
 
-    private String addQueryParameters (String url, Map<String,String> parameters) throws UnsupportedEncodingException {
+    private String addQueryParameters(String url, Map<String, String> parameters) throws UnsupportedEncodingException {
         StringBuilder sb = new StringBuilder(url);
-        if (parameters!=null && parameters.size()>0) {
+        if (parameters != null && parameters.size() > 0) {
             sb.append('?');
             for (Map.Entry<String, String> parameter : parameters.entrySet())
                 sb.append(URLEncoder.encode(parameter.getKey(), "UTF-8")).append('=').append(URLEncoder.encode(parameter.getValue(), "UTF-8")).append('&');
-            sb.setLength(sb.length()-1);
+            sb.setLength(sb.length() - 1);
         }
         return sb.toString();
     }
+
     public Response sendRequest(String url, Object entity, String method) throws Exception {
         Client client = ClientBuilder.newClient();
         WebTarget target = client.target(url);
@@ -153,31 +156,31 @@ public class RESTClient {
     }
 
 
-    private <T> Collection<Collection<T>>  splitCollection(Collection<T> list, int segmentSize) {
-        if (list==null)
+    private <T> Collection<Collection<T>> splitCollection(Collection<T> list, int segmentSize) {
+        if (list == null)
             return null;
         Collection<Collection<T>> buffer = new LinkedList<>();
         Collection<T> segment = new LinkedList<>();
         int count = 0;
         for (T element : list) {
-            if (++count>segmentSize) {
+            if (++count > segmentSize) {
                 buffer.add(segment);
                 segment = new LinkedList<>();
-                count=0;
+                count = 0;
             }
             segment.add(element);
         }
-        if (segment.size()>0)
+        if (segment.size() > 0)
             buffer.add(segment);
         return buffer;
     }
 
 
-    public void insertResource(Resource<DSDDataset, Object[]> resource, boolean override, Map<String, List<String>> errors) {
+    public boolean insertResource(Resource<DSDDataset, Object[]> resource, boolean override, Map<String, List<String>> errors, String urlResources) {
+        boolean result = true;
         try {
 
-            ClientRequest request = new ClientRequest(
-                    "http://localhost:7777/v2/msd/resources");
+            ClientRequest request = new ClientRequest(urlResources);
             request.accept("application/json");
 
             ObjectMapper mapper = new ObjectMapper();
@@ -185,10 +188,52 @@ public class RESTClient {
 
             request.body("application/json", input);
 
-            ClientResponse<String> response = (override)?request.put(String.class):request.post(String.class);
+
+            ClientResponse<String> response = !(existsResoruce(resource.getMetadata().getUid(), urlResources)) ? request.post(String.class) : (override) ? request.put(String.class) : null;
+
+            // if the dataset should not be inserted
+            if(response == null)
+                return false;
+
 
             if (response.getStatus() != 201 && response.getStatus() != 200) {
-                handleErrors(errors,resource.getMetadata().getUid(),"This dataset could not be saved in the server; the response of the D3S is "+response.getStatus());
+                    result = false;
+                    handleErrors(errors, resource.getMetadata().getUid(), "This dataset could not be saved in the server; the response of the D3S is " + response.getStatus());
+            }
+
+            } catch(MalformedURLException e){
+
+                e.printStackTrace();
+
+            } catch(IOException e){
+
+                e.printStackTrace();
+
+            } catch(Exception e){
+
+                e.printStackTrace();
+
+            }
+
+        return result;
+    }
+
+
+    public void insertCodelist(Resource<DSDCodelist, Code> resource, boolean override, String urlResources) {
+        try {
+
+            ClientRequest request = new ClientRequest(urlResources);
+            request.accept("application/json");
+
+            ObjectMapper mapper = new ObjectMapper();
+            String input = mapper.writeValueAsString(resource);
+
+            request.body("application/json", input);
+
+            ClientResponse<String> response = (override) ? request.put(String.class) : request.post(String.class);
+
+            if (response.getStatus() != 201 && response.getStatus() != 200) {
+                throw new Exception("This dataset could not be saved in the server; the response of the D3S is " + response.getStatus());
             }
 
             BufferedReader br = new BufferedReader(new InputStreamReader(
@@ -216,11 +261,26 @@ public class RESTClient {
     }
 
 
-    private void handleErrors (Map<String, List<String>> errors, String uid, String messageError) {
+    private void handleErrors(Map<String, List<String>> errors, String uid, String messageError) {
         List<String> values = new LinkedList<>();
-        if(errors.containsKey(uid))
+        if (errors.containsKey(uid))
             values = errors.get(uid);
         values.add(messageError);
-        errors.put(uid,values);
+        errors.put(uid, values);
+    }
+
+
+    private boolean existsResoruce(String uid, String url) {
+
+        ClientRequest request = new ClientRequest(url + "/uid/" + uid);
+        request.accept("application/json");
+        ClientResponse<String> response = null;
+        try {
+            response = request.get(String.class);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return response.getStatus()== 200;
     }
 }

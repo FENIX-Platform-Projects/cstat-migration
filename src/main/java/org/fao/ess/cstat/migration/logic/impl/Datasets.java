@@ -5,8 +5,8 @@ import org.apache.logging.log4j.Logger;
 import org.fao.ess.cstat.migration.dao.InputDao;
 import org.fao.ess.cstat.migration.dao.OutputDao;
 import org.fao.ess.cstat.migration.db.connection.DBAdapter;
-import org.fao.ess.cstat.migration.dto.config.CSConfig;
-import org.fao.ess.cstat.migration.dto.config.CSFilter;
+import org.fao.ess.cstat.migration.dto.config.dataset.CSConfig;
+import org.fao.ess.cstat.migration.dto.config.dataset.CSFilter;
 import org.fao.ess.cstat.migration.dto.cstat.CSDataset;
 import org.fao.ess.cstat.migration.dto.subjects.SubjectTitle;
 import org.fao.ess.cstat.migration.logic.Command;
@@ -72,10 +72,10 @@ public class Datasets implements Logic {
                         csConfig.getFilters().getDataset().getIncludedID()) :
                 XMLParser.trasformFlatData(XMLParser.getAllDatasetFromSchema(csConfig.getCountry()));
 
-        // PROBLEM with XML
+       /* // PROBLEM with XML
         if (datasets.keySet().size() != 2)
             throw new Exception("XML PARSER PROBLEM: there should be at least two domain in the dataset taken");
-
+*/
         // for each domain
         for (String key : datasets.keySet()) {
 
@@ -112,7 +112,7 @@ public class Datasets implements Logic {
                     for (String codelist : codelistToColumnID.keySet()) {
                         if (CodelistDB.contains(codelist) && CodelistDB.valueOf(codelist).getDataset() != null) {
                             Collection<Object[]> notMatchingCodes = dbAdapter.getNotMatchingCodes(resource.getMetadata().getUid(), codelistToColumnID.get(codelist), CodelistDB.valueOf(codelist).getDataset());
-                            validator.checkCodelistCodes(notMatchingCodes, errors, resource.getMetadata().getUid(), codelistToColumnID.get(codelist));
+                            validator.checkCodelistCodes(notMatchingCodes, errors, resource.getMetadata().getUid(), codelist,codelistToColumnID.get(codelist));
                         }
                     }
 
@@ -155,9 +155,8 @@ public class Datasets implements Logic {
         Set<String> toBeSaved = new HashSet<>();
         for(Resource dataset: resources ){
             if(!errors.containsKey(dataset.getMetadata().getUid())) {
-                toBeSaved.add(dataset.getMetadata().getUid());
-                System.out.println("here");
-                outputDao.storeDataset(dataset, csConfig.getLogics().isOverrideDS(), errors);
+                if(outputDao.storeDataset(dataset, csConfig.getLogics().isOverrideDS(), errors))
+                    toBeSaved.add(dataset.getMetadata().getUid());
             }
         }
 
@@ -222,7 +221,8 @@ public class Datasets implements Logic {
         StringBuilder stringBuilder = new StringBuilder();
         while (uids.hasNext())
             stringBuilder.append(uids.next() + ", ");
-        stringBuilder.setLength(stringBuilder.length() - 2);
+        if(stringBuilder.length()>2)
+            stringBuilder.setLength(stringBuilder.length() - 2);
 
         csLogManager.writeBothMessage(LOGGER, 3, stringBuilder.toString()+"\n");
 

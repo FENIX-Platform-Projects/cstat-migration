@@ -20,10 +20,10 @@ public enum CodelistD3S {
     CS_FoodSupply(new String[]{"CS_FoodSupply", "2014"}),
     HS(new String[]{"HS", "ALL"}),
     GAUL(new String[]{"GAUL", "2014"}),
-    CS_Indicator(new String[]{"indicator", "1.0"}),
-    CS_Units(new String[]{"indicator", "1.0"}),
-    CS_Flags(new String[]{"indicator", "1.0"}),
-    FAOSTAT_CoveregeSectors(new String[]{"indicator", "1.0"});
+    CS_Indicator(new String[]{"CountrySTAT_Indicators", null}),
+    CS_Units(new String[]{"CountrySTAT_UM", null}),
+    CS_Flags(new String[]{"Flag", "1.0"}),
+    FAOSTAT_CoveregeSectors(new String[]{"FAOSTAT_CoveregeSectors", "1.0"});
 
     private String[] codelist;
 

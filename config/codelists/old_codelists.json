@@ -1,0 +1,25 @@
+{
+
+  "codelists":[
+    {"CS_FoodSupply": "1.0"},
+    {"CS_Flags": "1.0"},
+    {"CS_Units": "1.0"},
+    {"CS_Indicator": "1.0"},
+    {"FAOSTAT_CoveregeSectors": "1.0"},
+    {"CS_Machinery": "1.0"},
+    {"CS_Prod_Trade": "1.0"},
+    {"CS_Population": "1.0"},
+    {"CS_Prices": "1.0"},
+    {"CS_Fertilizers": "1.0"},
+    {"CS_Fisheries": "1.0"},
+    {"CS_Labour": "1.0"},
+    {"CS_Land": "1.0"},
+    {"CS_ValueAdded": "1.0"},
+    {"CS_Water": "1.0"},
+    {"CS_Forestry": "1.0"},
+    {"CS_CPI": "1.0"},
+    {"CS_Pesticides": "1.0"},
+    {"CS_PPI": "1.0"},
+    {"Elements" :"1.0"}
+  ]
+}

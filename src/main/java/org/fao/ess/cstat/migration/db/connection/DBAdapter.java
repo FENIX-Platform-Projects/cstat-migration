@@ -288,7 +288,7 @@ public class DBAdapter {
 
         StringBuilder getQuery = new StringBuilder("SELECT DISTINCT "+ columnDB+" from cstat." + '"' + uid + '"');
         getQuery.append(" LEFT JOIN cstat."+joinDB+ " ON "+ "cstat." + '"' + uid + '"').append("."+columnDB);
-        getQuery.append(" =  cstat."+joinDB+".old WHERE  cstat."+joinDB+".old IS NULL");
+        getQuery.append(" =  cstat."+joinDB+".old WHERE "+ columnDB+" IS NOT NULL AND  cstat."+joinDB+".old IS NULL");
 
         Connection connection = getConnection();
 

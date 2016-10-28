@@ -39,11 +39,11 @@ public class Validator {
 
 
 
-    public void checkCodelistCodes(Collection<Object[]> notMatchingCodes, Map<String, List<String>> errors, String uid, String codelist) {
+    public void checkCodelistCodes(Collection<Object[]> notMatchingCodes, Map<String, List<String>> errors, String uid, String codelist, String column) {
 
-        if(notMatchingCodes!= null && notMatchingCodes.size()>0) {
+        if(notMatchingCodes!= null && notMatchingCodes.size()>0 && ((LinkedList) notMatchingCodes).get(0)!= null) {
 
-            StringBuilder stringBuilder = new StringBuilder("The codelist "+ codelist+ " does not have these codes in the transcoded file :");
+            StringBuilder stringBuilder = new StringBuilder("The codelist "+ codelist+ " present in the column "+column+" does not have these codes in the transcoded file :");
 
             stringBuilder.append("\n");
             for(Object[] data: notMatchingCodes) {

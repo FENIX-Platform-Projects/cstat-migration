@@ -12,20 +12,21 @@ import java.util.List;
 import java.util.Map;
 
 public class OutputDao {
-    @Inject
-    RESTClient client;
+    @Inject  RESTClient client;
+    private static final String URL_RESOURCES = "http://localhost:7777/v2/msd/resources";
 
     Collection<String> getList(String context) throws Exception {
         return null;
     }
 
-    void storeCodeList(Resource<DSDCodelist, Code> codelist) throws Exception {
+    public void storeCodeList(Resource<DSDCodelist, Code> codelist, boolean override) throws Exception {
+        client.insertCodelist(codelist, override, URL_RESOURCES);
 
     }
 
-    public void storeDataset(Resource<DSDDataset, Object[]> dataset, boolean override, Map<String, List<String>> errors) throws Exception {
+    public boolean storeDataset(Resource<DSDDataset, Object[]> dataset, boolean override, Map<String, List<String>> errors) throws Exception {
 
-        client.insertResource(dataset, override, errors);
+         return client.insertResource(dataset, override, errors, URL_RESOURCES);
 
     }
 
