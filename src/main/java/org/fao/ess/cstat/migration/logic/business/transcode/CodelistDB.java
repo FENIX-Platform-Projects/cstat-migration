@@ -6,7 +6,7 @@ public enum CodelistDB {
     GAUL(null),
     CS_Units("um"),
     CS_Flags("flags"),
-    CS_Prod_Trade("codelist"),
+    CS_Prod_Trade(null),
     CS_Indicator("trade"),
     CS_Machinery("codelist"),
     CS_Population("codelist"),

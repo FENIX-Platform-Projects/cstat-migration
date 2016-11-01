@@ -154,19 +154,32 @@ public class Translator {
                 }
                 // different between different datatypes
                 if (column.getDataType() == DataType.code) {
+                    DSDDomain domain = new DSDDomain();
+
                     OjCodeList codeList = new OjCodeList();
 
                     //if it is a virtual column
                     if (csColumn.getVirtualColumn() != null) {
                         checkVirtualColumnCondition(csColumn, column.getId());
                         LinkedHashMap<String, String> codedValues = (LinkedHashMap<String, String>) ((List) csColumn.getValues()).get(0);
+
                         if (codedValues.get("code") == null)
                             handleErrors(errors, uid,"DSD ERROR: this column" + column.getId() + "should not have the field code empty into the values section");
+
+                        //set id, title, description, version of the codelist
+                        codeList.setIdCodeList(CodelistD3S.valueOf(csColumn.getCodeSystem().getSystem()).getCodelistID());
+                        codeList.setVersion(CodelistD3S.valueOf(csColumn.getCodeSystem().getSystem()).getVersion());
+                        codeList.setExtendedName(csColumn.getTitle());
+                        codelistToColumnID.put(csColumn.getCodeSystem().getSystem(), column.getId());
+                        // add into the domain
+                        List<OjCodeList> codelists = new LinkedList<>();
+                        codelists.add(codeList);
+                        domain.setCodes(codelists);
+                        column.setDomain(domain);
                         virtualColumnsValues.put(column.getId(), codedValues.get("code"));
                     }
+                    else {  // if it is not a virtual column
 
-                    //if it is a code column
-                    if (column.getDataType() == DataType.code) {
 
                         // check the codelist has the id
                         if (csColumn.getCodeSystem().getSystem() == null)
@@ -177,23 +190,13 @@ public class Translator {
                         codeList.setVersion(CodelistD3S.valueOf(csColumn.getCodeSystem().getSystem()).getVersion());
                         codeList.setExtendedName(csColumn.getTitle());
                         codelistToColumnID.put(csColumn.getCodeSystem().getSystem(), column.getId());
+                        // add into the domain
+                        List<OjCodeList> codelists = new LinkedList<>();
+                        codelists.add(codeList);
+                        domain.setCodes(codelists);
+                        column.setDomain(domain);
                     }
-                    //TODO ASAP for handling custom code
-                  /*  else if (column.getDataType() == DataType.customCode) {
-                        if (csColumn.getValuesCountrystat() == null)
-                            handleErrors(errors, uid,"there should be codes into the dsd for the column " + csColumn.getColumnId());
 
-                        // put codes into the new customCode column of the D3S
-                        Collection<OjCode> codes = new LinkedList<>();
-                        for (CSValue cstatCode : csColumn.getValuesCountrystat()) {
-                            OjCode code = new OjCode();
-                            code.setCode(cstatCode.getCode());
-                            HashMap<String, String> labelI18n = new HashMap<>();
-                            labelI18n.put(lang, cstatCode.getLabel());
-                            code.setLabel(labelI18n);
-                        }
-                        codeList.setCodes(codes);
-                    }*/
                 } else {
                     // virtual column for datatypes different from coded ones
                     if (csColumn.getVirtualColumn() != null) {
