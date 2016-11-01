@@ -1,0 +1,456 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<tree>
+  <lastID>1001</lastID>
+  <node id="1" name="National Core" cod="C">
+    <node id="7" name="Production" cod="CPD">
+      <table id="102" file="226CPD035" />
+      <table id="103" file="226CPD050" />
+      <table id="104" file="226CPD060" />
+      <table id="105" file="226CPD070" />
+      <table id="180" file="226CPD020" />
+      <table id="181" file="226CPD010" />
+      <table id="980" file="226CPD016" />
+    </node>
+    <node id="8" name="Trade" cod="CTR">
+      <table id="106" file="226CTR015" />
+      <table id="107" file="226CTR020" />
+      <table id="108" file="226CTR025" />
+      <table id="109" file="226CTR035" />
+      <table id="110" file="226CTR040" />
+      <table id="111" file="226CTR055" />
+      <table id="112" file="226CTR060" />
+    </node>
+    <node id="9" name="Food Availability" cod="CFA" />
+    <node id="10" name="Prices" cod="CPR">
+      <table id="113" file="226CPR040" />
+    </node>
+    <node id="11" name="Land Use" cod="CLI">
+      <table id="114" file="226CLI010" />
+      <table id="115" file="226CLI011" />
+    </node>
+    <node id="12" name="Population" cod="CPO">
+      <table id="116" file="226CPO010" />
+    </node>
+    <node id="13" name="Labor" cod="CLA">
+      <table id="117" file="226CLA010" />
+      <table id="1001" file="226CLA015" />
+    </node>
+    <node id="14" name="Fertilizers" cod="CFA">
+    </node>
+    <node id="15" name="Pesticides" cod="CPE">
+      <!--table id="118" file="226CPE010" /-->
+    </node>
+    <node id="16" name="Machinery" cod="CMA">
+      <table id="119" file="226CMA025" />
+    </node>
+    <node id="17" name="Forestry" cod="CFO">
+      <table id="120" file="226CFO010" />
+      <table id="122" file="226CFO025" />
+    </node>
+    <node id="18" name="Fisheries" cod="CFI">
+      <table id="124" file="226CFI030" />
+      <table id="182" file="226CFI080" />
+      <table id="405" file="226CFI010" />
+    </node>
+    <node id="19" name="Water" cod="CWA" />
+    <node id="20" name="Value Added" cod="CVA">
+      <table id="403" file="226CVA010" />
+      <table id="404" file="226CVA020" />
+    </node>
+    <node id="1000" name="Government Expenditure" cod="CGE" />
+  </node>
+  <node id="2" name="Sub-National" cod="S">
+    <node id="21" name="Production" cod="SPD">
+    </node>
+    <node id="22" name="Trade" cod="STR" />
+    <node id="23" name="Food Availability" cod="SFA" />
+    <node id="24" name="Prices" cod="SPR" />
+    <node id="25" name="Land Use" cod="SLI" />
+    <node id="26" name="Population" cod="SPO">
+      <table id="138" file="226SPO101" />
+    </node>
+    <node id="27" name="Labor" cod="SLA">
+    </node>
+    <node id="28" name="Fertilizers" cod="SFA" />
+    <node id="29" name="Pesticides" cod="SPE" />
+    <node id="30" name="Machinery" cod="SMA" />
+    <node id="31" name="Forestry" cod="SFO" />
+    <node id="32" name="Fisheries" cod="SFI">
+    </node>
+    <node id="33" name="Water" cod="SWA" />
+    <node id="34" name="Value Added" cod="SVA" />
+  </node>
+  <node id="3" name="Global Strategy Minimum set of Core Data" cod="G">
+    <node id="35" name="Economic">
+      <node id="36" name="Output">
+        <table id="151" file="226CFO010" />
+        <table id="153" file="226CPD050" />
+        <table id="154" file="226CPD060" />
+        <table id="155" file="226CPD070" />
+      </node>
+      <node id="37" name="Trade">
+        <table id="159" file="226CTR015" />
+        <table id="160" file="226CTR020" />
+        <table id="161" file="226CTR025" />
+        <table id="162" file="226CTR035" />
+        <table id="163" file="226CTR040" />
+        <table id="164" file="226CTR055" />
+        <table id="165" file="226CTR060" />
+      </node>
+      <node id="38" name="Stock of Resources">
+        <table id="166" file="226CLA010" />
+        <table id="167" file="226CMA025" />
+        <table id="168" file="226CPD035" />
+      </node>
+      <node id="39" name="Inputs">
+      </node>
+      <node id="40" name="Agro Processing" />
+      <node id="41" name="Prices">
+        <table id="170" file="226CPR040" />
+      </node>
+      <node id="42" name="Final Expenditure" />
+      <node id="43" name="Rural Infrastructure(Capital stock)" />
+      <node id="44" name="International Transfer" />
+    </node>
+    <node id="45" name="Social">
+      <node id="46" name="Demographics of Urban and Rural Population">
+        <table id="171" file="226CPO010" />
+      </node>
+    </node>
+    <node id="47" name="Environmental">
+      <node id="48" name="Land" />
+      <node id="49" name="Water" />
+      <node id="50" name="Air" />
+    </node>
+    <node id="51" name="Geographic Location">
+      <node id="52" name="GIS coordinates" />
+      <node id="53" name="Degree of urbanization" />
+    </node>
+  </node>
+  <node id="55" name="Agricultural Censuses and Surveys">
+    <node id="175" name="Censuses">
+      <node id="57" name="2008 Livestock Census">
+        <node id="58" name="beehives">
+          <table id="141" file="226M08005" />
+        </node>
+        <node id="67" name="cattle">
+          <table id="147" file="226M08003" />
+        </node>
+        <node id="59" name="Sheep">
+          <table id="140" file="226M08001" />
+        </node>
+      </node>
+      <node id="68" name="Cotton Consumption">
+        <table id="148" file="226MCO004" />
+      </node>
+      <node id="60" name="Cotton_Production">
+        <node id="65" name=" Cotton Exports">
+          <node id="66" name="Export quantity">
+            <table id="145" file="226MCO003" />
+          </node>
+          <node id="69" name="Export value">
+            <table id="146" file="226MCO002" />
+          </node>
+        </node>
+        <node id="61" name="Cotton Production">
+          <node id="62" name="Cotton lint">
+            <table id="142" file="226MCO001" />
+          </node>
+          <node id="63" name="Cotton oil">
+            <table id="143" file="226MCO006" />
+          </node>
+          <node id="64" name="Cotton seed">
+            <table id="983" file="226MCO005" />
+          </node>
+        </node>
+      </node>
+      <node id="359" name="Uganda Census of Agriculture 2008-09">
+        <node id="360" name="Crop Area and Production">
+          <table id="370" file="226MCR001" />
+          <table id="371" file="MCR003" />
+          <table id="398" file="226MCR018" />
+          <table id="399" file="226MCR019" />
+          <table id="985" file="226MCR006" />
+          <table id="986" file="226MCR009" />
+          <table id="987" file="226MCR010" />
+          <table id="988" file="226MCR011" />
+          <table id="989" file="226MCR013" />
+          <table id="990" file="226MCR014" />
+          <table id="991" file="226MCR015" />
+          <table id="992" file="226MCR016" />
+          <table id="993" file="226MCR017" />
+          <table id="997" file="226MCR030" />
+          <table id="998" file="226MCR003" />
+          <table id="999" file="226MCR012" />
+        </node>
+        <node id="361" name="Demographic and social economic characteristics" />
+        <node id="362" name="Access to Extension Services">
+          <table id="994" file="226MCR020" />
+        </node>
+        <node id="363" name="Access to Credit">
+          <table id="393" file="226MCR023" />
+        </node>
+        <node id="364" name="Access to Facilities">
+          <table id="995" file="226MCR021" />
+          <table id="996" file="226MCR022" />
+        </node>
+        <node id="365" name="Storage Facilities" />
+        <node id="366" name="Irrigation and Water Management" />
+        <node id="367" name="Agricultural Inputs" />
+        <node id="368" name="Food Security" />
+        <node id="369" name="Economic activities and Sources of Income">
+          <table id="400" file="226MCR027" />
+          <table id="401" file="226MCR029" />
+        </node>
+      </node>
+    </node>
+    <node id="176" name="Surveys" />
+  </node>
+  <node id="56" name="Statistical Yearbooks" />
+  <node id="54" name="Food Balance Sheets" />
+  <node id="4" name="Thematic Modules" cod="T">
+    <node id="172" name="Government Expenditure" />
+    <node id="927" name="Other">
+      <table id="928" file="226CPD021" />
+      <table id="929" file="226M08002" />
+      <table id="930" file="226M08007" />
+      <table id="931" file="226M08009" />
+      <table id="932" file="226M08010" />
+      <table id="933" file="226M08011" />
+      <table id="934" file="226M08012" />
+      <table id="935" file="226M08013" />
+      <table id="936" file="226M08014" />
+      <table id="937" file="226M08015" />
+      <table id="938" file="226M08016" />
+      <table id="939" file="226M08017" />
+      <table id="940" file="226SWA020" />
+      <table id="941" file="HHWSIF001" />
+      <table id="942" file="HHWSIF003" />
+      <table id="943" file="HHWSIF004" />
+      <table id="944" file="HHWSIF005" />
+      <table id="945" file="HHWSIL001" />
+      <table id="946" file="HHWSIL003" />
+      <table id="947" file="HHWSIL004" />
+      <table id="948" file="HHWSIL005" />
+      <table id="949" file="HHWSIS001" />
+      <table id="950" file="HHWSIS003" />
+      <table id="951" file="HHWSIS004" />
+      <table id="952" file="HHWSIS005" />
+    </node>
+  </node>
+  <node id="5" name="National Institutions" cod="N">
+    <node id="178" name="Forestry">
+      <table id="984" file="226IFO012" />
+    </node>
+    <node id="373" name="UBOS">
+      <table id="374" file="226IVA010" />
+      <table id="375" file="226IVA020" />
+    </node>
+    <node id="376" name="Ministry of Agriculture, Animal Industry and Fisheries (MAAIF)">
+      <table id="383" file="226IFI070" />
+      <table id="384" file="226IFI010" />
+    </node>
+    <node id="982" name="Cotton Development Organization (CDO)" />
+  </node>
+  <node id="6" name="International Partners" cod="I" />
+  <node id="229" name="WFP">
+    <node id="231" name="CFSVA2009">
+      <node id="232" name="Access_to_Food_Security_Interventions">
+        <node id="243" name="By_Food_Groups">
+          <table id="277" file="HHAFSIF001" />
+        </node>
+        <node id="244" name="By_Livelihood_Groups">
+          <table id="278" file="HHAFSIL001" />
+        </node>
+        <node id="245" name="By_Strata">
+          <table id="279" file="HHAFSIS001" />
+        </node>
+      </node>
+      <node id="233" name="Agriculture_and_Livelihoods">
+        <node id="246" name="By_Food_Groups">
+          <table id="280" file="HHAGLIF001" />
+          <table id="281" file="HHAGLIF002" />
+        </node>
+        <node id="247" name="By_Livelihood_Groups">
+          <table id="282" file="HHAGLIL001" />
+          <table id="283" file="HHAGLIL002" />
+        </node>
+        <node id="248" name="By_Strata">
+          <table id="284" file="HHAGLIS001" />
+          <table id="285" file="HHAGLIS002" />
+        </node>
+      </node>
+      <node id="234" name="Displacement">
+        <node id="249" name="By_Food_Groups">
+          <table id="286" file="HHDPIF001" />
+        </node>
+        <node id="258" name="By_Livelihood_Groups">
+          <table id="287" file="HHDPIL001" />
+        </node>
+        <node id="268" name="By_Strata">
+          <table id="288" file="HHDPIS001" />
+        </node>
+      </node>
+      <node id="235" name="Food_Sources_and_Consumption">
+        <node id="250" name="By_Food_Groups">
+          <table id="289" file="HHFSCIF002" />
+          <table id="290" file="HHFSCIF001" />
+        </node>
+        <node id="260" name="By_Livelihood_Groups">
+          <table id="291" file="HHFSCIL002" />
+          <table id="292" file="HHFSCIL001" />
+        </node>
+        <node id="269" name="By_Strata">
+          <table id="293" file="HHFSCIS002" />
+          <table id="294" file="HHFSCIS001" />
+        </node>
+      </node>
+      <node id="236" name="Household_Expenditure_and_Market_Access">
+        <node id="251" name="By_Food_Groups">
+          <table id="295" file="HHEXPIF003" />
+          <table id="296" file="HHEXPIF004" />
+          <table id="297" file="HHEXPIF001" />
+          <table id="298" file="HHEXPIF002" />
+        </node>
+        <node id="261" name="By_Livelihood_Groups">
+          <table id="299" file="HHEXPIL003" />
+          <table id="300" file="HHEXPIL004" />
+          <table id="301" file="HHEXPIL001" />
+          <table id="302" file="HHEXPIL002" />
+        </node>
+        <node id="270" name="By_Strata">
+          <table id="303" file="HHEXPIS003" />
+          <table id="304" file="HHEXPIS004" />
+          <table id="305" file="HHEXPIS001" />
+          <table id="306" file="HHEXPIS002" />
+        </node>
+      </node>
+      <node id="237" name="Household_Information">
+        <node id="252" name="By_Food_Groups">
+          <table id="307" file="HHDMIF001" />
+          <table id="308" file="HHDMIF002" />
+        </node>
+        <node id="262" name="By_Livelihood_Groups">
+          <table id="309" file="HHDMIL001" />
+          <table id="310" file="HHDMIL002" />
+        </node>
+        <node id="271" name="By_Strata">
+          <table id="311" file="HHDMIS001" />
+          <table id="312" file="HHDMIS002" />
+        </node>
+      </node>
+      <node id="238" name="Housing_and_Facilities">
+        <node id="253" name="By_Food_Groups">
+          <table id="313" file="HHHFIF002" />
+          <table id="314" file="HHHFIF003" />
+          <table id="315" file="HHHFIF004" />
+          <table id="316" file="HHHFIF005" />
+          <table id="317" file="HHHFIF001" />
+        </node>
+        <node id="263" name="By_Livelihood_Groups">
+          <table id="318" file="HHHFIL002" />
+          <table id="319" file="HHHFIL003" />
+          <table id="320" file="HHHFIL004" />
+          <table id="321" file="HHHFIL005" />
+          <table id="322" file="HHHFIL001" />
+        </node>
+        <node id="272" name="By_Strata">
+          <table id="323" file="HHHFIS002" />
+          <table id="324" file="HHHFIS003" />
+          <table id="325" file="HHHFIS004" />
+          <table id="326" file="HHHFIS005" />
+          <table id="327" file="HHHFIS001" />
+        </node>
+      </node>
+      <node id="239" name="Labour_Migration">
+        <node id="254" name="By_Food_Groups">
+          <table id="328" file="HHLMIF001" />
+          <table id="329" file="HHLMIF002" />
+        </node>
+        <node id="264" name="By_Livelihood_Groups">
+          <table id="330" file="HHLMIL001" />
+          <table id="331" file="HHLMIL002" />
+        </node>
+        <node id="273" name="By_Strata">
+          <table id="332" file="HHLMIS001" />
+          <table id="333" file="HHLMIS002" />
+        </node>
+      </node>
+      <node id="240" name="Shocks">
+        <node id="255" name="By_Food_Groups">
+          <table id="334" file="HHSHKIF002" />
+          <table id="335" file="HHSHKIF001" />
+        </node>
+        <node id="265" name="By_Livelihood_Groups">
+          <table id="336" file="HHSHKIL002" />
+          <table id="337" file="HHSHKIL001" />
+        </node>
+        <node id="274" name="By_Strata">
+          <table id="338" file="HHSHKIS002" />
+          <table id="339" file="HHSHKIS001" />
+        </node>
+      </node>
+      <node id="241" name="Water_and_Sanitation">
+        <node id="256" name="By_Food_Groups">
+          <table id="348" file="-HHWSIF003" />
+          <table id="349" file="-HHWSIF005" />
+          <table id="350" file="-HHWSIF001" />
+          <table id="351" file="-HHWSIF002" />
+          <table id="352" file="-HHWSIF004" />
+        </node>
+        <node id="266" name="By_Livelihood_Groups">
+          <table id="353" file="-HHWSIL003" />
+          <table id="354" file="-HHWSIL005" />
+          <table id="355" file="-HHWSIL001" />
+          <table id="356" file="-HHWSIL002" />
+          <table id="357" file="-HHWSIL004" />
+        </node>
+        <node id="275" name="By_Strata">
+          <table id="343" file="-HHWSIS003" />
+          <table id="344" file="-HHWSIS005" />
+          <table id="345" file="-HHWSIS001" />
+          <table id="346" file="-HHWSIS002" />
+          <table id="347" file="-HHWSIS004" />
+        </node>
+      </node>
+      <node id="242" name="Wealth_Related_Indicators">
+        <node id="257" name="By_Food_Groups">
+          <table id="340" file="HHWRIF001" />
+        </node>
+        <node id="267" name="By_Livelihood_Groups">
+          <table id="341" file="HHWRIL001" />
+        </node>
+        <node id="276" name="By_Strata">
+          <table id="342" file="HHWRIS001" />
+        </node>
+      </node>
+      <node id="900" name="Other">
+        <table id="901" file="226CPD021" />
+        <table id="903" file="226M08007" />
+        <table id="904" file="226M08009" />
+        <table id="905" file="226M08010" />
+        <table id="906" file="226M08011" />
+        <table id="907" file="226M08012" />
+        <table id="908" file="226M08013" />
+        <table id="909" file="226M08014" />
+        <table id="910" file="226M08015" />
+        <table id="911" file="226M08016" />
+        <table id="912" file="226M08017" />
+        <table id="913" file="226SWA020" />
+        <table id="914" file="HHWSIF001" />
+        <table id="915" file="HHWSIF003" />
+        <table id="916" file="HHWSIF004" />
+        <table id="917" file="HHWSIF005" />
+        <table id="918" file="HHWSIL001" />
+        <table id="919" file="HHWSIL003" />
+        <table id="920" file="HHWSIL004" />
+        <table id="921" file="HHWSIL005" />
+        <table id="922" file="HHWSIS001" />
+        <table id="923" file="HHWSIS003" />
+        <table id="924" file="HHWSIS004" />
+        <table id="925" file="HHWSIS005" />
+        <table id="926" file="226M08002" />
+      </node>
+    </node>
+  </node>
+</tree>

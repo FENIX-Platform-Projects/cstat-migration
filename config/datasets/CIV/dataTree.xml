@@ -1,0 +1,649 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<tree>
+  <lastID>643</lastID>
+  <node id="1" name="Statistiques nationales - module de base" cod="C">
+    <node id="7" name="Production" cod="CPD">
+      <table id="58" file="107CPD010" />
+      <table id="59" file="107CPD015" />
+      <table id="60" file="107CPD016" />
+      <table id="61" file="107CPD025" />
+      <table id="62" file="107CPD035" />
+      <table id="63" file="107CPD040" />
+      <table id="64" file="107CPD045" />
+      <table id="65" file="107CPD050" />
+      <table id="66" file="107CPD055" />
+      <table id="67" file="107CPD060" />
+      <table id="220" file="107CPD065" />
+      <table id="221" file="107CPD070" />
+      <table id="68" file="107CPD075" />
+    </node>
+    <node id="8" name="Commerce" cod="CTR">
+      <table id="257" file="107CTR045" />
+      <table id="260" file="107CTR040" />
+      <table id="263" file="107CTR010" />
+      <table id="266" file="107CTR015" />
+    </node>
+    <node id="9" name="Disponibilité alimentaire" cod="CFA">
+      <table id="69" file="107CFA010" />
+      <table id="70" file="107CFA015" />
+      <table id="71" file="107CFA020" />
+      <table id="72" file="107CFA025" />
+      <table id="73" file="107CFA030" />
+      <table id="74" file="107CFA035" />
+    </node>
+    <node id="10" name="Prix" cod="CPR">
+      <table id="75" file="107CPR010" />
+      <table id="618" file="107CPR040" />
+    </node>
+    <node id="11" name="Terres" cod="CLI" />
+    <node id="12" name="Population" cod="CPO">
+      <table id="619" file="107CPO010" />
+      <table id="622" file="107CPO030" />
+      <table id="624" file="107CPO015" />
+      <table id="626" file="107CPO035" />
+    </node>
+    <node id="13" name="Travail" cod="CLA">
+      <table id="78" file="107CLA010" />
+    </node>
+    <node id="14" name="Engrais" cod="CFE">
+      <table id="628" file="107CFE030" />
+    </node>
+    <node id="15" name="Pesticides" cod="CPE">
+      <table id="241" file="107CPE020" />
+      <table id="242" file="107CPE015" />
+    </node>
+    <node id="16" name="Machines" cod="CMA">
+      <table id="80" file="107CMA015" />
+      <table id="81" file="107CMA020" />
+    </node>
+    <node id="17" name="Forêts" cod="CFO">
+      <table id="82" file="107CFO010" />
+      <table id="83" file="107CFO020" />
+    </node>
+    <node id="18" name="Pêches" cod="CFI">
+      <table id="84" file="107CFI010" />
+      <table id="85" file="107CFI020" />
+      <table id="86" file="107CFI030" />
+      <table id="87" file="107CFI040" />
+      <table id="88" file="107CFI070" />
+    </node>
+    <node id="19" name="Eau" cod="CWA">
+      <table id="581" file="107CWA015" />
+    </node>
+    <node id="20" name="Valeur ajoutée" cod="CVA">
+      <table id="631" file="107CVA025" />
+      <table id="633" file="107CVA020" />
+      <table id="634" file="107CVA010" />
+      <table id="643" file="107CVA030" />
+    </node>
+    <node id="620" name="Dépenses Publiques" cod="CGE" />
+  </node>
+  <node id="2" name="Statistiques locales" cod="S">
+    <node id="21" name="Production" cod="SPD">
+      <table id="93" file="107SPD015" />
+      <table id="274" file="107SPD010" />
+    </node>
+    <node id="22" name="Commerce" cod="STR" />
+    <node id="23" name="Disponibilité alimentaire" cod="SFA" />
+    <node id="24" name="Prix" cod="SPR">
+      <table id="94" file="107SPR010" />
+      <table id="95" file="107SPR015" />
+    </node>
+    <node id="25" name="Terres" cod="SLI" />
+    <node id="26" name="Population" cod="SPO">
+      <table id="96" file="107SPO010" />
+      <table id="97" file="107SPO110" />
+    </node>
+    <node id="27" name="Travail" cod="SLA" />
+    <node id="28" name="Engrais" cod="SFE" />
+    <node id="29" name="Pesticides" cod="SPE" />
+    <node id="30" name="Machines" cod="SMA">
+      <table id="98" file="107SMA010" />
+    </node>
+    <node id="31" name="Forêts" cod="SFO" />
+    <node id="32" name="Pêches" cod="SFI">
+      <table id="99" file="107SFI010" />
+      <table id="100" file="107SFI015" />
+      <table id="101" file="107SFI020" />
+    </node>
+    <node id="33" name="Eau" cod="SWA">
+      <table id="103" file="107SWA115" />
+      <table id="104" file="107SWA315" />
+    </node>
+    <node id="34" name="Valeur ajoutée" cod="SVA" />
+  </node>
+  <node id="3" name="Stratégie Mondiale ensemble minimal de données de base" cod="G">
+    <node id="35" name="Economique">
+      <node id="36" name="Produit">
+        <table id="237" file="107CFI010" />
+        <table id="105" file="107CFI020" />
+        <table id="106" file="107CFI030" />
+        <table id="107" file="107CFI040" />
+        <table id="108" file="107CPD010" />
+        <table id="109" file="107CPD015" />
+        <table id="110" file="107CPD016" />
+        <table id="111" file="107CPD045" />
+        <table id="112" file="107CPD060" />
+        <table id="113" file="107CPD075" />
+        <table id="114" file="107CVA010" />
+        <table id="115" file="107CVA020" />
+      </node>
+      <node id="37" name="Commerce">
+        <table id="116" file="107CFI070" />
+        <table id="258" file="107CTR045" />
+        <table id="261" file="107CTR040" />
+        <table id="264" file="107CTR010" />
+        <table id="267" file="107CTR015" />
+      </node>
+      <node id="38" name="Stock de ressources">
+        <table id="118" file="107CMA015" />
+        <table id="119" file="107CMA020" />
+      </node>
+      <node id="39" name="Inputs">
+        <table id="120" file="107CPD025" />
+      </node>
+      <node id="40" name="Transformation agro-alimentaire" />
+      <node id="41" name="Prix">
+        <table id="122" file="107CPR010" />
+      </node>
+      <node id="42" name="Dépense finale">
+        <table id="124" file="107CFA010" />
+        <table id="125" file="107CFA015" />
+        <table id="126" file="107CFA020" />
+        <table id="127" file="107CFA025" />
+        <table id="128" file="107CFA030" />
+        <table id="129" file="107CFA035" />
+      </node>
+      <node id="43" name="Infrastructure rurale(capital stock)" />
+      <node id="44" name="Transfert international" />
+    </node>
+    <node id="45" name="Social">
+      <node id="46" name="Démographie de la population urbaine et rurale">
+        <table id="130" file="107CPO010" />
+      </node>
+    </node>
+    <node id="47" name="Environnemental">
+      <node id="48" name="Terre" />
+      <node id="49" name="Eau">
+        <table id="131" file="107SWA115" />
+        <table id="132" file="107SWA315" />
+      </node>
+      <node id="50" name="Air" />
+    </node>
+    <node id="51" name="Localisation géographique">
+      <node id="52" name="SIG coordonnées" />
+      <node id="53" name="Niveau d'urbanisation" />
+    </node>
+  </node>
+  <node id="253" name="Recensements et enquêtes agricoles">
+    <node id="254" name="Recensements">
+      <node id="380" name="Recensement National de l'Agriculture 2001">
+        <node id="381" name="Structure Foncière">
+          <table id="411" file="107RFN011" />
+          <table id="415" file="107RSN011" />
+          <table id="417" file="107RSF014" />
+          <table id="419" file="107RSN013" />
+        </node>
+        <node id="382" name="Population">
+          <table id="441" file="107RPN013" />
+          <table id="442" file="107RPN014" />
+          <table id="444" file="107RPN015" />
+          <table id="454" file="107RPR017" />
+          <table id="456" file="107RPR016" />
+          <table id="458" file="107RPR015" />
+          <table id="460" file="107RPR013" />
+          <table id="526" file="107RPR014" />
+        </node>
+        <node id="383" name="Condition de Vie">
+          <table id="393" file="107RCV011" />
+          <table id="425" file="107RCN011" />
+          <table id="427" file="107RCN012" />
+          <table id="429" file="107RCN013" />
+          <table id="431" file="107RCN014" />
+          <table id="527" file="107RCR011" />
+          <table id="530" file="107RCR018" />
+          <table id="532" file="107RCR017" />
+          <table id="534" file="107RCR016" />
+          <table id="536" file="107RCR015" />
+          <table id="538" file="107RCR014" />
+          <table id="545" file="107RCR013" />
+          <table id="546" file="107RCR012" />
+        </node>
+        <node id="384" name="Matériel et Equipement">
+          <table id="433" file="107RMN011" />
+          <table id="435" file="107RMN012" />
+          <table id="437" file="107RMN013" />
+          <table id="439" file="107RMN014" />
+          <table id="480" file="107RMR013" />
+          <table id="481" file="107RMR012" />
+          <table id="482" file="107RMR011" />
+          <table id="488" file="107RMR014" />
+        </node>
+        <node id="385" name="Facteurs de productions">
+          <table id="409" file="107RFP012" />
+          <table id="413" file="107RFN012" />
+        </node>
+        <node id="405" name="Agriculture">
+          <table id="421" file="107RAN012" />
+          <table id="423" file="107RAN013" />
+        </node>
+        <node id="446" name="Elevage">
+          <table id="447" file="107REN013" />
+          <table id="449" file="107REN014" />
+          <table id="451" file="107REN016" />
+          <table id="452" file="107REN015" />
+          <table id="528" file="107RER011" />
+        </node>
+        <node id="55" name="Recensement 2001">
+          <table id="139" file="107CPO010" />
+          <table id="140" file="107CPO011" />
+          <table id="141" file="107CPO012" />
+          <table id="142" file="107CPO013" />
+          <table id="143" file="107CPO014" />
+          <table id="144" file="107CPO015" />
+          <table id="145" file="107CPO016" />
+          <table id="147" file="107SPO011" />
+          <table id="148" file="107SPO012" />
+          <table id="149" file="107SPO013" />
+          <table id="150" file="107SPO014" />
+          <table id="151" file="107SPO015" />
+          <table id="152" file="107SPO016" />
+        </node>
+      </node>
+    </node>
+    <node id="255" name="Enquêtes">
+      <table id="578" file="107EXR977" />
+      <table id="579" file="107EXR976" />
+      <table id="580" file="107EXR971" />
+      <table id="583" file="107EXR961" />
+      <table id="584" file="107EXR921" />
+      <table id="585" file="107EAR975" />
+      <table id="586" file="107EAR971" />
+    </node>
+  </node>
+  <node id="56" name="Annuaires Statistiques">
+    <node id="277" name="Annuaire 2001">
+      <node id="596" name="Agriculture">
+        <table id="599" file="107AAN011" />
+      </node>
+    </node>
+    <node id="278" name="Annuaire 2002">
+      <node id="597" name="Agriculture">
+        <table id="600" file="107AAN021" />
+      </node>
+    </node>
+    <node id="279" name="Annuaire 2003">
+      <node id="598" name="Agriculture">
+        <table id="601" file="107AAN031" />
+      </node>
+    </node>
+    <node id="280" name="Annuaire 2004">
+      <node id="281" name="Agriculture">
+        <table id="289" file="107AAN042" />
+        <table id="602" file="107AAN014" />
+      </node>
+      <node id="282" name="Elévage">
+        <table id="298" file="107AEN044" />
+        <table id="299" file="107AEN041" />
+        <table id="300" file="107AEN043" />
+        <table id="301" file="107AEN045" />
+      </node>
+      <node id="283" name="Foresterie">
+        <table id="324" file="107AFN041" />
+        <table id="325" file="107AFM042" />
+        <table id="326" file="107AFN043" />
+      </node>
+    </node>
+    <node id="286" name="Annuaire 2005">
+      <node id="287" name="Agriculture">
+        <table id="292" file="107AAN051" />
+        <table id="293" file="107AAN053" />
+      </node>
+      <node id="290" name="Elévage">
+        <table id="318" file="107AEN054" />
+        <table id="319" file="107AEN056" />
+        <table id="320" file="107AEN051" />
+        <table id="321" file="107AEN053" />
+        <table id="323" file="107AEN055" />
+      </node>
+      <node id="291" name="Foresterie">
+        <table id="349" file="107AFN053" />
+        <table id="350" file="107AFN052" />
+        <table id="351" file="107AFN051" />
+      </node>
+    </node>
+    <node id="294" name="Annuaire 2006">
+      <node id="295" name="Agriculture">
+        <table id="296" file="107AAN063" />
+        <table id="297" file="107AAN061" />
+        <table id="317" file="107AAN062" />
+      </node>
+      <node id="345" name="Forestérie">
+        <table id="346" file="107AFN063" />
+        <table id="347" file="107AFN062" />
+        <table id="348" file="107AFN061" />
+      </node>
+      <node id="371" name="Elevage">
+        <table id="372" file="107AEN066" />
+        <table id="375" file="107AEN067" />
+        <table id="376" file="107AEN065" />
+        <table id="377" file="107AEN064" />
+        <table id="378" file="107AEN063" />
+        <table id="379" file="107AEN061" />
+      </node>
+    </node>
+    <node id="302" name="Annuaire 2007">
+      <node id="305" name="Agriculture">
+        <table id="309" file="107AAN071" />
+        <table id="310" file="107AAN073" />
+        <table id="311" file="107AAN072" />
+        <table id="312" file="107AAN077" />
+      </node>
+      <node id="306" name="Elevage">
+        <table id="364" file="107AEN077" />
+        <table id="365" file="107AEN076" />
+        <table id="366" file="107AEN075" />
+        <table id="367" file="107AEN074" />
+        <table id="368" file="107AEN073" />
+        <table id="369" file="107AEN071" />
+      </node>
+      <node id="341" name="Forestérie">
+        <table id="342" file="107AFN073" />
+        <table id="343" file="107AFN072" />
+        <table id="344" file="107AFN071" />
+      </node>
+    </node>
+    <node id="303" name="Annuaire 2008">
+      <node id="307" name="Agriculture">
+        <table id="313" file="107AAN081" />
+        <table id="314" file="107AAN083" />
+        <table id="315" file="107AAN082" />
+        <table id="316" file="107AAN087" />
+      </node>
+      <node id="338" name="Forestérie">
+        <table id="339" file="107AFN082" />
+        <table id="340" file="107AFNO81" />
+      </node>
+      <node id="357" name="Elevage">
+        <table id="358" file="107AEN087" />
+        <table id="359" file="107AEN086" />
+        <table id="360" file="107AEN085" />
+        <table id="361" file="107AEN084" />
+        <table id="362" file="107AEN083" />
+        <table id="363" file="107EAN081" />
+      </node>
+    </node>
+    <node id="304" name="Annuaire 2009">
+      <node id="308" name="Agriculture">
+        <table id="547" file="107AAN093" />
+        <table id="548" file="107AAN092" />
+        <table id="603" file="107AAN091" />
+      </node>
+      <node id="332" name="Foresterie">
+        <table id="334" file="107AFN093" />
+        <table id="335" file="107AFN092" />
+        <table id="336" file="107AFN091" />
+      </node>
+      <node id="333" name="Elevage" />
+    </node>
+  </node>
+  <node id="54" name="Bilans Alimentaires">
+    <node id="489" name="BA par groupe de produits">
+      <table id="511" file="107BAP009" />
+      <table id="515" file="107BAP007" />
+      <table id="517" file="107BAP003" />
+      <table id="520" file="107BAP013" />
+      <table id="521" file="107BAP006" />
+      <table id="554" file="107BAG001" />
+      <table id="558" file="107BAG003" />
+      <table id="560" file="107BAG009" />
+      <table id="561" file="107BAG008" />
+      <table id="562" file="107BAG007" />
+      <table id="563" file="107BAG006" />
+      <table id="564" file="107BAG005" />
+      <table id="566" file="107BAG004" />
+      <table id="567" file="107BAG002" />
+      <table id="519" file="107BAP013" />
+    </node>
+    <node id="490" name="BA par produits">
+      <table id="550" file="107BAP009" />
+      <table id="568" file="107BAP002" />
+      <table id="569" file="107BAP001" />
+      <table id="570" file="107BAP003" />
+      <table id="571" file="107BAP004" />
+      <table id="572" file="107BAP005" />
+      <table id="573" file="107BAP007" />
+      <table id="574" file="107BAP006" />
+      <table id="575" file="107BAP008" />
+    </node>
+    <node id="491" name="BA : TDI, TDC, TDS, TAS">
+      <table id="493" file="107BAT009" />
+      <table id="495" file="107BAT005" />
+      <table id="499" file="107BAT004" />
+      <table id="502" file="107BAT003" />
+      <table id="505" file="107BAT008" />
+      <table id="507" file="107BAT007" />
+      <table id="509" file="107BAT006" />
+      <table id="576" file="107BAT001" />
+      <table id="577" file="107BAT002" />
+    </node>
+    <table id="492" file="107BAT009" />
+    <table id="494" file="107BAT005" />
+    <table id="498" file="107BAT004" />
+    <table id="500" file="107BAT003" />
+    <table id="503" file="107BAT008" />
+    <table id="506" file="107BAT007" />
+    <table id="508" file="107BAT006" />
+    <table id="510" file="107BAP009" />
+    <table id="512" file="107BAP008" />
+    <table id="514" file="107BAP007" />
+    <table id="516" file="107BAP003" />
+    <table id="518" file="107BAP013" />
+    <node id="587" name="BA Disponibilté">
+      <table id="588" file="107BAD001" />
+      <table id="589" file="107BAD003" />
+      <table id="590" file="107BAD004" />
+      <table id="591" file="107BAD005" />
+      <table id="592" file="107BAD006" />
+      <table id="593" file="107BAD007" />
+      <table id="594" file="107BAD008" />
+      <table id="595" file="107BAD009" />
+      <table id="235" file="107CFA010" />
+      <table id="236" file="107CFA015" />
+      <table id="135" file="107CFA020" />
+      <table id="136" file="107CFA025" />
+      <table id="137" file="107CFA030" />
+      <table id="138" file="107CFA035" />
+    </node>
+  </node>
+  <node id="4" name="Modules thématiques" cod="T">
+    <node id="252" name="Dépenses Publiques" cod="CGE" />
+    <node id="238" name="Indicateurs de suivi de la PAU">
+      <node id="239" name="Indicateurs des filieres prioritaires">
+        <node id="240" name="Filiere Coton">
+          <details lCode="fr">
+            <title>Filière Coton</title>
+          </details>
+        </node>
+        <details lCode="fr">
+          <title>Indicateurs des filières prioritaires</title>
+        </details>
+      </node>
+      <details lCode="fr">
+        <title>Indicateurs de suivi de la PAU</title>
+      </details>
+    </node>
+    <node id="604" name="Autres">
+      <table id="605" file="107AAN041" />
+      <table id="606" file="107AEN081" />
+      <table id="607" file="107AFN083" />
+      <table id="608" file="1O7MSA010" />
+      <table id="640" file="107DPVSACFE015" />
+      <table id="642" file="107DPVSACFE020" />
+    </node>
+  </node>
+  <node id="5" name="Institutions nationales" cod="N">
+    <node id="153" name="FEDERATION DES FILIERES BETAIL ET VIANDE">
+      <table id="155" file="107CTR051" />
+      <table id="156" file="107CTR052" />
+      <table id="157" file="107CTR053" />
+      <table id="158" file="107CTR070" />
+      <table id="355" file="107ITR050" />
+    </node>
+    <node id="159" name="DMEME - MINAGRI">
+      <table id="161" file="107CMA015" />
+      <table id="162" file="107CMA020" />
+    </node>
+    <node id="163" name="DSDI - MINAGRI">
+      <table id="164" file="107CFA010" />
+      <table id="165" file="107CFA015" />
+      <table id="166" file="107CFA020" />
+      <table id="167" file="107CFA025" />
+      <table id="168" file="107CFA030" />
+      <table id="169" file="107CFA035" />
+      <table id="171" file="107CLI021" />
+      <table id="172" file="107CLI022" />
+      <table id="173" file="107CLI023" />
+      <table id="174" file="107CPD010" />
+      <table id="175" file="107CPD015" />
+      <table id="176" file="107CPD016" />
+      <table id="177" file="107CPD025" />
+      <table id="178" file="107CPO010" />
+      <table id="179" file="107CPO011" />
+      <table id="180" file="107CPO012" />
+      <table id="181" file="107CPO013" />
+      <table id="182" file="107CPO014" />
+      <table id="183" file="107CPO015" />
+      <table id="184" file="107CPO016" />
+      <table id="185" file="107CTR010" />
+      <table id="187" file="107CTR040" />
+      <table id="189" file="107SMA012" />
+      <table id="191" file="107SPD015" />
+      <table id="192" file="107SPD080" />
+      <table id="193" file="107SPO011" />
+      <table id="194" file="107SPO012" />
+      <table id="195" file="107SPO013" />
+      <table id="196" file="107SPO014" />
+      <table id="197" file="107SPO015" />
+      <table id="198" file="107SPO016" />
+      <table id="330" file="107IVA010" />
+      <table id="331" file="107IVA020" />
+      <table id="353" file="107ILI020" />
+      <table id="387" file="107RSF013" />
+      <table id="392" file="107RPO015" />
+      <table id="395" file="107RCV012" />
+      <table id="400" file="107RME012" />
+      <table id="402" file="107RME013" />
+      <table id="404" file="107RME014" />
+      <table id="408" file="107RPV012" />
+      <table id="410" file="107RFP012" />
+      <table id="412" file="107RFN011" />
+      <table id="414" file="107RFN012" />
+      <table id="416" file="107RSN011" />
+      <table id="418" file="107RSF014" />
+      <table id="420" file="107RSN013" />
+      <table id="422" file="107RAN012" />
+      <table id="424" file="107RAN013" />
+      <table id="426" file="107RCN011" />
+      <table id="428" file="107RCN012" />
+      <table id="430" file="107RCN013" />
+      <table id="432" file="107RCN014" />
+      <table id="434" file="107RMN011" />
+      <table id="436" file="107RMN012" />
+      <table id="438" file="107RMN013" />
+      <table id="440" file="107RMN014" />
+      <table id="443" file="107RPN014" />
+      <table id="448" file="107REN013" />
+      <table id="450" file="107REN014" />
+      <table id="453" file="107REN015" />
+      <table id="455" file="107RPR017" />
+      <table id="457" file="107RPR016" />
+      <table id="459" file="107RPR015" />
+      <table id="461" file="107RPR013" />
+      <table id="467" file="107BAL092" />
+      <table id="487" file="107RMR014" />
+      <table id="501" file="107BAT003" />
+      <table id="504" file="107BAT008" />
+      <table id="529" file="107RER011" />
+      <table id="531" file="107RCR018" />
+      <table id="533" file="107RCR017" />
+      <table id="535" file="107RCR016" />
+      <table id="537" file="107RCR015" />
+      <table id="539" file="107RCR014" />
+    </node>
+    <node id="199" name="INS">
+      <table id="200" file="107CPO010" />
+      <table id="201" file="107CPR010" />
+      <table id="203" file="107CTR010" />
+      <table id="204" file="107CTR011" />
+      <table id="205" file="107CTR040" />
+      <table id="206" file="107CVA010" />
+      <table id="207" file="107CVA011" />
+      <table id="208" file="107CVA020" />
+      <table id="352" file="107IPR040" />
+      <table id="356" file="107IPE011" />
+      <table id="623" file="107CPO030" />
+      <table id="625" file="107CPO015" />
+      <table id="627" file="107CPO035" />
+      <table id="632" file="107CVA025" />
+    </node>
+    <node id="209" name="MINEF">
+      <table id="210" file="107CFO010" />
+      <table id="211" file="107CFO011" />
+      <table id="212" file="107CFO012" />
+    </node>
+    <node id="213" name="MIPARH">
+      <table id="214" file="107CFI010" />
+      <table id="215" file="107CPD035" />
+      <table id="216" file="107CPD040" />
+      <table id="217" file="107CPD045" />
+      <table id="218" file="107CPD050" />
+      <table id="219" file="107CPD060" />
+      <table id="256" file="107CPD055" />
+      <table id="613" file="107SFI025" />
+    </node>
+    <node id="222" name="OCPV: Prix des vivriers">
+      <table id="223" file="107SPR010" />
+      <table id="224" file="107SPR015" />
+    </node>
+    <node id="225" name="ONDR(Office National de Developpement de la Riziculture)">
+      <table id="226" file="107CTR040" />
+      <table id="227" file="107SMA010" />
+    </node>
+    <node id="228" name="SANTE">
+      <table id="229" file="107MSA010" />
+    </node>
+    <node id="230" name="SODEXAM">
+      <table id="232" file="107SWA010" />
+      <table id="233" file="107SWA020" />
+      <table id="234" file="107SWA315" />
+      <table id="354" file="107IWA015" />
+      <table id="582" file="107CWA015" />
+    </node>
+    <node id="245" name="DPVCQ - MINAGRI">
+      <table id="270" file="107CFE020" />
+      <table id="271" file="107CPE015" />
+      <table id="272" file="107CPE020" />
+      <table id="549" file="107CFE015" />
+    </node>
+    <node id="247" name="DIRECTION DES STATISTIQUES DOUANERES">
+      <table id="259" file="107CTR045" />
+      <table id="262" file="107CTR040" />
+      <table id="265" file="107CTR010" />
+      <table id="268" file="107CTR015" />
+    </node>
+    <node id="327" name="DAP (Direction de l’Aquaculture et des Pêches)">
+      <table id="328" file="107IFI010" />
+      <table id="329" file="107IFI020" />
+      <table id="610" file="107CFI010" />
+    </node>
+    <node id="615" name="ANADER" />
+    <node id="636" name="DPVSA-MINAGRI">
+      <table id="639" file="107DPVSACFE015" />
+      <table id="641" file="107DPVSACFE020" />
+    </node>
+  </node>
+  <node id="6" name="Partenaires internationaux" cod="I">
+    <table id="617" file="107CLA010" />
+  </node>
+</tree>

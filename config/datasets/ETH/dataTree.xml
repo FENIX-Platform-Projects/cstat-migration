@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<tree>
+  <lastID>135</lastID>
+  <node id="1" name="National Core" cod="C">
+    <node id="7" name="Production" cod="CPD">
+      <table id="57" file="238CPD010" />
+      <table id="58" file="238CPD015" />
+      <table id="59" file="238CPD020" />
+      <table id="61" file="238CPD040" />
+      <table id="62" file="238CPD045" />
+      <table id="63" file="238CPD055" />
+      <table id="64" file="238CPD060" />
+      <table id="65" file="238CPD065" />
+      <table id="66" file="238CPD070" />
+      <table id="118" file="238CPD010" />
+      <table id="121" file="238CPD015" />
+      <table id="122" file="238CPD040" />
+    </node>
+    <node id="8" name="Trade" cod="CTR">
+    </node>
+    <node id="9" name="Food Availability" cod="CFA" />
+    <node id="10" name="Prices" cod="CPR">
+      <table id="104" file="238CPR010" />
+      <table id="105" file="238CPR020" />
+      <table id="106" file="238CPR040" />
+      <table id="133" file="238CPR020" />
+      <table id="134" file="238CPR040" />
+    </node>
+    <node id="11" name="Land Use" cod="CLI">
+      <table id="72" file="238CLI010" />
+      <table id="131" file="238CLI010" />
+    </node>
+    <node id="12" name="Population" cod="CPO">
+      <table id="73" file="238CPO010" />
+      <table id="132" file="238CPO010" />
+    </node>
+    <node id="13" name="Labor" cod="CLA">
+      <table id="74" file="238CLA010" />
+      <table id="130" file="238CLA010" />
+    </node>
+    <node id="14" name="Fertilizers" cod="CFE">
+      <table id="75" file="238CFE015" />
+      <table id="76" file="238CFE030" />
+      <table id="123" file="238CFE015" />
+      <table id="124" file="238CFE030" />
+    </node>
+    <node id="15" name="Pesticides" cod="CPE">
+    </node>
+    <node id="16" name="Machinery" cod="CMA">
+    </node>
+    <node id="17" name="Forestry" cod="CFO">
+      <table id="81" file="238CFO015" />
+      <table id="82" file="238CFO020" />
+      <table id="83" file="238CFO025" />
+      <table id="127" file="238CFO015" />
+      <table id="128" file="238CFO020" />
+      <table id="129" file="238CFO025" />
+    </node>
+    <node id="18" name="Fisheries" cod="CFI">
+      <table id="84" file="238CFI010" />
+      <table id="85" file="238CFI020" />
+      <table id="125" file="238CFI010" />
+      <table id="126" file="238CFI020" />
+    </node>
+    <node id="19" name="Water" cod="CWA" />
+    <node id="20" name="Value Added" cod="CVA" />
+    <node id="135" name="Government Expenditure" cod="CGE" />
+  </node>
+  <node id="2" name="Sub-National" cod="S">
+    <node id="21" name="Production" cod="SPD">
+    </node>
+    <node id="22" name="Trade" cod="STR" />
+    <node id="23" name="Food Availability" cod="SFA">
+    </node>
+    <node id="24" name="Prices" cod="SPR">
+    </node>
+    <node id="25" name="Land Use" cod="SLI">
+    </node>
+    <node id="26" name="Population" cod="SPO" />
+    <node id="27" name="Labor" cod="SLA">
+    </node>
+    <node id="28" name="Fertilizers" cod="SFE">
+    </node>
+    <node id="29" name="Pesticides" cod="SPE" />
+    <node id="30" name="Machinery" cod="SMA" />
+    <node id="31" name="Forestry" cod="SFO" />
+    <node id="32" name="Fisheries" cod="SFI" />
+    <node id="33" name="Water" cod="SWA" />
+    <node id="34" name="Value Added" cod="SVA" />
+  </node>
+  <node id="3" name="Global Strategy Minimum set of Core Data" cod="G">
+    <node id="35" name="Economic">
+      <node id="36" name="Output" />
+      <node id="37" name="Trade" />
+      <node id="38" name="Stock of Resources" />
+      <node id="39" name="Inputs" />
+      <node id="40" name="Agro Processing" />
+      <node id="41" name="Prices" />
+      <node id="42" name="Final Expenditure" />
+      <node id="43" name="Rural Infrastructure(Capital stock)" />
+      <node id="44" name="International Transfer" />
+    </node>
+    <node id="45" name="Social">
+      <node id="46" name="Demographics of Urban and Rural Population" />
+    </node>
+    <node id="47" name="Environmental">
+      <node id="48" name="Land" />
+      <node id="49" name="Water" />
+      <node id="50" name="Air" />
+    </node>
+    <node id="51" name="Geographic Location">
+      <node id="52" name="GIS coordinates" />
+      <node id="53" name="Degree of urbanization" />
+    </node>
+  </node>
+  <node id="4" name="Thematic Modules" cod="T">
+    <node id="54" name="SUA/FBS">
+      <node id="57" name="FBS" />
+      <node id="58" name="SUA" />
+    </node>
+    <node id="59" name="Food Security" />
+    <node id="55" name="Agricultural Census" />
+    <node id="56" name="Food Supply Survey">
+      <table id="101" file="238MFA010" />
+    </node>
+  </node>
+  <node id="5" name="National Institutions" cod="N" />
+  <node id="6" name="International Partners" cod="I" />
+  <node id="109" name="Agricultural Censuses and Surveys">
+    <node id="113" name="Agricultural Census">
+      <table id="117" file="238CPD010" />
+      <table id="119" file="238CPD010" />
+    </node>
+    <node id="114" name="Belg Season Survey">
+      <table id="116" file="238CPD010" />
+      <table id="120" file="238CPD010" />
+    </node>
+  </node>
+  <node id="110" name="Statistical Yearbooks">
+    <node id="115" name="Agricultural Statistics Abstract" />
+  </node>
+  <node id="111" name="Food Balance Sheets" />
+</tree>

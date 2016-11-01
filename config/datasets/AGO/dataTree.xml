@@ -1,0 +1,241 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<tree>
+  <lastID>208</lastID>
+  <node id="1" name="Estatísticas nacionais - módulo básico" cod="C">
+    <node id="7" name="Produção" cod="CPD">
+      <table id="67" file="007CPD010" />
+      <table id="68" file="007CPD015" />
+      <table id="69" file="007CPD016" />
+      <table id="70" file="007CPD020" />
+      <table id="71" file="007CPD025" />
+      <table id="72" file="007CPD030" />
+      <table id="73" file="007CPD035" />
+      <table id="74" file="007CPD040" />
+      <table id="75" file="007CPD045" />
+      <table id="76" file="007CPD050" />
+      <table id="153" file="007CPD060" />
+      <table id="154" file="007CPD070" />
+    </node>
+    <node id="8" name="Comércio" cod="CTR">
+      <table id="77" file="007CTR010" />
+      <table id="78" file="007CTR015" />
+      <table id="79" file="007CTR025" />
+      <table id="80" file="007CTR030" />
+      <table id="81" file="007CTR040" />
+      <table id="82" file="007CTR045" />
+      <table id="83" file="007CTR050" />
+      <table id="84" file="007CTR055" />
+      <table id="85" file="007CTR070" />
+      <table id="86" file="007CTR071" />
+      <table id="88" file="007CTR081" />
+    </node>
+    <node id="9" name="Disponibilidade de alimentos" cod="CFA">
+      <table id="164" file="007CFA020" />
+      <table id="165" file="007CFA015" />
+      <table id="166" file="007CFA010" />
+    </node>
+    <node id="10" name="Preços" cod="CPR">
+      <table id="163" file="007CPR010" />
+    </node>
+    <node id="11" name="Uso da Terra" cod="CLI" />
+    <node id="12" name="População" cod="CPO">
+      <table id="89" file="007CPO010" />
+      <table id="207" file="007CPO015" />
+    </node>
+    <node id="13" name="Força de trabalho" cod="CLA" />
+    <node id="14" name="Fertilizantes" cod="CFE" />
+    <node id="15" name="Pesticidas" cod="CPE" />
+    <node id="16" name="Maquinaria" cod="CMA">
+      <table id="91" file="007CMA015" />
+      <table id="92" file="007CMA020" />
+      <table id="160" file="007CMA010" />
+    </node>
+    <node id="17" name="Florestas" cod="CFO">
+    </node>
+    <node id="18" name="Pesca" cod="CFI">
+      <table id="111" file="007CFI010" />
+      <table id="94" file="007CFI011" />
+      <table id="95" file="007CFI020" />
+      <table id="96" file="007CFI021" />
+      <table id="169" file="007CFI070" />
+      <table id="170" file="007CFI080" />
+    </node>
+    <node id="19" name="Água" cod="CWA">
+    </node>
+    <node id="205" name="Gastos Públicos" cod="CGE" />
+    <node id="20" name="Valor Agregado" cod="CVA" />
+  </node>
+  <node id="2" name="Estatísticas locais" cod="S">
+    <node id="21" name="Produção" cod="SPD">
+      <table id="98" file="007SPD010" />
+      <table id="99" file="007SPD015" />
+      <table id="100" file="007SPD016" />
+      <table id="101" file="007SPD035" />
+      <table id="102" file="007SPD040" />
+      <table id="103" file="007SPD045" />
+      <table id="104" file="007SPD050" />
+      <table id="167" file="007SPD020" />
+      <table id="168" file="007SPD030" />
+    </node>
+    <node id="22" name="Comércio" cod="STR">
+      <table id="105" file="007SPR020" />
+    </node>
+    <node id="23" name="Disponibilidade de alimentos" cod="SFA" />
+    <node id="24" name="Preços" cod="SPR" />
+    <node id="25" name="Uso da Terra" cod="SLI" />
+    <node id="26" name="População" cod="SPO">
+      <table id="106" file="007SPO010" />
+    </node>
+    <node id="27" name="Força de trabalho" cod="SLA" />
+    <node id="28" name="Fertilizantes" cod="SFE" />
+    <node id="29" name="Pesticidas" cod="SPE" />
+    <node id="30" name="Maquinaria" cod="SMA">
+      <table id="107" file="007SMA010" />
+      <table id="108" file="007SMA521" />
+      <table id="109" file="007SMA533" />
+    </node>
+    <node id="31" name="Florestas" cod="SFO">
+      <table id="110" file="007SFO011" />
+    </node>
+    <node id="32" name="Pesca" cod="SFI">
+      <table id="208" file="007SFI010" />
+    </node>
+    <node id="33" name="Água" cod="SWA">
+      <table id="97" file="007SWA010" />
+    </node>
+    <node id="34" name="Valor Agregado" cod="SVA" />
+  </node>
+  <node id="3" name="Estratégia Global – grupo mínimo de dados de base" cod="G">
+    <node id="35" name="Economico">
+      <node id="36" name="Produto">
+        <table id="112" file="007CPD010" />
+        <table id="113" file="007CPD015" />
+        <table id="114" file="007CPD016" />
+        <table id="115" file="007CPD045" />
+        <table id="116" file="007CPD050" />
+        <table id="117" file="007CPD060" />
+        <table id="118" file="007CPD070" />
+      </node>
+      <node id="37" name="Comércio">
+        <table id="119" file="007CTR010" />
+        <table id="120" file="007CTR015" />
+        <table id="121" file="007CTR025" />
+        <table id="122" file="007CTR030" />
+        <table id="123" file="007CTR040" />
+        <table id="124" file="007CTR045" />
+        <table id="125" file="007CTR050" />
+      </node>
+      <node id="38" name="Estoque de recursos">
+        <table id="126" file="007CPD035" />
+        <table id="127" file="007CPD040" />
+      </node>
+      <node id="39" name="Inputs">
+        <table id="128" file="007CPD020" />
+        <table id="129" file="007CPD025" />
+      </node>
+      <node id="40" name="Transformação agro-alimentar">
+        <table id="130" file="007CPD030" />
+      </node>
+      <node id="41" name="Preço" />
+      <node id="42" name="Despesa final" />
+      <node id="43" name="Infrastrutura rural (estoque capital)" />
+      <node id="44" name="Transferência internacional" />
+    </node>
+    <node id="45" name="Social">
+      <node id="46" name="Demografia da população urbana e rural">
+        <table id="131" file="007CPO010" />
+      </node>
+    </node>
+    <node id="47" name="Ambiental">
+      <node id="48" name="Terra" />
+      <node id="49" name="Água" />
+      <node id="50" name="Ar" />
+    </node>
+    <node id="51" name="Localização geográfica">
+      <node id="52" name="Coordenadas SIG" />
+      <node id="53" name="Nivel de urbanização" />
+    </node>
+  </node>
+  <node id="55" name="Censos agrícolas e inquéritos">
+    <node id="158" name="Censos" />
+    <node id="159" name="Inquéritos" />
+  </node>
+  <node id="56" name="Anuários Estatísticos" />
+  <node id="54" name="Balanço Alimentar" />
+  <node id="4" name="Módulos temáticos" cod="T">
+    <node id="157" name="Despesa pública" />
+    <node id="183" name="">
+      <table id="184" file="007CMA032" />
+      <table id="185" file="007CWA015" />
+      <table id="186" file="007SFI010" />
+      <table id="187" file="007SPD011" />
+      <table id="188" file="007SPD025" />
+      <table id="189" file="007SPD080" />
+      <table id="190" file="sf34" />
+    </node>
+  </node>
+  <node id="5" name="Instituições nacionais" cod="N">
+    <node id="57" name="SNA">
+      <table id="133" file="007CMA030" />
+      <table id="134" file="007CMA031" />
+      <table id="135" file="007CMA033" />
+      <table id="136" file="007CTR070" />
+      <table id="137" file="007CTR071" />
+      <table id="171" file="007IMA010" />
+      <table id="172" file="007IMA015" />
+      <table id="173" file="007IMA020" />
+    </node>
+    <node id="58" name="GEPE-MINAGRI">
+      <table id="138" file="007CPD010" />
+      <table id="139" file="007CPD011" />
+      <table id="140" file="007CPD015" />
+      <table id="141" file="007CPD020" />
+    </node>
+    <node id="59" name="GEPE MINCO" />
+    <node id="60" name="GEPE-MINPESCA">
+      <table id="142" file="007CFI010" />
+      <table id="143" file="007CFI011" />
+    </node>
+    <node id="61" name="GSA">
+      <table id="144" file="007CPR010" />
+    </node>
+    <node id="62" name="IDF">
+      <table id="145" file="007CTR080" />
+      <table id="146" file="007CTR081" />
+    </node>
+    <node id="63" name="INAMET">
+      <table id="147" file="007SWA010" />
+      <table id="203" file="007INA010" />
+    </node>
+    <node id="64" name="INCA" />
+    <node id="65" name="INE">
+      <table id="148" file="007SPO010" />
+      <table id="179" file="007IPR040" />
+      <table id="180" file="007IPR030" />
+      <table id="202" file="007INE010" />
+    </node>
+    <node id="66" name="ISV">
+      <table id="149" file="007CPD035" />
+      <table id="150" file="007CPD040" />
+      <table id="151" file="007CPD050" />
+    </node>
+    <node id="181" name="INSTITUTO DE DESENVOLVIMENTO FLORESTAL">
+      <table id="182" file="007itr080" />
+    </node>
+    <node id="192" name="Direcção Nacional das Alfandegas">
+      <table id="193" file="007DNA010" />
+    </node>
+    <node id="194" name="GEPE/PESCAS">
+      <table id="195" file="007DNA015" />
+      <table id="196" file="007DNA020" />
+      <table id="197" file="007DNA025" />
+    </node>
+    <node id="198" name="GEPE DO MINADERP">
+      <table id="199" file="007GDM010" />
+    </node>
+    <node id="200" name="INSTITUTO DE DESENVOLVIMENTO AGRARIO">
+      <table id="201" file="007IDA010" />
+    </node>
+  </node>
+  <node id="6" name="Parceiros internacionais" cod="I" />
+</tree>

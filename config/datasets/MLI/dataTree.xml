@@ -1,0 +1,1131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<tree>
+  <lastID>1344</lastID>
+  <node id="1" name="Statistiques nationales - module de base" cod="C">
+    <node id="7" name="Production" cod="CPD">
+      <table id="100" file="133CPD010" />
+      <table id="101" file="133CPD015" />
+      <table id="102" file="133CPD020" />
+      <table id="103" file="133CPD035" />
+      <table id="104" file="133CPD045" />
+      <table id="105" file="133CPD050" />
+      <table id="106" file="133CPD060" />
+      <table id="107" file="133CPD065" />
+      <table id="108" file="133CPD070" />
+      <table id="419" file="133CPD016" />
+      <table id="434" file="133CPD040" />
+    </node>
+    <node id="8" name="Commerce" cod="CTR">
+      <table id="109" file="133CTR010" />
+      <table id="110" file="133CTR015" />
+      <table id="111" file="133CTR025" />
+      <table id="112" file="133CTR030" />
+      <table id="113" file="133CTR040" />
+      <table id="115" file="133CTR045" />
+      <!--table id="116" file="133CTR055" /-->
+    </node>
+    <node id="9" name="Disponibilité alimentaire" cod="CFA">
+      <table id="347" file="133CFA010" />
+      <table id="348" file="133CFA015" />
+      <!--table id="349" file="133CFA040" /-->
+    </node>
+    <node id="10" name="Prix" cod="CPR">
+      <table id="351" file="133CPR010" />
+      <table id="941" file="133CPR050" />
+      <table id="1132" file="133CPR040" />
+    </node>
+    <node id="11" name="Terres" cod="CLI">
+      <table id="352" file="133CLI010" />
+    </node>
+    <node id="12" name="Population" cod="CPO">
+      <!--table id="353" file="133CPO010" /-->
+      <table id="390" file="133CPO010" />
+      <table id="1109" file="133CPO015" />
+      <table id="1110" file="133CPO020" />
+      <table id="1263" file="133CPO025" />
+      <table id="1264" file="133CPO030" />
+      <table id="1265" file="133CPO035" />
+      <table id="1266" file="133CPO040" />
+    </node>
+    <node id="13" name="Travail" cod="CLA">
+      <table id="354" file="133CLA010" />
+      <table id="1108" file="133CLA015" />
+    </node>
+    <node id="14" name="Engrais" cod="CFE">
+      <table id="117" file="133CFE015" />
+      <table id="118" file="133CFE020" />
+      <!--table id="119" file="133CFE030" /-->
+      <table id="407" file="133CFE030" />
+    </node>
+    <node id="15" name="Pesticides" cod="CPE">
+      <table id="120" file="133CPE010" />
+    </node>
+    <node id="16" name="Machines" cod="CMA">
+      <!--table id="121" file="133CMA010" /-->
+      <table id="435" file="133CMA010" />
+    </node>
+    <node id="17" name="Forêts" cod="CFO">
+      <!--table id="122" file="133CFO010" /-->
+      <table id="425" file="133CFO010" />
+    </node>
+    <node id="18" name="Pêches" cod="CFI">
+      <table id="125" file="133CFI010" />
+      <table id="126" file="133CFI020" />
+      <table id="127" file="133CFI030" />
+      <table id="128" file="133CFI040" />
+      <table id="129" file="133CFI070" />
+      <table id="130" file="133CFI080" />
+    </node>
+    <node id="19" name="Eau" cod="CWA" />
+    <node id="20" name="Valeur ajoutée" cod="CVA">
+      <table id="134" file="133CVA020" />
+      <table id="794" file="133CVA010" />
+    </node>
+    <node id="1053" name="Dépenses Publiques" cod="CGE" />
+  </node>
+  <node id="2" name="Statistiques locales" cod="S">
+    <node id="21" name="Production" cod="SPD">
+      <table id="135" file="133SPD010" />
+      <table id="136" file="133SPD015" />
+      <table id="137" file="133SPD020" />
+      <table id="138" file="133SPD035" />
+      <table id="139" file="133SPD045" />
+      <table id="140" file="133SPD050" />
+      <table id="141" file="133SPD060" />
+      <table id="142" file="133SPD065" />
+      <table id="143" file="133SPD070" />
+      <table id="833" file="133SPD055" />
+      <table id="834" file="133SPD040" />
+    </node>
+    <node id="22" name="Commerce" cod="STR" />
+    <node id="23" name="Disponibilité alimentaire" cod="SFA" />
+    <node id="24" name="Prix" cod="SPR">
+      <table id="144" file="133SPR010" />
+      <!--table id="146" file="133SPR014" /-->
+      <!--table id="149" file="133SPR512" /-->
+      <!--table id="150" file="133SPR514" /-->
+    </node>
+    <node id="25" name="Terres" cod="SLI">
+      <table id="942" file="133SLI010" />
+    </node>
+    <node id="26" name="Population" cod="SPO">
+      <table id="153" file="133SPO010" />
+      <table id="1267" file="133SPO015" />
+      <table id="1268" file="133SPO025" />
+      <table id="1269" file="133SPO030" />
+      <table id="1270" file="133SPO035" />
+      <table id="1271" file="133SPO040" />
+      <table id="1272" file="133SPO020" />
+    </node>
+    <node id="27" name="Travail" cod="SLA">
+      <!--table id="156" file="133SLA030" /-->
+      <table id="1052" file="133SLA010" />
+      <table id="1273" file="133SLA015" />
+    </node>
+    <node id="28" name="Engrais" cod="SFE">
+      <!--table id="157" file="133SLA030" /-->
+      <table id="838" file="133SFE030" />
+    </node>
+    <node id="29" name="Pesticides" cod="SPE">
+      <!--table id="158" file="133SPE010" /-->
+    </node>
+    <node id="30" name="Machines" cod="SMA" />
+    <node id="31" name="Forêts" cod="SFO">
+      <table id="1341" file="133SFO010" />
+    </node>
+    <node id="32" name="Pêches" cod="SFI">
+      <table id="787" file="133SFI020" />
+      <table id="788" file="133SFI040" />
+      <table id="792" file="133SFI010" />
+      <table id="1257" file="133SFI030" />
+    </node>
+    <node id="33" name="Eau" cod="SWA">
+      <!--table id="162" file="133SWA010_1" /-->
+      <table id="163" file="133SWA015" />
+    </node>
+    <node id="34" name="Valeur ajoutée" cod="SVA">
+    </node>
+  </node>
+  <node id="3" name="Stratégie Mondiale ensemble minimal de données de base" cod="G">
+    <node id="35" name="Economique">
+      <node id="36" name="Produit">
+        <table id="165" file="133CFI010" />
+        <table id="166" file="133CFI020" />
+        <table id="167" file="133CFI030" />
+        <table id="168" file="133CFI040" />
+        <!--table id="169" file="133CFO010" /-->
+        <table id="170" file="133CPD010" />
+        <table id="171" file="133CPD015" />
+        <table id="172" file="133CPD045" />
+        <table id="173" file="133CPD050" />
+        <table id="174" file="133CPD060" />
+        <table id="175" file="133CPD070" />
+      </node>
+      <node id="37" name="Commerce">
+        <table id="176" file="133CFI070" />
+        <table id="177" file="133CFI080" />
+        <table id="178" file="133CTR010" />
+        <table id="179" file="133CTR015" />
+        <table id="180" file="133CTR025" />
+        <table id="181" file="133CTR030" />
+        <table id="182" file="133CTR040" />
+        <table id="183" file="133CTR045" />
+        <!--table id="184" file="133CTR055" /-->
+      </node>
+      <node id="38" name="Stock de ressources" />
+      <node id="39" name="Inputs">
+        <!--table id="185" file="133CFE030" /-->
+        <table id="186" file="133CPD020" />
+        <table id="187" file="133CPE010" />
+      </node>
+      <node id="40" name="Transformation agro-alimentaire" />
+      <node id="41" name="Prix">
+        <table id="188" file="133CPR010" />
+      </node>
+      <node id="42" name="Dépense finale">
+        <table id="189" file="133CFA010" />
+        <table id="190" file="133CFA015" />
+      </node>
+      <node id="43" name="Infrastructure rurale(capital stock)" />
+      <node id="44" name="Transfert international" />
+    </node>
+    <node id="45" name="Social">
+      <node id="46" name="Démographie de la population urbaine et rurale">
+        <!--table id="191" file="133CPO010" /-->
+      </node>
+    </node>
+    <node id="47" name="Environnemental">
+      <node id="48" name="Terre" />
+      <node id="49" name="Eau" />
+      <node id="50" name="Air" />
+    </node>
+    <node id="51" name="Localisation géographique">
+      <node id="52" name="SIG coordonnées" />
+      <node id="53" name="Niveau d'urbanisation" />
+    </node>
+  </node>
+  <node id="431" name="Recensements et enquêtes agricoles">
+    <node id="943" name="Recensements">
+      <node id="947" name="Recensement 2004-2005">
+        <table id="959" file="133M04010" />
+        <table id="960" file="133M04011" />
+        <table id="961" file="133M04013" />
+        <table id="962" file="133M04020" />
+        <table id="963" file="133M04025" />
+        <table id="964" file="133M04030" />
+        <table id="965" file="133M04032" />
+        <table id="966" file="133M04033" />
+        <table id="967" file="133M04034" />
+        <table id="969" file="133M04040" />
+        <table id="972" file="133M04045" />
+        <table id="973" file="133MA4010" />
+        <table id="974" file="133MO4036" />
+        <table id="975" file="133MRA012" />
+        <table id="976" file="133MRA013" />
+        <table id="977" file="133MRA014" />
+        <table id="978" file="133MRA015" />
+        <table id="979" file="133MRA016" />
+        <table id="980" file="133MRA017" />
+        <table id="981" file="133MRA018" />
+        <table id="983" file="133MRA019" />
+        <table id="984" file="133MRA020" />
+        <table id="985" file="133MRA021" />
+        <table id="986" file="133MRA022" />
+        <table id="987" file="133MRA023" />
+        <table id="988" file="133MRA024" />
+        <table id="989" file="133MRA025" />
+        <table id="990" file="133MRA026" />
+        <table id="991" file="133MRA027" />
+        <table id="992" file="133MRA028" />
+        <table id="993" file="133MRA029" />
+        <table id="994" file="133MRA030" />
+        <table id="995" file="133MRA031" />
+        <table id="996" file="133MRA032" />
+        <table id="997" file="133MRA033" />
+        <table id="998" file="133MRA034" />
+        <table id="999" file="133MRA035" />
+        <table id="1000" file="133MRA036" />
+        <table id="1001" file="133MRA037" />
+        <table id="1002" file="133MRA038" />
+        <table id="1003" file="133MRA039" />
+        <table id="1004" file="133MRA040" />
+        <table id="1005" file="133MRA041" />
+        <table id="1006" file="133MRA042" />
+        <table id="1008" file="133MRA043" />
+        <table id="1009" file="133MRA044" />
+        <table id="1010" file="133MRA045" />
+        <table id="1011" file="133MRA046" />
+        <table id="1012" file="133MRA047" />
+        <table id="1013" file="133MRA048" />
+        <table id="1014" file="133MRA049" />
+        <table id="1015" file="133MRA050" />
+        <table id="1016" file="133MRA051" />
+        <table id="1017" file="133MRA052" />
+        <table id="1018" file="133MRA053" />
+        <table id="1019" file="133MRA054" />
+        <table id="1020" file="133MRA055" />
+        <table id="1021" file="133MRA56" />
+        <table id="1022" file="133MRA057" />
+        <table id="1023" file="133MRA058" />
+        <table id="1024" file="133MRA059" />
+        <table id="1025" file="133MRA060" />
+        <table id="1026" file="133MRA061" />
+        <table id="1027" file="133MRA062" />
+        <table id="1028" file="133MRA063" />
+        <table id="1029" file="133MRA064" />
+        <table id="1030" file="133MRA065" />
+        <table id="1031" file="133MRA066" />
+        <table id="1032" file="133MRA067" />
+        <table id="1033" file="133MRA068" />
+        <table id="1034" file="133MRA069" />
+        <table id="1035" file="133MRA070" />
+        <table id="1036" file="133MRA071" />
+        <table id="1037" file="133MRA072" />
+        <table id="1038" file="133MRA073" />
+        <table id="1039" file="133MRA074" />
+        <table id="1040" file="133MRA075" />
+        <table id="1041" file="133MRA076" />
+        <table id="1042" file="133MRA077" />
+        <table id="1043" file="133MRA078" />
+        <table id="1044" file="133MRA079" />
+        <table id="1045" file="133MRA080" />
+        <table id="201" file="133M04015" />
+        <table id="542" file="133MRA081" />
+        <table id="543" file="133MRA082" />
+        <table id="545" file="133MRA084" />
+        <table id="546" file="133MRA085" />
+        <table id="547" file="133MRA086" />
+        <table id="548" file="133MRA087" />
+        <table id="550" file="133MRA089" />
+        <table id="551" file="133MRA090" />
+        <table id="553" file="133MRA092" />
+        <table id="554" file="133MRA093" />
+        <table id="555" file="133MRA094" />
+        <table id="556" file="133MRA095" />
+        <table id="557" file="133MRA096" />
+        <table id="558" file="133MRA097" />
+        <table id="559" file="133MRA098" />
+        <table id="560" file="133MRA099" />
+        <table id="561" file="133MRA100" />
+        <table id="562" file="133MRA101" />
+        <table id="563" file="133MRA102" />
+        <table id="564" file="133MRA103" />
+        <table id="565" file="133MRA104" />
+        <table id="566" file="133MRA105" />
+        <table id="567" file="133MRA106" />
+        <table id="568" file="133MRA107" />
+        <table id="569" file="133MRA108" />
+        <table id="570" file="133MRA109" />
+        <table id="571" file="133MRA110" />
+        <table id="572" file="133MRA111" />
+        <table id="573" file="133MRA112" />
+        <table id="574" file="133MRA113" />
+        <table id="575" file="133MRA114" />
+        <table id="576" file="133MRA115" />
+        <table id="577" file="133MRA116" />
+        <table id="578" file="133MRA117" />
+        <table id="579" file="133MRA118" />
+        <table id="580" file="133MRA119" />
+        <table id="581" file="133MRA120" />
+        <table id="582" file="133MRA121" />
+        <table id="583" file="133MRA122" />
+        <table id="584" file="133MRA123" />
+        <table id="585" file="133MRA124" />
+        <table id="586" file="133MRA125" />
+        <table id="587" file="133MRA126" />
+        <table id="588" file="133MRA127" />
+        <table id="589" file="133MRA128" />
+        <table id="590" file="133MRA129" />
+        <table id="591" file="133MRA131" />
+        <table id="592" file="133MRA130" />
+        <table id="593" file="133MRA132" />
+        <table id="594" file="133MRA133" />
+        <table id="595" file="133MRA134" />
+        <table id="596" file="133MRA135" />
+        <table id="597" file="133MRA136" />
+        <table id="598" file="133MRA137" />
+        <table id="599" file="133MRA139" />
+        <table id="600" file="133MRA138" />
+        <table id="601" file="133MRA140" />
+        <table id="602" file="133MRA141" />
+        <table id="603" file="133MRA142" />
+        <table id="604" file="133MRA147" />
+        <table id="605" file="133MRA143" />
+        <table id="606" file="133MRA144" />
+        <table id="607" file="133MRA145" />
+        <table id="608" file="133MRA146" />
+        <table id="609" file="133MRA148" />
+        <table id="610" file="133MRA149" />
+        <table id="611" file="133MRA150" />
+        <table id="612" file="133MRA151" />
+        <table id="613" file="133MRA152" />
+        <table id="614" file="133MRA153" />
+        <table id="615" file="133MRA154" />
+        <table id="618" file="133MRA157" />
+        <table id="619" file="133MRA156" />
+        <table id="620" file="133MRA155" />
+        <table id="621" file="133MRA158" />
+        <table id="622" file="133MRA159" />
+        <table id="623" file="133MRA160" />
+        <table id="624" file="133MRA161" />
+        <table id="625" file="133MRA162" />
+        <table id="626" file="133MRA163" />
+        <table id="627" file="133MRA164" />
+        <table id="628" file="133MRA165" />
+        <table id="629" file="133MRA166" />
+        <table id="630" file="133MRA167" />
+        <table id="631" file="133MRA168" />
+        <table id="632" file="133MRA169" />
+        <table id="633" file="133MRA170" />
+        <table id="634" file="133MRA171" />
+        <table id="635" file="133MRA172" />
+        <table id="636" file="133MRA173" />
+        <table id="637" file="133MRA174" />
+        <table id="638" file="133MRA175" />
+        <table id="639" file="133MRA176" />
+        <table id="640" file="133MRA177" />
+        <table id="641" file="133MRA178" />
+        <table id="642" file="133MRA179" />
+        <table id="643" file="133MRA180" />
+        <table id="644" file="133MRA181" />
+        <table id="645" file="133MRA182" />
+        <table id="646" file="133MRA183" />
+        <table id="647" file="133MRA184" />
+        <table id="648" file="133MRA185" />
+        <table id="649" file="133MRA186" />
+        <table id="650" file="133MRA187" />
+        <table id="651" file="133MRA188" />
+        <table id="652" file="133MRA189" />
+        <table id="653" file="133MRA190" />
+        <table id="654" file="133MRA191" />
+        <table id="655" file="133MRA192" />
+        <table id="656" file="133MRA193" />
+        <table id="657" file="133MRA194" />
+        <table id="658" file="133MRA195" />
+        <table id="659" file="133MRA196" />
+        <table id="660" file="133MRA197" />
+        <table id="661" file="133MRA198" />
+        <table id="662" file="133MRA199" />
+        <table id="663" file="133MRA200" />
+        <table id="664" file="133MRA201" />
+        <table id="665" file="133MRA202" />
+        <table id="666" file="133MRA203" />
+        <table id="667" file="133MRA204" />
+        <table id="668" file="133MRA205" />
+        <table id="669" file="133MRA206" />
+        <table id="670" file="133MRA207" />
+        <table id="671" file="133MRA208" />
+        <table id="672" file="133MRA209" />
+        <table id="673" file="133MRA210" />
+        <table id="674" file="133MRA211" />
+        <table id="675" file="133MRA212" />
+        <table id="676" file="133MRA213" />
+        <table id="677" file="133MRA214" />
+        <table id="678" file="133MRA215" />
+        <table id="679" file="133MRA216" />
+        <table id="680" file="133MRA217" />
+        <table id="681" file="133MRA218" />
+        <table id="682" file="133MRA219" />
+        <table id="683" file="133MRA220" />
+        <table id="684" file="133MRA221" />
+        <table id="685" file="133MRA222" />
+        <table id="686" file="133MRA223" />
+        <table id="687" file="133MRA224" />
+        <table id="688" file="133MRA225" />
+        <table id="689" file="133MRA226" />
+        <table id="690" file="133MRA227" />
+        <table id="691" file="133MRA228" />
+        <table id="692" file="133MRA229" />
+        <table id="693" file="133MRA230" />
+        <table id="694" file="133MRA231" />
+        <table id="695" file="133MRA232" />
+        <table id="696" file="133MRA233" />
+        <table id="697" file="133MRA234" />
+        <table id="698" file="133MRA235" />
+        <table id="699" file="133MRA236" />
+        <table id="700" file="133MRA237" />
+        <table id="701" file="133MRA238" />
+        <table id="702" file="133MRA239" />
+        <table id="703" file="133MRA240" />
+        <table id="704" file="133MRA241" />
+        <table id="705" file="133MRA242" />
+        <table id="706" file="133MRA243" />
+        <table id="707" file="133MRA244" />
+        <table id="708" file="133MRA245" />
+        <table id="709" file="133MRA246" />
+        <table id="710" file="133MRA247" />
+        <table id="711" file="133MRA248" />
+        <table id="712" file="133MRA249" />
+        <table id="713" file="133MRA250" />
+        <table id="714" file="133MRA251" />
+        <table id="715" file="133MRA252" />
+        <table id="716" file="133MRA253" />
+        <table id="717" file="133MRA254" />
+        <table id="718" file="133MRA255" />
+        <table id="719" file="133MRA256" />
+        <table id="720" file="133MRA257" />
+        <table id="721" file="133MRA258" />
+        <table id="722" file="133MRA259" />
+        <table id="723" file="133MRA260" />
+        <table id="724" file="133MRA261" />
+        <table id="725" file="133MRA262" />
+        <table id="726" file="133MRA263" />
+        <table id="727" file="133MRA264" />
+        <table id="728" file="133MRA265" />
+        <table id="729" file="133MRA266" />
+        <table id="730" file="133MRA267" />
+        <table id="731" file="133MRA268" />
+        <table id="732" file="133MRA269" />
+        <table id="733" file="133MRA270" />
+        <table id="734" file="133MRA271" />
+        <table id="735" file="133MRA272" />
+        <table id="736" file="133MRA273" />
+        <table id="737" file="133MRA274" />
+        <table id="738" file="133MRA275" />
+        <table id="739" file="133MRA276" />
+        <table id="740" file="133MRA277" />
+        <table id="741" file="133MRA278" />
+        <table id="742" file="133MRA279" />
+        <table id="743" file="133MRA280" />
+        <table id="744" file="133MRA281" />
+        <table id="745" file="133MRA282" />
+        <table id="746" file="133MRA283" />
+        <table id="747" file="133MRA284" />
+        <table id="748" file="133MRA285" />
+        <table id="749" file="133MRA287" />
+        <table id="937" file="133MRA083" />
+        <table id="938" file="133MRA088" />
+        <table id="939" file="133MRA091" />
+      </node>
+    </node>
+    <node id="944" name="Enquêtes">
+      <node id="945" name="Enquêtes 1991-2012">
+        <table id="948" file="133SEA040" />
+        <table id="949" file="133SEA052" />
+        <table id="950" file="133SEA053" />
+        <table id="951" file="133SEA090" />
+        <table id="952" file="133EAC054" />
+        <table id="954" file="133EAC056" />
+        <table id="955" file="133EAC057" />
+        <table id="957" file="133EAC059" />
+        <table id="958" file="133EAC060" />
+        <table id="1051" file="133MEA001" />
+      </node>
+    </node>
+  </node>
+  <node id="54" name="Bilans Alimentaires">
+    <table id="466" file="133MBA001" />
+    <table id="467" file="133MBA002" />
+    <table id="468" file="133MBA003" />
+    <table id="469" file="133MBA004" />
+    <table id="470" file="133MBA005" />
+    <table id="471" file="133MBA006" />
+  </node>
+  <node id="56" name="Annuaires Statistiques">
+    <table id="1141" file="133APO001" />
+    <table id="1142" file="133APO002" />
+    <table id="1143" file="133APO003" />
+    <table id="1144" file="133APO004" />
+    <table id="1145" file="133APO005" />
+    <table id="1146" file="133APD001" />
+    <table id="1147" file="133APO006" />
+    <table id="1148" file="133APD002" />
+    <table id="1150" file="133APE001" />
+    <table id="1151" file="133APE002" />
+    <table id="1152" file="133APD003" />
+    <table id="1153" file="133APD004" />
+    <table id="1154" file="133APO007" />
+    <table id="1155" file="133APO008" />
+    <table id="1156" file="133APO009" />
+    <table id="1157" file="133APD005" />
+    <table id="1158" file="133APO010" />
+    <table id="1159" file="133APO011" />
+    <table id="1160" file="133APO012" />
+    <table id="1161" file="133APO013" />
+    <table id="1162" file="133APO014" />
+    <table id="1163" file="133APO015" />
+    <table id="1164" file="133APO016" />
+    <table id="1165" file="133APE004" />
+    <table id="1166" file="133APD006" />
+    <table id="1167" file="133APD007" />
+    <table id="1168" file="133APD008" />
+    <table id="1169" file="133APD009" />
+    <table id="1170" file="133APD010" />
+    <table id="1171" file="133APD011" />
+    <table id="1172" file="133APD012" />
+    <table id="1173" file="133APD013" />
+    <table id="1174" file="133APD014" />
+    <table id="1175" file="133APO017" />
+    <table id="1176" file="133APO018" />
+    <table id="1177" file="133AFE001" />
+    <table id="1178" file="133APD015" />
+    <table id="1179" file="133APD016" />
+    <table id="1180" file="133APD017" />
+    <table id="1181" file="133APD018" />
+    <table id="1182" file="133AFE002" />
+    <table id="1183" file="133APO019" />
+    <table id="1184" file="133APD019" />
+    <table id="1185" file="133APD020" />
+    <table id="1186" file="133APD021" />
+    <table id="1187" file="133APD022" />
+    <table id="1188" file="133APD023" />
+    <table id="1189" file="133APD024" />
+    <table id="1190" file="133APO020" />
+    <table id="1191" file="133APD025" />
+    <table id="1192" file="133AFE003" />
+    <table id="1193" file="133APD026" />
+    <table id="1194" file="133APD027" />
+    <table id="1195" file="133APD028" />
+    <table id="1196" file="133APD029" />
+    <table id="1197" file="133APD030" />
+    <table id="1198" file="133APD031" />
+    <table id="1199" file="133APO021" />
+    <table id="1200" file="133APD032" />
+    <table id="1201" file="133APD033" />
+    <table id="1203" file="133APD034" />
+    <table id="1204" file="133APD035" />
+    <table id="1205" file="133APD036" />
+    <table id="1206" file="133APD037" />
+    <table id="1208" file="133APD038" />
+    <table id="1209" file="133APD039" />
+    <table id="1210" file="133APD040" />
+    <table id="1211" file="133APD041" />
+    <table id="1212" file="133APD042" />
+    <table id="1213" file="133APD043" />
+    <table id="1214" file="133APO023" />
+    <table id="1215" file="133APO022" />
+    <table id="1217" file="133ATR001" />
+    <table id="1218" file="133ATR002" />
+    <table id="1219" file="133APD044" />
+    <table id="1220" file="133APD045" />
+    <table id="1221" file="133APD046" />
+    <table id="1222" file="133APD047" />
+    <table id="1223" file="133APD048" />
+    <table id="1224" file="133APD049" />
+    <table id="1225" file="133APD050" />
+    <table id="1226" file="133APD051" />
+    <table id="1227" file="133APD052" />
+    <table id="1228" file="133ATR003" />
+    <table id="1229" file="133ATR004" />
+    <table id="1230" file="133ATR005" />
+    <table id="1231" file="133AFI001" />
+    <table id="1232" file="133AFI002" />
+    <table id="1233" file="133AMA001" />
+    <table id="1234" file="133AMA002" />
+    <table id="1235" file="133APD053" />
+    <table id="1236" file="133AMA003" />
+    <table id="1237" file="133APD054" />
+    <table id="1238" file="133APD055" />
+    <table id="1239" file="133APD056" />
+    <table id="1240" file="133APD057" />
+    <table id="1241" file="133APD058" />
+    <table id="1242" file="133APD059" />
+    <table id="1243" file="133APO024" />
+    <table id="1244" file="133AFE004" />
+    <table id="1245" file="133AFE005" />
+    <table id="1246" file="133AFE006" />
+    <table id="1247" file="133APD060" />
+    <table id="1248" file="133APD061" />
+    <table id="1249" file="133APD062" />
+    <table id="1250" file="133APD063" />
+    <table id="1282" file="133APO025" />
+    <table id="1283" file="133APO026" />
+    <table id="1284" file="133APO027" />
+    <table id="1285" file="133APO028" />
+    <table id="1286" file="133AWA001" />
+    <table id="1287" file="133AWA002" />
+    <table id="1288" file="133AWA003" />
+    <table id="1289" file="133AFE007" />
+    <table id="1290" file="133APD064" />
+    <table id="1291" file="133APR001" />
+    <table id="1292" file="133APD065" />
+    <table id="1293" file="133APD066" />
+    <table id="1294" file="133AMA004" />
+    <table id="1295" file="133APD067" />
+    <table id="1296" file="133APD068" />
+    <table id="1297" file="133APD069" />
+    <table id="1298" file="133APD070" />
+    <table id="1299" file="133APD071" />
+    <table id="1300" file="133APD072" />
+    <table id="1301" file="133APD073" />
+    <table id="1302" file="133APD074" />
+    <table id="1303" file="133APD075" />
+    <table id="1304" file="133AMA005" />
+    <table id="1305" file="133APD076" />
+    <table id="1306" file="133APR002" />
+    <table id="1307" file="133APR003" />
+    <table id="1308" file="133APD077" />
+    <table id="1309" file="133APD078" />
+    <table id="1310" file="133APD079" />
+    <table id="1311" file="133APD080" />
+    <table id="1312" file="133APD081" />
+    <table id="1313" file="133APD082" />
+    <table id="1314" file="133APD083" />
+    <table id="1315" file="133APD084" />
+    <table id="1316" file="133APD085" />
+    <table id="1317" file="133ALA001" />
+    <table id="1318" file="133APD086" />
+    <table id="1319" file="133APD087" />
+    <table id="1320" file="133APD088" />
+    <table id="1321" file="133APD089" />
+    <table id="1322" file="133APD090" />
+    <table id="1323" file="133APD091" />
+    <table id="1324" file="133ATR006" />
+    <table id="1325" file="133ATR007" />
+    <table id="1326" file="133APD092" />
+    <table id="1327" file="133APD093" />
+    <table id="1328" file="133ATR008" />
+    <table id="1329" file="133ASA001" />
+    <table id="1330" file="133ASA002" />
+    <table id="1331" file="133AFI003" />
+    <table id="1332" file="133AFI004" />
+    <table id="1333" file="133AFI005" />
+    <table id="1334" file="133AFI006" />
+    <table id="1335" file="133AFI007" />
+    <table id="1336" file="133AFO001" />
+    <table id="1337" file="133AFO002" />
+    <table id="1338" file="133AFO003" />
+    <table id="1339" file="133AFO004" />
+    <table id="1340" file="133AFO005" />
+  </node>
+  <node id="4" name="Modules thématiques" cod="T">
+    <node id="416" name="Dépenses Publiques" />
+    <node id="57" name="Sécurité Alimentaire">
+      <!--table id="193" file="133MSA011" /-->
+      <table id="194" file="133MSA013" />
+      <table id="195" file="133MSA015" />
+      <!--table id="197" file="133SVA050" /-->
+      <table id="418" file="133MSA031" />
+      <table id="1344" file="133MSA010" />
+    </node>
+    <node id="59" name="Climat">
+      <table id="221" file="133MCL015" />
+      <table id="222" file="133MCL020" />
+      <table id="223" file="133MCL021" />
+    </node>
+    <node id="60" name="Santé animale">
+      <table id="226" file="133SAH038" />
+      <table id="227" file="133SAH039" />
+      <!--table id="228" file="133SAH046" /-->
+    </node>
+    <node id="61" name="Intrants agricoles">
+      <table id="229" file="133CIT021" />
+      <table id="230" file="133CIT022" />
+    </node>
+    <node id="386" name="Indicateurs de suivi de la PAU">
+      <details lCode="fr">
+        <title>Indicateurs de suivi de la PAU</title>
+      </details>
+      <node id="387" name="Indicateurs des filieres prioritaires">
+        <details lCode="fr">
+          <title>Indicateurs des filières prioritaires</title>
+        </details>
+        <node id="388" name="Filiere Coton">
+          <details lCode="fr">
+            <title>Filière Coton</title>
+          </details>
+        </node>
+      </node>
+    </node>
+    <node id="758" name="Autres">
+      <table id="759" file="133IWA011" />
+      <table id="761" file="133SPR515" />
+      <table id="762" file="FI060" />
+    </node>
+  </node>
+  <node id="5" name="Institutions nationales" cod="N">
+    <node id="62" name="Compagnie Malienne du Développement des Textiles">
+      <table id="231" file="133IFE010" />
+      <table id="232" file="133IMA010" />
+      <table id="233" file="133IPD014" />
+      <table id="235" file="133IPD018" />
+      <table id="236" file="133IPD019" />
+      <table id="238" file="133IPD021" />
+      <table id="239" file="133IPD022" />
+      <table id="240" file="133IPD023" />
+      <table id="246" file="133IPD080" />
+      <table id="247" file="133IPE010" />
+      <table id="917" file="133IPD152" />
+      <table id="919" file="133IPR029" />
+      <table id="930" file="133IPR031" />
+      <table id="931" file="133IPR032" />
+      <table id="934" file="133IPD017" />
+      <table id="935" file="133IPD024" />
+      <table id="1116" file="133IPR039" />
+      <table id="1343" file="133IPR043" />
+    </node>
+    <node id="63" name="CNLCP">
+      <!--table id="248" file="133IPE005" /-->
+      <table id="249" file="133IPE006" />
+      <table id="404" file="133IPE008" />
+      <table id="442" file="133IPE012" />
+      <table id="784" file="133IPE007" />
+      <table id="1115" file="133IPE015" />
+    </node>
+    <node id="64" name="DNA">
+      <table id="250" file="133IPD029" />
+      <table id="251" file="133IPD030" />
+      <table id="252" file="133IPD031" />
+      <table id="253" file="133IPD032" />
+      <table id="254" file="133IPD033" />
+      <table id="255" file="133IPD034" />
+      <table id="256" file="133IPD035" />
+      <table id="257" file="133IPD036" />
+      <table id="258" file="133IPD037" />
+      <table id="259" file="133IPD038" />
+      <table id="260" file="133IPD039" />
+      <table id="261" file="133IPD040" />
+      <table id="262" file="133IPD041" />
+      <table id="263" file="133IPD042" />
+      <table id="264" file="133IPD043" />
+      <table id="265" file="133IPD044" />
+      <table id="266" file="133IPD045" />
+      <table id="267" file="133IPD046" />
+      <table id="268" file="133IPD047" />
+      <table id="269" file="133IPD048" />
+      <table id="270" file="133IPD049" />
+      <table id="271" file="133IPD053" />
+      <table id="272" file="133IPD054" />
+      <table id="273" file="133IPD055" />
+      <table id="274" file="133IPD056" />
+      <table id="275" file="133IPD057" />
+      <table id="276" file="133IPD058" />
+      <table id="277" file="133IPD059" />
+      <table id="278" file="133IPD060" />
+      <table id="279" file="133IPD061" />
+      <table id="280" file="133IPD062" />
+      <table id="281" file="133IPD063" />
+      <table id="282" file="133IPD064" />
+      <table id="839" file="133IPD066" />
+      <table id="840" file="133IPD067" />
+      <table id="841" file="133IPD068" />
+      <table id="842" file="133IPD069" />
+      <table id="843" file="133IPD072" />
+      <table id="844" file="133IPD073" />
+      <table id="845" file="133IPD074" />
+      <table id="846" file="133IPD075" />
+      <table id="847" file="133IPD083" />
+      <table id="848" file="133IPD084" />
+      <table id="849" file="133IPD085" />
+      <table id="850" file="133IPD086" />
+      <table id="851" file="133IPD087" />
+      <table id="852" file="133IPD088" />
+      <table id="853" file="133IPD089" />
+      <table id="854" file="133IPD090" />
+      <table id="855" file="133IPD091" />
+      <table id="856" file="133IPD092" />
+      <table id="857" file="133IPD093" />
+      <table id="858" file="133IPD094" />
+      <table id="859" file="133IPD095" />
+      <table id="860" file="133IPD096" />
+      <table id="861" file="133IPD097" />
+      <table id="862" file="133IPD098" />
+      <table id="863" file="133IPD099" />
+      <table id="864" file="133IPD100" />
+      <table id="865" file="133IPD101" />
+      <table id="866" file="133IPD102" />
+      <table id="867" file="133IPD103" />
+      <table id="868" file="133IPD104" />
+      <table id="869" file="133IPD105" />
+      <table id="870" file="133IPD106" />
+      <table id="871" file="133IPD107" />
+      <table id="872" file="133IPD108" />
+      <table id="873" file="133IPD109" />
+      <table id="874" file="133IPD110" />
+      <table id="875" file="133IPD111" />
+      <table id="876" file="133IPD112" />
+      <table id="877" file="133IPD113" />
+      <table id="878" file="133IPD114" />
+      <table id="879" file="133IPD115" />
+      <table id="880" file="133IPD116" />
+      <table id="881" file="133IPD117" />
+      <table id="882" file="133IPD118" />
+      <table id="883" file="133IPD119" />
+      <table id="884" file="133IPD120" />
+      <table id="885" file="133IPD121" />
+      <table id="886" file="133IPD122" />
+      <table id="887" file="133IPD123" />
+      <table id="888" file="133IPD124" />
+      <table id="889" file="133IPD125" />
+      <table id="891" file="133IPD127" />
+      <table id="892" file="133IPD128" />
+      <table id="893" file="133IPD129" />
+      <table id="894" file="133IPD130" />
+      <table id="895" file="133IPD131" />
+      <table id="896" file="133IPD132" />
+      <table id="897" file="133IPD133" />
+      <table id="898" file="133IPD134" />
+      <table id="899" file="133IPD135" />
+      <table id="900" file="133IPD136" />
+      <table id="901" file="133IPD137" />
+      <table id="902" file="133IPD138" />
+      <table id="903" file="133IPD139" />
+      <table id="904" file="133IPD140" />
+      <table id="905" file="133IPD141" />
+      <table id="906" file="133IPD142" />
+      <table id="907" file="133IPD143" />
+      <table id="908" file="133IPD144" />
+      <table id="909" file="133IPD145" />
+      <table id="910" file="133IPD146" />
+      <table id="911" file="133IPD147" />
+      <table id="912" file="133IPD148" />
+      <table id="913" file="133IPD149" />
+      <table id="914" file="133IPD150" />
+      <table id="915" file="133IPD151" />
+      <table id="920" file="133IPD153" />
+      <table id="921" file="133IPD154" />
+      <table id="922" file="133IPD155" />
+      <table id="923" file="133IPD156" />
+      <table id="924" file="133IPD157" />
+      <table id="925" file="133IPD158" />
+      <table id="926" file="133IPD159" />
+      <table id="927" file="133IPD160" />
+      <table id="928" file="133IPD161" />
+      <table id="1085" file="133IPD163" />
+      <table id="1086" file="133IPD164" />
+      <table id="1087" file="133IPD165" />
+      <table id="1088" file="166IPD166" />
+      <table id="1089" file="133IPD167" />
+      <table id="1090" file="133IPD168" />
+      <table id="1091" file="133IPD169" />
+      <table id="1092" file="133IPD170" />
+      <table id="1093" file="133IPD171" />
+      <table id="1094" file="133IPD172" />
+      <table id="1095" file="133IPD173" />
+      <table id="1096" file="133IPD174" />
+      <table id="1097" file="133IPD175" />
+      <table id="1098" file="133IPD176" />
+      <table id="1099" file="133IPD177" />
+      <table id="1100" file="133IPD178" />
+      <table id="1101" file="133IPD179" />
+    </node>
+    <node id="65" name="DNCC">
+      <table id="283" file="133IPR002" />
+      <table id="284" file="133IPR003" />
+      <table id="769" file="133ITR014" />
+      <table id="770" file="133ITR015" />
+      <table id="771" file="133ITR017" />
+      <table id="773" file="133ITR016" />
+      <table id="810" file="133IPR016" />
+      <table id="811" file="133IPR017" />
+      <table id="812" file="133IPR018" />
+      <table id="813" file="133IPR019" />
+      <table id="814" file="133IPR020" />
+      <table id="815" file="133IPR021" />
+      <table id="816" file="133IPR022" />
+      <table id="817" file="133IPR023" />
+      <table id="818" file="133IPR024" />
+      <table id="819" file="133IPR025" />
+      <table id="820" file="133IPR026" />
+      <table id="821" file="133IPR027" />
+      <table id="822" file="133IPR028" />
+      <table id="1133" file="133ITR045" />
+      <table id="1134" file="133ITR046" />
+      <table id="1251" file="133ITR020" />
+      <table id="1252" file="133ITR021" />
+      <table id="1253" file="133ITR022" />
+    </node>
+    <node id="66" name="DNGR">
+      <table id="1125" file="133ILI019" />
+      <table id="1254" file="133IMA005" />
+      <table id="1255" file="133IMA006" />
+    </node>
+    <node id="67" name="Direction Nationale de l'Hydraulique">
+      <table id="384" file="133IWA001" />
+      <table id="373" file="133IWA002" />
+      <table id="378" file="133IWA007" />
+      <table id="379" file="133IWA008" />
+      <table id="288" file="133IWA010" />
+      <table id="290" file="133IWA012" />
+      <table id="291" file="133IWA013" />
+      <table id="292" file="133IWA014" />
+      <table id="293" file="133IWA015" />
+      <table id="294" file="133IWA016" />
+      <table id="381" file="133IWA017" />
+      <table id="382" file="133IWA018" />
+      <table id="383" file="133IWA019" />
+      <table id="295" file="133IWA021" />
+      <table id="296" file="133IWA022" />
+      <table id="409" file="133IWA023" />
+      <table id="463" file="133IWA042" />
+      <table id="464" file="133IWA043" />
+      <table id="1054" file="133IWA044" />
+      <table id="1055" file="133IWA046" />
+      <table id="1056" file="133IWA047" />
+      <table id="1057" file="133IWA048" />
+      <table id="1058" file="133IWA049" />
+      <table id="1059" file="133IWA050" />
+      <table id="1060" file="133IWA051" />
+      <table id="1061" file="133IWA052" />
+      <table id="1062" file="133IWA053" />
+      <table id="1063" file="133IWA054" />
+      <table id="1064" file="133IWA055" />
+      <table id="1065" file="133IWA056" />
+      <table id="1066" file="133IWA057" />
+      <table id="1067" file="133IWA058" />
+      <table id="1068" file="133IWA059" />
+      <table id="1069" file="133IWA060" />
+      <table id="1070" file="133IWA062" />
+      <table id="1071" file="133IWA061" />
+      <table id="1073" file="133IWA064" />
+      <table id="1074" file="133IWA065" />
+      <table id="1075" file="133IWA066" />
+      <table id="1076" file="133IWA067" />
+      <table id="1077" file="133IWA068" />
+      <table id="1079" file="133IWA070" />
+      <table id="1080" file="133IWA071" />
+      <table id="1081" file="133IWA072" />
+      <table id="1082" file="133IWA073" />
+      <table id="1083" file="133IWA074" />
+      <table id="1130" file="133IWA080" />
+      <table id="1280" file="133IWA081" />
+      <table id="1281" file="133IWA069" />
+    </node>
+    <node id="68" name="DNPD">
+      <table id="297" file="133IBI001" />
+      <table id="399" file="133IBI002" />
+      <table id="400" file="133IBI003" />
+    </node>
+    <node id="69" name="Direction Nationale des Productions et Industries Animales">
+      <table id="298" file="133CPD070" />
+      <table id="300" file="133IPD071" />
+      <table id="301" file="133IPR001" />
+      <table id="302" file="133SPD070" />
+      <table id="929" file="133CPD060" />
+    </node>
+    <node id="70" name="DNPêche">
+      <table id="303" file="133IFI001" />
+      <table id="406" file="133IPR041" />
+      <table id="1107" file="133IFI002" />
+      <table id="1256" file="133IFI003" />
+      <table id="1258" file="133IFI004" />
+    </node>
+    <node id="71" name="Direction Nationale des Services Veterinaires">
+      <table id="306" file="133IPD050" />
+      <table id="307" file="133ITR002" />
+      <table id="801" file="133ITR018" />
+      <table id="802" file="133ITR019" />
+      <table id="1259" file="133ISA007" />
+      <table id="1260" file="133ISA008" />
+      <table id="1261" file="133ISA009" />
+      <table id="1262" file="133ISA010" />
+    </node>
+    <node id="72" name="Eaux et Forêts">
+      <table id="308" file="133IFO001" />
+      <table id="309" file="133IFO002" />
+      <table id="311" file="133IFO004" />
+      <table id="312" file="133IFO005" />
+      <table id="313" file="133IFO006" />
+      <table id="314" file="133IFO007" />
+      <table id="316" file="133IFO013" />
+      <table id="317" file="133IFO014" />
+      <table id="793" file="133IFO012" />
+      <table id="932" file="133IFO003" />
+      <table id="1136" file="133IFO018" />
+      <table id="1342" file="133IFO016" />
+    </node>
+    <node id="73" name="INSTAT">
+      <table id="319" file="133ITR003" />
+      <table id="320" file="133ITR004" />
+      <table id="321" file="133ITR005" />
+      <table id="322" file="133ITR006" />
+      <table id="420" file="133IPR042" />
+      <table id="424" file="133IPO002" />
+      <table id="757" file="133Itr042" />
+      <table id="829" file="133IVA001" />
+      <table id="1111" file="133IPO004" />
+      <table id="1112" file="133ILA001" />
+    </node>
+    <node id="74" name="Office Haute Vallée du Niger">
+      <table id="323" file="133IFE051" />
+      <table id="324" file="133IMA050" />
+      <table id="325" file="133IPD010" />
+      <table id="327" file="133IPD012" />
+      <!--table id="328" file="133IPD013" /-->
+      <table id="329" file="133IPD015" />
+      <table id="330" file="133IPD016" />
+      <table id="331" file="133IPE050" />
+      <table id="332" file="133IPE051" />
+      <table id="333" file="133IPE055" />
+      <!--table id="335" file="133IPR011" /-->
+      <table id="410" file="133IPD076" />
+      <table id="411" file="133IPD077" />
+      <table id="415" file="133IPD081" />
+      <table id="443" file="133IPD051" />
+      <table id="444" file="133IPD082" />
+      <table id="916" file="133IPD020" />
+      <table id="933" file="133IPD011" />
+      <table id="936" file="133IPD078" />
+    </node>
+    <node id="75" name="Observatoire du Marché Agricole">
+      <!--table id="336" file="133CPR012" /-->
+      <!--table id="337" file="133SVA050" /-->
+      <table id="417" file="133IPR012" />
+      <table id="790" file="133IPR013" />
+      <table id="1126" file="133IPR038" />
+    </node>
+    <node id="76" name="OPV">
+      <table id="339" file="133IPE002" />
+      <table id="340" file="133IPE003" />
+      <table id="1118" file="133IPE016" />
+      <table id="1274" file="133IPE018" />
+      <table id="1275" file="133IMA007" />
+    </node>
+    <node id="77" name="PCDA">
+      <table id="364" file="133IMA001" />
+      <table id="365" file="133IMA002" />
+      <table id="366" file="133IMA003" />
+      <table id="367" file="133IMA004" />
+      <table id="395" file="133ITR007" />
+      <table id="764" file="133ITR010" />
+      <table id="766" file="133ITR012" />
+      <table id="803" file="133ILI004" />
+      <table id="804" file="133ILI005" />
+      <table id="805" file="133ILI006" />
+      <table id="806" file="133ILI007" />
+      <table id="807" file="133ILI008" />
+      <table id="808" file="133ILI009" />
+      <table id="809" file="133ILI010" />
+      <table id="1117" file="133IPD079" />
+      <table id="1137" file="133IPD180" />
+    </node>
+    <node id="78" name="Système d'Alerte Precoce">
+      <table id="368" file="133IFA001" />
+      <table id="369" file="133IPO001" />
+      <table id="830" file="133IPO003" />
+      <table id="1276" file="133ISA012" />
+    </node>
+    <node id="447" name="Agence Nationale de la METEO">
+      <table id="448" file="133IWA027" />
+      <table id="449" file="133IWA028" />
+      <table id="450" file="133IWA029" />
+      <table id="451" file="133IWA030" />
+      <table id="453" file="133IWA032" />
+      <table id="454" file="133IWA033" />
+      <table id="456" file="133IWA035" />
+      <table id="457" file="133IWA036" />
+      <table id="458" file="133IWA037" />
+      <table id="459" file="133IWA038" />
+      <table id="460" file="133IWA039" />
+      <table id="462" file="133IWA041" />
+      <table id="835" file="133IWA045" />
+      <table id="836" file="133IWA040" />
+      <table id="1122" file="" />
+      <table id="1123" file="133IWA034" />
+      <table id="1124" file="133IWA075" />
+      <table id="1131" file="133IWA031" />
+      <table id="1277" file="133IWA077" />
+      <table id="1278" file="133ITE001" />
+      <table id="1279" file="133ITE002" />
+    </node>
+    <node id="796" name="CSA">
+      <table id="797" file="133ISA001" />
+      <table id="798" file="133ISA002" />
+      <table id="799" file="133ISA003" />
+      <table id="800" file="133ISA004" />
+      <table id="1127" file="133ISA006" />
+    </node>
+  </node>
+  <node id="1049" name="PAM" />
+  <node id="1050" name="Partenaires internationaux" />
+</tree>

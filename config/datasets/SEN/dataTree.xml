@@ -1,0 +1,965 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<tree>
+  <lastID>1191</lastID>
+  <node id="1" name="Statistiques nationales - module de base" cod="C">
+    <node id="7" name="Production" cod="CPD">
+      <table id="100" file="195CPD010" />
+      <table id="101" file="195CPD015" />
+      <table id="103" file="195CPD035" />
+      <table id="104" file="195CPD045" />
+      <table id="105" file="195CPD050" />
+      <table id="106" file="195CPD055" />
+      <table id="107" file="195CPD060" />
+      <table id="108" file="195CPD070" />
+      <table id="109" file="195CPD075" />
+      <table id="244" file="195CPD065" />
+    </node>
+    <node id="8" name="Commerce" cod="CTR">
+      <table id="110" file="195CTR010" />
+      <table id="111" file="195CTR015" />
+      <table id="112" file="195CTR025" />
+      <table id="113" file="195CTR030" />
+      <table id="114" file="195CTR040" />
+      <table id="115" file="195CTR045" />
+    </node>
+    <node id="9" name="Disponibilité alimentaire" cod="CFA">
+      <table id="116" file="195CFA010" />
+      <table id="117" file="195cfa015" />
+      <!--table id="118" file="195cfa020"/-->
+      <table id="119" file="195CFA025" />
+      <table id="120" file="195CFA030" />
+      <table id="121" file="195CFA035" />
+    </node>
+    <node id="10" name="Prix" cod="CPR">
+      <!--table id="122" file="195CPR010"/-->
+      <!--table id="123" file="195CPR011"/-->
+      <!--table id="124" file="195CPR014"/-->
+      <table id="202" file="195CPR040" />
+      <table id="1189" file="195CPR010" />
+    </node>
+    <node id="11" name="Terres" cod="CLI">
+    </node>
+    <node id="12" name="Population" cod="CPO">
+      <table id="128" file="195cpo010" />
+    </node>
+    <node id="13" name="Travail" cod="CLA">
+      <table id="129" file="195CLA010" />
+    </node>
+    <node id="14" name="Engrais" cod="CFE">
+      <!--table id="130" file="195CFE010"/-->
+      <table id="131" file="195CFE015" />
+      <table id="132" file="195cfe020" />
+    </node>
+    <node id="15" name="Pesticides" cod="CPE">
+      <table id="134" file="195cpe010" />
+      <table id="136" file="195cpe015" />
+      <table id="137" file="195cpe020" />
+    </node>
+    <node id="16" name="Machines" cod="CMA">
+      <table id="138" file="195CMA020" />
+      <table id="139" file="195CMA030" />
+      <table id="140" file="195CMA010" />
+    </node>
+    <node id="17" name="Forêts" cod="CFO">
+      <table id="203" file="195CFO020" />
+      <table id="204" file="195CFO030" />
+      <table id="248" file="195CFO015" />
+      <table id="249" file="195CFO025" />
+    </node>
+    <node id="18" name="Pêches" cod="CFI">
+      <table id="145" file="195CFI010" />
+      <table id="246" file="195CFI020" />
+    </node>
+    <node id="19" name="Eau" cod="CWA" />
+    <node id="20" name="Valeur ajoutée" cod="CVA">
+      <table id="147" file="195cva010" />
+      <table id="247" file="195CVA020" />
+    </node>
+    <node id="1191" name="Dépenses Publiques" cod="CGE" />
+  </node>
+  <node id="2" name="Statistiques locales" cod="S">
+    <node id="21" name="Production" cod="SPD">
+      <!--table id="154" file="195SPD010"/-->
+      <!--table id="155" file="195SPD015"/-->
+      <table id="156" file="195SPD035" />
+      <!--table id="159" file="195SPD521"/-->
+      <!--table id="161" file="195SPD523"/-->
+    </node>
+    <node id="22" name="Commerce" cod="STR" />
+    <node id="23" name="Disponibilité alimentaire" cod="SFA" />
+    <node id="24" name="Prix" cod="SPR">
+    </node>
+    <node id="25" name="Terres" cod="SLI" />
+    <node id="26" name="Population" cod="SPO">
+      <table id="163" file="195SPO010" />
+    </node>
+    <node id="27" name="Travail" cod="SLA" />
+    <node id="28" name="Engrais" cod="SFE">
+    </node>
+    <node id="29" name="Pesticides" cod="SPE">
+      <table id="167" file="195SPE010" />
+    </node>
+    <node id="30" name="Machines" cod="SMA">
+      <table id="171" file="195SMA011" />
+    </node>
+    <node id="31" name="Forêts" cod="SFO">
+      <table id="172" file="195SFO010" />
+    </node>
+    <node id="32" name="Pêches" cod="SFI">
+      <table id="173" file="195SFI010" />
+    </node>
+    <node id="33" name="Eau" cod="SWA">
+      <table id="174" file="195SWA011" />
+      <table id="175" file="195SWA015" />
+    </node>
+    <node id="34" name="Valeur ajoutée" cod="SVA" />
+  </node>
+  <node id="3" name="Stratégie Mondiale ensemble minimal de données de base" cod="G">
+    <node id="35" name="Economique">
+      <node id="36" name="Produit">
+        <table id="176" file="195CFI010" />
+        <table id="177" file="195CPD010" />
+        <table id="178" file="195CPD015" />
+        <table id="180" file="195cpd045" />
+        <table id="181" file="195cpd050" />
+        <table id="182" file="195cpd060" />
+        <table id="183" file="195cpd070" />
+        <table id="184" file="195cpd075" />
+      </node>
+      <node id="37" name="Commerce">
+        <table id="185" file="195CTR010" />
+        <table id="186" file="195CTR025" />
+        <table id="187" file="195CTR030" />
+        <table id="188" file="195CTR040" />
+        <table id="189" file="195CTR045" />
+      </node>
+      <node id="38" name="Stock de ressources">
+        <table id="200" file="195cpd035" />
+        <table id="201" file="195CPD055" />
+      </node>
+      <node id="39" name="Inputs">
+        <table id="190" file="195cpe010" />
+        <table id="191" file="195cpe015" />
+        <table id="192" file="195cpe020" />
+      </node>
+      <node id="40" name="Transformation agro-alimentaire" />
+      <node id="41" name="Prix">
+        <!--table id="193" file="195CPR010"/-->
+      </node>
+      <node id="42" name="Dépense finale">
+        <table id="194" file="195CFA010" />
+        <table id="195" file="195cfa015" />
+        <!--table id="196" file="195cfa020"/-->
+        <table id="197" file="195CFA025" />
+        <table id="198" file="195CFA030" />
+        <table id="199" file="195CFA035" />
+      </node>
+      <node id="43" name="Infrastructure rurale(capital stock)" />
+      <node id="44" name="Transfert international" />
+    </node>
+    <node id="45" name="Social">
+      <node id="46" name="Démographie de la population urbaine et rurale" />
+    </node>
+    <node id="47" name="Environnemental">
+      <node id="48" name="Terre" />
+      <node id="49" name="Eau" />
+      <node id="50" name="Air" />
+    </node>
+    <node id="51" name="Localisation géographique">
+      <node id="52" name="SIG coordonnées" />
+      <node id="53" name="Niveau d'urbanisation" />
+    </node>
+  </node>
+  <node id="55" name="Recensements et enquêtes agricoles">
+    <node id="251" name="Recensements">
+      <node id="276" name="pre-RNA 1998-99">
+        <table id="277" file="195RNA101" />
+        <node id="286" name="Menages">
+          <table id="289" file="195RNA301" />
+          <table id="290" file="195RNA103" />
+          <table id="291" file="195RNA310" />
+          <table id="292" file="195RNA309" />
+          <table id="293" file="195RNA308" />
+          <table id="294" file="195RNA307" />
+          <table id="295" file="195RNA306" />
+          <table id="296" file="195RNA305" />
+          <table id="297" file="195RNA304" />
+          <table id="298" file="195RNA303" />
+          <table id="299" file="195RNA302" />
+          <table id="300" file="195RNA202" />
+          <table id="303" file="195RNA402" />
+          <table id="384" file="195RNA501" />
+          <table id="387" file="195RNA502" />
+          <table id="389" file="195RNA503" />
+          <table id="393" file="195RNA504" />
+          <table id="396" file="195RNA505" />
+          <table id="399" file="195RNA506" />
+          <table id="401" file="195RNA507" />
+          <table id="403" file="195RNA508" />
+          <table id="404" file="195RNA509" />
+          <table id="405" file="195RNA510" />
+          <table id="406" file="195RNA511" />
+          <table id="407" file="195RNA512" />
+          <table id="408" file="195RNA513" />
+          <table id="409" file="195RNA514" />
+          <table id="410" file="195RNA515" />
+          <table id="413" file="195RNA516" />
+          <table id="418" file="195RNA517" />
+          <table id="419" file="195RNA518" />
+          <table id="420" file="195RNA519" />
+          <table id="421" file="195RNA520" />
+          <table id="432" file="195RNA423" />
+          <table id="443" file="195RNA429" />
+          <table id="444" file="195rna701" />
+          <table id="446" file="195rna702" />
+          <table id="449" file="195rna703" />
+          <table id="453" file="195rna704" />
+          <table id="458" file="195rna705" />
+          <table id="461" file="195rna706" />
+          <table id="464" file="195rna708" />
+          <table id="465" file="195rna709" />
+          <table id="511" file="195rna710" />
+          <table id="512" file="195rna711" />
+          <table id="513" file="195RNA712" />
+          <table id="514" file="195rna713" />
+          <table id="515" file="195rna714" />
+          <table id="517" file="195RNA716" />
+          <table id="518" file="195rna718" />
+          <table id="534" file="195RNA715" />
+          <table id="536" file="195RNA719" />
+          <table id="537" file="195RNA720" />
+          <table id="539" file="195RNA011" />
+          <table id="540" file="195RNA012" />
+          <table id="542" file="195RNA013" />
+          <table id="545" file="195RNA014" />
+          <table id="548" file="195RNA015" />
+          <table id="553" file="195rna016" />
+          <table id="555" file="195rna017" />
+          <table id="556" file="195rna019" />
+          <table id="557" file="195RNA018" />
+          <table id="1099" file="195RNA420" />
+          <table id="1100" file="195RNA419" />
+          <table id="1101" file="195RNA418" />
+          <table id="1102" file="195RNA417" />
+          <table id="1103" file="195RNA416" />
+          <table id="1104" file="195RNA415" />
+          <table id="1105" file="195RNA414" />
+          <table id="1106" file="195RNA413" />
+          <table id="1107" file="195RNA407" />
+          <table id="1108" file="195RNA412" />
+          <table id="1109" file="195RNA411" />
+          <table id="1110" file="195RNA410" />
+          <table id="1111" file="195RNA409" />
+          <table id="1112" file="195RNA408" />
+          <table id="1113" file="195RNA406" />
+          <table id="1114" file="195RNA405" />
+          <table id="1115" file="195RNA404" />
+          <table id="1116" file="195RNA403" />
+          <table id="1117" file="195RNA401" />
+          <table id="1118" file="195RNA341" />
+          <table id="1125" file="195RNA320" />
+          <table id="1126" file="195RNA319" />
+          <table id="1127" file="195RNA318" />
+          <table id="1128" file="195RNA317" />
+          <table id="1129" file="195RNA316" />
+          <table id="1130" file="195RNA315" />
+          <table id="1131" file="195RNA314" />
+          <table id="1132" file="195RNA313" />
+          <table id="1133" file="195RNA312" />
+          <table id="1134" file="195RNA311" />
+          <table id="1137" file="195RNA220" />
+          <table id="1138" file="195RNA219" />
+          <table id="1139" file="195RNA218" />
+          <table id="1140" file="195RNA217" />
+          <table id="1141" file="195RNA216" />
+          <table id="1142" file="195RNA214" />
+          <table id="1143" file="195RNA213" />
+          <table id="1144" file="195RNA212" />
+          <table id="1145" file="195RNA211" />
+          <table id="1146" file="195RNA210" />
+          <table id="1147" file="195RNA209" />
+          <table id="1148" file="195RNA208" />
+          <table id="1149" file="195RNA207" />
+          <table id="1150" file="195RNA206" />
+          <table id="1151" file="195RNA205" />
+          <table id="1152" file="195RNA204" />
+          <table id="1153" file="195RNA203" />
+          <table id="1154" file="195RNA201" />
+          <table id="1155" file="195RNA122" />
+          <table id="1156" file="195RNA121" />
+          <table id="1157" file="195RNA120" />
+          <table id="1158" file="195RNA118" />
+          <table id="1159" file="195RNA117" />
+          <table id="1160" file="195RNA116" />
+          <table id="1161" file="195RNA115" />
+          <table id="1162" file="195RNA114" />
+          <table id="1163" file="195RNA113" />
+          <table id="1164" file="195RNA112" />
+          <table id="1165" file="195RNA111" />
+          <table id="1166" file="195RNA110" />
+          <table id="1167" file="195RNA109" />
+          <table id="1168" file="195RNA108" />
+          <table id="1169" file="195RNA107" />
+          <table id="1170" file="195RNA106" />
+          <table id="1171" file="195RNA105" />
+          <table id="1172" file="195RNA104" />
+          <table id="1173" file="195RNA102" />
+          <table id="1177" file="195RNA010" />
+        </node>
+        <node id="287" name="Villages">
+          <table id="341" file="195RNA329" />
+          <table id="342" file="195RNA328" />
+          <table id="348" file="195RNA324" />
+          <table id="350" file="195RNA322" />
+          <table id="380" file="195RNA222" />
+          <table id="381" file="195RNA223" />
+          <table id="382" file="195RNA224" />
+          <table id="383" file="195RNA225" />
+          <table id="385" file="195RNA226" />
+          <table id="388" file="195RNA227" />
+          <table id="390" file="195RNA228" />
+          <table id="394" file="195RNA229" />
+          <table id="411" file="195RNA123" />
+          <table id="412" file="195RNA124" />
+          <table id="414" file="195RNA125" />
+          <table id="415" file="195RNA126" />
+          <table id="416" file="195RNA127" />
+          <table id="417" file="195RNA128" />
+          <table id="422" file="195RNA129" />
+          <table id="423" file="195RNA130" />
+          <table id="424" file="195RNA521" />
+          <table id="425" file="195RNA522" />
+          <table id="426" file="195RNA523" />
+          <table id="427" file="195RNA524" />
+          <table id="428" file="195RNA529" />
+          <table id="429" file="195RNA428" />
+          <table id="430" file="195RNA421" />
+          <table id="431" file="195RNA422" />
+          <table id="433" file="195RNA525" />
+          <table id="434" file="195RNA424" />
+          <table id="435" file="195RNA526" />
+          <table id="436" file="195RNA425" />
+          <table id="437" file="195RNA427" />
+          <table id="438" file="195RNA527" />
+          <table id="439" file="195RNA528" />
+          <table id="440" file="195RNA530" />
+          <table id="441" file="195RNA426" />
+          <table id="442" file="195RNA423" />
+          <table id="445" file="195RNA430" />
+          <table id="447" file="195RNA431" />
+          <table id="448" file="195RNA432" />
+          <table id="450" file="195RNA433" />
+          <table id="451" file="195RNA531" />
+          <table id="452" file="195RNA231" />
+          <table id="454" file="195RNA434" />
+          <table id="455" file="195RNA435" />
+          <table id="456" file="195RNA232" />
+          <table id="457" file="195RNA436" />
+          <table id="466" file="195RNA131" />
+          <table id="467" file="195RNA132" />
+          <table id="468" file="195RNA133" />
+          <table id="469" file="195RNA134" />
+          <table id="470" file="195RNA135" />
+          <table id="471" file="195RNA136" />
+          <table id="472" file="195RNA137" />
+          <table id="473" file="195RNA138" />
+          <table id="474" file="195RNA139" />
+          <table id="475" file="195RNA140" />
+          <table id="476" file="195RNA141" />
+          <table id="477" file="195RNA142" />
+          <table id="478" file="195RNA143" />
+          <table id="479" file="195RNA144" />
+          <table id="480" file="195RNA145" />
+          <table id="481" file="195RNA146" />
+          <table id="482" file="195RNA532" />
+          <table id="483" file="195RNA533" />
+          <table id="484" file="195RNA534" />
+          <table id="485" file="195RNA535" />
+          <table id="486" file="195RNA536" />
+          <table id="487" file="195RNA537" />
+          <table id="488" file="195RNA538" />
+          <table id="489" file="195RNA539" />
+          <table id="490" file="195RNA540" />
+          <table id="491" file="195RNA541" />
+          <table id="492" file="195RNA542" />
+          <table id="493" file="195RNA543" />
+          <table id="494" file="195RNA544" />
+          <table id="495" file="195RNA545" />
+          <table id="496" file="195RNA546" />
+          <table id="519" file="195RNA437" />
+          <table id="520" file="195RNA438" />
+          <table id="521" file="195RNA439" />
+          <table id="522" file="195RNA440" />
+          <table id="523" file="195RNA441" />
+          <table id="524" file="195RNA442" />
+          <table id="525" file="195RNA443" />
+          <table id="526" file="195RNA445" />
+          <table id="527" file="195RNA446" />
+          <table id="528" file="195RNA447" />
+          <table id="529" file="195RNA448" />
+          <table id="530" file="195RNA449" />
+          <table id="531" file="195RNA450" />
+          <table id="532" file="195RNA451" />
+          <table id="533" file="195RNA452" />
+          <table id="535" file="195RNA453" />
+          <table id="541" file="195RNA454" />
+          <table id="543" file="195RNA455" />
+          <table id="544" file="195RNA456" />
+          <table id="546" file="195RNA457" />
+          <table id="547" file="195RNA458" />
+          <table id="549" file="195RNA459" />
+          <table id="550" file="195RNA233" />
+          <table id="551" file="195RNA460" />
+          <table id="552" file="195RNA461" />
+          <table id="554" file="195RNA234" />
+          <table id="558" file="195rna331" />
+          <table id="559" file="195rna332" />
+          <table id="560" file="195rna333" />
+          <table id="561" file="195rna334" />
+          <table id="562" file="195RNA235" />
+          <table id="563" file="195RNA236" />
+          <table id="564" file="195rna335" />
+          <table id="565" file="195rna336" />
+          <table id="566" file="195rna337" />
+          <table id="567" file="195RNA237" />
+          <table id="568" file="195rna338" />
+          <table id="569" file="195rna339" />
+          <table id="570" file="195RNA238" />
+          <table id="571" file="195rna340" />
+          <table id="573" file="195RNA239" />
+          <table id="574" file="195RNA240" />
+          <table id="575" file="195RNA241" />
+          <table id="576" file="195RNA242" />
+          <table id="577" file="195RNA243" />
+          <table id="578" file="195RNA244" />
+          <table id="579" file="195RNA245" />
+          <table id="580" file="195RNA246" />
+          <table id="1119" file="195RNA330" />
+          <table id="1120" file="195RNA327" />
+          <table id="1121" file="195RNA326" />
+          <table id="1122" file="195RNA325" />
+          <table id="1123" file="195RNA323" />
+          <table id="1124" file="195RNA321" />
+          <table id="1135" file="195RNA230" />
+          <table id="1136" file="195RNA221" />
+        </node>
+      </node>
+      <node id="285" name="RNA 1998-99">
+        <node id="586" name="Cheptel">
+          <table id="611" file="195RNA811" />
+          <table id="612" file="195RNA810" />
+          <table id="613" file="195RNA809" />
+          <table id="614" file="195RNA808" />
+          <table id="615" file="195RNA807" />
+          <table id="616" file="195RNA806" />
+          <table id="617" file="195RNA805" />
+          <table id="618" file="195RNA804" />
+          <table id="619" file="195RNA803" />
+          <table id="620" file="195RNA800" />
+          <table id="621" file="195RNA812" />
+          <table id="622" file="195RNA813" />
+          <table id="623" file="195RNA814" />
+          <table id="624" file="195RNA815" />
+          <table id="625" file="195RNA816" />
+          <table id="626" file="195RNA818" />
+          <table id="627" file="195RNA819" />
+          <table id="628" file="195RNA820" />
+          <table id="629" file="195RNA821" />
+          <table id="630" file="195RNA817" />
+          <table id="642" file="195RNA830" />
+          <table id="644" file="195RNA829" />
+          <table id="646" file="195RNA828" />
+          <table id="649" file="195RNA827" />
+          <table id="650" file="195RNA826" />
+          <table id="653" file="195RNA825" />
+          <table id="655" file="195RNA824" />
+          <table id="657" file="195RNA823" />
+          <table id="659" file="195RNA822" />
+          <table id="672" file="195RNA831" />
+          <table id="684" file="195RNA832" />
+          <table id="685" file="195RNA840" />
+          <table id="686" file="195RNA839" />
+          <table id="687" file="195RNA838" />
+          <table id="689" file="195RNA837" />
+          <table id="690" file="195RNA836" />
+          <table id="692" file="195RNA835" />
+          <table id="694" file="195RNA834" />
+          <table id="696" file="195RNA833" />
+          <table id="759" file="195RNA841" />
+        </node>
+        <node id="587" name="Main d'oeuvre">
+          <table id="594" file="195RNA905" />
+          <table id="720" file="195RNA900" />
+          <table id="723" file="195RNA901" />
+          <table id="724" file="195RBA902" />
+          <table id="725" file="195RNA903" />
+          <table id="727" file="195RNA904" />
+          <table id="730" file="195RNA906" />
+          <table id="731" file="195RNA907" />
+          <table id="732" file="195RNA909" />
+          <table id="735" file="195RNA902" />
+          <table id="785" file="195RNA908" />
+          <table id="787" file="195RNA862" />
+          <table id="788" file="195RNA863" />
+          <table id="793" file="195RNA864" />
+          <table id="794" file="195RNA865" />
+          <table id="795" file="195RNA866" />
+          <table id="796" file="195RNA867" />
+          <table id="797" file="195rna868" />
+          <table id="798" file="195RNA869" />
+          <table id="799" file="195RNA870" />
+          <table id="800" file="195RNA871" />
+        </node>
+        <node id="588" name="Foncier">
+          <table id="632" file="195RNA0012" />
+          <table id="633" file="195RNA0013" />
+          <table id="634" file="195RNA0014" />
+          <table id="635" file="195RNA0015" />
+          <table id="636" file="195RNA0016" />
+          <table id="637" file="195RNA0017" />
+          <table id="638" file="195RNA0018" />
+          <table id="639" file="195RNA0019" />
+          <table id="640" file="195RNA0020" />
+          <table id="643" file="195RNA0021" />
+          <table id="673" file="195RNA0022" />
+          <table id="674" file="195RNA0023" />
+          <table id="675" file="195RNA0024" />
+          <table id="676" file="195RNA0025" />
+          <table id="677" file="195RNA0026" />
+          <table id="678" file="195RNA0027" />
+          <table id="679" file="195RNA0028" />
+          <table id="680" file="195RNA0029" />
+          <table id="681" file="195RNA0030" />
+          <table id="736" file="195RNA001" />
+          <table id="737" file="195RNA002" />
+          <table id="738" file="195RNA003" />
+          <table id="742" file="195RNA004" />
+          <table id="743" file="195RNA006" />
+          <table id="744" file="195RNA007" />
+          <table id="745" file="195RNA008" />
+          <table id="747" file="195RNA009" />
+          <table id="1098" file="195RNA005" />
+          <table id="1175" file="195RNA0031" />
+        </node>
+        <node id="589" name="Population">
+          <table id="641" file="195RNA98200" />
+          <table id="647" file="195RNA98201" />
+          <table id="648" file="195RNA98202" />
+          <table id="651" file="195RNA98203" />
+          <table id="652" file="195RNA98204" />
+          <table id="654" file="195RNA98205" />
+          <table id="656" file="195RNA98207" />
+          <table id="658" file="195RNA98208" />
+          <table id="660" file="195RNA98209" />
+          <table id="661" file="195RNA98206" />
+          <table id="662" file="195RNA98210" />
+          <table id="663" file="195RNA98211" />
+          <table id="664" file="195RNA98212" />
+          <table id="665" file="195RNA98213" />
+          <table id="666" file="195RNA98214" />
+          <table id="667" file="195RNA98215" />
+          <table id="668" file="195RNA98216" />
+          <table id="669" file="195RNA98217" />
+          <table id="670" file="195RNA98218" />
+          <table id="671" file="195RNA98219" />
+        </node>
+        <node id="590" name="Exploitations Agricoles">
+          <table id="780" file="195RNA0042" />
+          <table id="781" file="195RNA0043" />
+          <table id="782" file="195RNA0044" />
+          <table id="783" file="195RNA0045" />
+          <table id="784" file="195RNA0046" />
+          <table id="786" file="195RNA0047" />
+          <table id="789" file="195RNA0048" />
+          <table id="790" file="195RNA0049" />
+          <table id="791" file="195RNA0050" />
+          <table id="792" file="195RNA0051" />
+          <table id="831" file="195RNA1007" />
+          <table id="832" file="195RNA1016" />
+          <table id="834" file="195RNA1014" />
+          <table id="835" file="195RNA1013" />
+          <table id="836" file="195RNA1012" />
+          <table id="837" file="195RNA1011" />
+          <table id="841" file="195RNA1006" />
+          <table id="843" file="195RNA1004" />
+          <table id="845" file="195RNA1002" />
+          <table id="847" file="195RNA98230" />
+          <table id="848" file="195RNA98231" />
+          <table id="850" file="195RNA98232" />
+          <table id="851" file="195RNA98233" />
+          <table id="853" file="195RNA98234" />
+          <table id="854" file="195RNA98235" />
+          <table id="855" file="195RNA98236" />
+          <table id="856" file="195RNA98237" />
+          <table id="857" file="195RNA98238" />
+          <table id="858" file="195RNA98239" />
+          <table id="859" file="195RNA1019" />
+          <table id="861" file="1995RNA0062" />
+          <table id="862" file="1995RNA0063" />
+          <table id="863" file="1995RNA0064" />
+          <table id="864" file="1995RNA0065" />
+          <table id="865" file="1995RNA0066" />
+          <table id="866" file="1995RNA0067" />
+          <table id="867" file="1995RNA0068" />
+          <table id="868" file="1995RNA0069" />
+          <table id="869" file="195RNA0070" />
+          <table id="870" file="195RNA0071" />
+          <table id="871" file="195RNA021" />
+          <table id="878" file="195RNA98240" />
+          <table id="879" file="195RNA1022" />
+          <table id="881" file="195RNA98241" />
+          <table id="882" file="195RNA1023" />
+          <table id="884" file="195RNA024" />
+          <table id="886" file="195RNA98242" />
+          <table id="888" file="195RNA1025" />
+          <table id="891" file="195rna98243" />
+          <table id="892" file="195RNA1026" />
+          <table id="895" file="195RNA1027" />
+          <table id="896" file="195rna98244" />
+          <table id="899" file="195RNA98245" />
+          <table id="902" file="195RNA98246" />
+          <table id="904" file="195RNA98247" />
+          <table id="911" file="195RNA98248" />
+          <table id="914" file="195RNA98249" />
+          <table id="939" file="195RNA1028" />
+          <table id="946" file="195RNA1029" />
+          <table id="950" file="195RNA1030" />
+          <table id="953" file="195RNA1031" />
+          <table id="955" file="195RNA98250" />
+          <table id="957" file="195RNA98251" />
+          <table id="958" file="195RNA98252" />
+          <table id="959" file="195RNA98253" />
+          <table id="960" file="195RNA98254" />
+          <table id="961" file="195RNA98255" />
+          <table id="962" file="195RNA98256" />
+          <table id="963" file="195RNA98257" />
+          <table id="964" file="195RNA98258" />
+          <table id="965" file="195RNA98259" />
+        </node>
+        <node id="591" name="Matériel agricole">
+          <table id="703" file="195RNA910" />
+          <table id="704" file="195RNA911" />
+          <table id="705" file="195RNA912" />
+          <table id="706" file="195RNA913" />
+          <table id="707" file="195RNA914" />
+          <table id="708" file="195RNA915" />
+          <table id="709" file="195RNA916" />
+          <table id="710" file="195RNA917" />
+          <table id="711" file="195RNA918" />
+          <table id="712" file="195RNA919" />
+          <table id="715" file="195RNA921" />
+          <table id="717" file="195RNA922" />
+          <table id="718" file="195RNA923" />
+          <table id="719" file="195RNA924" />
+          <table id="746" file="195RNA920" />
+          <table id="811" file="195RNA925" />
+          <table id="812" file="195RNA926" />
+          <table id="813" file="195RNA927" />
+          <table id="814" file="195RNA928" />
+          <table id="815" file="195RNA929" />
+          <table id="816" file="195RNA930" />
+          <table id="817" file="195RNA931" />
+          <table id="818" file="195RNA932" />
+          <table id="819" file="195RNA933" />
+          <table id="820" file="195RNA934" />
+          <table id="821" file="195RNA935" />
+          <table id="822" file="195RNA936" />
+          <table id="823" file="195RNA937" />
+          <table id="824" file="195RNA938" />
+          <table id="825" file="195RNA939" />
+          <table id="826" file="195RNA940" />
+          <table id="827" file="195RNA941" />
+          <table id="828" file="195RNA942" />
+          <table id="829" file="195RNA943" />
+          <table id="830" file="195RNA944" />
+          <table id="872" file="195RNA945" />
+          <table id="873" file="195RNA946" />
+          <table id="874" file="195RNA947" />
+          <table id="875" file="195RNA948" />
+          <table id="876" file="195RNA949" />
+          <table id="877" file="195RNA950" />
+          <table id="890" file="195RNA951" />
+          <table id="893" file="195RNA952" />
+          <table id="897" file="195RNA953" />
+          <table id="898" file="195RNA954" />
+          <table id="900" file="195RNA955" />
+          <table id="901" file="195RNA956" />
+          <table id="903" file="195RNA957" />
+          <table id="906" file="195RNA958" />
+          <table id="908" file="195RNA959" />
+          <table id="909" file="195RNA960" />
+          <table id="913" file="195RNA961" />
+          <table id="915" file="195RNA962" />
+          <table id="918" file="195RNA963" />
+          <table id="920" file="195RNA964" />
+          <table id="924" file="195RNA966" />
+          <table id="926" file="195RNA967" />
+          <table id="928" file="195RNA968" />
+          <table id="930" file="195RNA969" />
+          <table id="932" file="195RNA970" />
+          <table id="934" file="195RNA971" />
+          <table id="936" file="195RNA972" />
+          <table id="938" file="195RNA973" />
+          <table id="941" file="195RNA974" />
+          <table id="943" file="195RNA975" />
+          <table id="945" file="195RNA976" />
+          <table id="948" file="195RNA977" />
+          <table id="951" file="195RNA978" />
+          <table id="954" file="195RNA979" />
+          <table id="966" file="195RNA980" />
+          <table id="967" file="195RNA981" />
+          <table id="968" file="195RNA982" />
+          <table id="969" file="195RNA983" />
+          <table id="970" file="195RNA984" />
+          <table id="971" file="195RNA985" />
+          <table id="972" file="195RNA986" />
+          <table id="973" file="195RNA987" />
+          <table id="974" file="195RNA988" />
+          <table id="975" file="195RNA989" />
+          <table id="976" file="195RNA990" />
+          <table id="977" file="195RNA992" />
+          <table id="978" file="195RNA993" />
+          <table id="979" file="195RNA994" />
+          <table id="980" file="195RNA995" />
+        </node>
+        <node id="592" name="Terres">
+          <table id="688" file="195RNA98220" />
+          <table id="691" file="195RNA98222" />
+          <table id="693" file="195RNA98223" />
+          <table id="695" file="195RNA98225" />
+          <table id="697" file="195RNA98224" />
+          <table id="698" file="195RNA98226" />
+          <table id="699" file="195RNA98227" />
+          <table id="700" file="195RNA98228" />
+          <table id="701" file="195RNA98229" />
+          <table id="702" file="195RNA98221" />
+          <table id="755" file="195RNA0032" />
+          <table id="758" file="195RNA0033" />
+          <table id="761" file="195RNA0034" />
+          <table id="762" file="195RNAOO41" />
+          <table id="763" file="195RNA0035" />
+          <table id="764" file="195RNA0036" />
+          <table id="765" file="195RNA0037" />
+          <table id="766" file="195RNA0038" />
+          <table id="767" file="195RNA0039" />
+          <table id="768" file="195RNA0040" />
+          <table id="770" file="195RNA0012" />
+          <table id="771" file="195RNA0013" />
+          <table id="772" file="195RNA0014" />
+          <table id="773" file="195RNA0015" />
+          <table id="774" file="195RNA0016" />
+          <table id="775" file="195RNA0017" />
+          <table id="776" file="195RNA0018" />
+          <table id="777" file="195RNA0019" />
+          <table id="778" file="195RNA0020" />
+          <table id="779" file="195RNA0021" />
+          <table id="801" file="195RNA0052" />
+          <table id="802" file="195RNA0053" />
+          <table id="803" file="195RNA0054" />
+          <table id="804" file="195RNA0055" />
+          <table id="805" file="195RNA0056" />
+          <table id="806" file="195RNA0057" />
+          <table id="807" file="195RNA0058" />
+          <table id="808" file="195RNA0059" />
+          <table id="809" file="195RNA0060" />
+          <table id="810" file="195RNA0061" />
+          <table id="833" file="195RNA1015" />
+          <table id="838" file="195RNA1010" />
+          <table id="839" file="195RNA1009" />
+          <table id="840" file="195RNA1008" />
+          <table id="842" file="195RNA1005" />
+          <table id="844" file="195RNA1003" />
+          <table id="846" file="195RNA1001" />
+          <table id="849" file="195RNA1017" />
+          <table id="852" file="195RNA1018" />
+          <table id="860" file="195RNA1020" />
+          <table id="880" file="195RNA0082" />
+          <table id="883" file="195RNA0083" />
+          <table id="885" file="195RNA0084" />
+          <table id="887" file="195RNA0085" />
+          <table id="889" file="195RNA0086" />
+          <table id="894" file="195RNA0087" />
+          <table id="905" file="195rna0088" />
+          <table id="907" file="195RNA0089" />
+          <table id="910" file="195RNA0090" />
+          <table id="912" file="195RNA0091" />
+          <table id="916" file="195RNA0072" />
+          <table id="917" file="195RNA0073" />
+          <table id="919" file="195RNA0074" />
+          <table id="921" file="195RNA0075" />
+          <table id="922" file="195RNA0076" />
+          <table id="923" file="195RNA0077" />
+          <table id="925" file="195RNA0078" />
+          <table id="927" file="195RNA0079" />
+          <table id="929" file="195RNA0080" />
+          <table id="931" file="195RNA0081" />
+          <table id="933" file="195RNA0092" />
+          <table id="935" file="195RNA0093" />
+          <table id="940" file="195RNA0095" />
+          <table id="942" file="195RNA0096" />
+          <table id="944" file="195RNA0097" />
+          <table id="947" file="195RNA0098" />
+          <table id="949" file="195RNA0099" />
+          <table id="952" file="195RNA00100" />
+          <table id="956" file="195RNA00101" />
+          <table id="1174" file="195RNA0094" />
+        </node>
+        <table id="593" file="195RNA905" />
+        <node id="714" name="Intrants">
+          <table id="716" file="195RNA849" />
+          <table id="726" file="195RNA848" />
+          <table id="728" file="195RNA847" />
+          <table id="729" file="195RNA846" />
+          <table id="733" file="195RNA845" />
+          <table id="734" file="195rNA851" />
+          <table id="740" file="195RNA850" />
+          <table id="748" file="195RNA852" />
+          <table id="749" file="195RNA854" />
+          <table id="750" file="195RNA855" />
+          <table id="751" file="195RNA856" />
+          <table id="752" file="195RNA857" />
+          <table id="753" file="195RNA858" />
+          <table id="754" file="195RNA859" />
+          <table id="756" file="195RNA860" />
+          <table id="757" file="195RNA861" />
+          <table id="760" file="195RNA853" />
+        </node>
+        <table id="739" file="195RNA850" />
+      </node>
+    </node>
+    <node id="252" name="Enquêtes" />
+  </node>
+  <node id="56" name="Annuaires Statistiques">
+    <node id="631" name="annuaire statistique des peches" />
+  </node>
+  <node id="54" name="Bilans Alimentaires">
+    <node id="57" name="Bilans vivriers">
+    </node>
+  </node>
+  <node id="4" name="Modules thématiques" cod="T">
+    <node id="250" name="Dépenses Publiques">
+      <table id="262" file="195cva017" />
+    </node>
+    <node id="206" name="Indicateurs de suivi de la PAU">
+      <details lCode="fr">
+        <title>Indicateurs de suivi de la PAU</title>
+      </details>
+      <node id="207" name="Indicateurs des filieres prioritaires">
+        <details lCode="fr">
+          <title>Indicateurs des filières prioritaires</title>
+        </details>
+        <node id="208" name="Filiere Coton">
+          <details lCode="fr">
+            <title>Filière Coton</title>
+          </details>
+        </node>
+      </node>
+      <node id="981" name="Autres">
+        <table id="982" file="195cva017" />
+        <table id="983" file="195CFE016" />
+        <table id="984" file="195cfo01" />
+        <table id="985" file="195cfo014" />
+        <table id="986" file="195fo010" />
+        <table id="987" file="195li015" />
+        <table id="988" file="195ma010" />
+        <table id="990" file="195RNA0041" />
+        <table id="991" file="195RNA0062" />
+        <table id="992" file="195RNA0063" />
+        <table id="993" file="195RNA0064" />
+        <table id="994" file="195RNA0065" />
+        <table id="995" file="195RNA0066" />
+        <table id="996" file="195RNA0067" />
+        <table id="997" file="195RNA0068" />
+        <table id="998" file="195SFI0101" />
+        <table id="999" file="195SPD0201" />
+        <table id="1000" file="195SPD0351" />
+        <table id="1001" file="195SPE0101" />
+        <table id="1176" file="195RNA0011" />
+      </node>
+    </node>
+    <node id="240" name="Comptes Economiques">
+      <node id="241" name="PIB par secteur">
+        <table id="256" file="195cva011" />
+        <table id="258" file="195cva018" />
+        <table id="260" file="195cva019" />
+      </node>
+    </node>
+    <node id="583" name="donnees environnement" />
+  </node>
+  <node id="5" name="Institutions nationales" cod="N">
+    <node id="209" name="ANSD">
+      <table id="505" file="195IMA020" />
+      <table id="506" file="195IMA030" />
+      <table id="508" file="195IPR020" />
+      <table id="1178" file="195WIP002" />
+      <table id="1179" file="195WIP003" />
+      <table id="1180" file="195WIP004" />
+      <table id="1186" file="195WIP010" />
+      <table id="1190" file="195CPR010" />
+    </node>
+    <node id="211" name="DEFCCS">
+      <table id="377" file="195cfo010" />
+      <table id="510" file="195IFO010" />
+      <table id="1183" file="195WIP007" />
+    </node>
+    <node id="212" name="ISRA" />
+    <node id="213" name="CSA">
+      <table id="282" file="195SPR011" />
+    </node>
+    <node id="214" name="SECNSA" />
+    <node id="215" name="DPM">
+      <table id="1181" file="195WIP006" />
+    </node>
+    <node id="216" name="DPC">
+      <table id="497" file="195IFI101" />
+    </node>
+    <node id="217" name="ANACIM" />
+    <node id="218" name="DPN">
+      <table id="264" file="195SPD351" />
+      <table id="501" file="195IMA010" />
+    </node>
+    <node id="219" name="DGPRE">
+      <table id="1187" file="195WIP011" />
+    </node>
+    <node id="220" name="DPEE" />
+    <node id="221" name="DIREL">
+      <table id="1184" file="195WIP008" />
+    </node>
+    <node id="222" name="SAED" />
+    <node id="223" name="DHORT" />
+    <node id="224" name="DA">
+      <table id="243" file="195MIN090" />
+      <table id="278" file="195SPD522" />
+      <table id="280" file="195SPD201" />
+      <table id="283" file="195SFE011" />
+      <table id="460" file="195SFE030" />
+      <table id="463" file="195SFE130" />
+    </node>
+    <node id="225" name="DPV">
+      <table id="254" file="195cpe011" />
+      <table id="270" file="195SPE011" />
+      <table id="272" file="195SPE012" />
+      <table id="274" file="195SPE101" />
+      <table id="1185" file="195WIP009" />
+    </node>
+    <node id="226" name="SOD AGRI" />
+    <node id="227" name="ANA" />
+    <details lCode="fr">
+      <title>DAPSA</title>
+      <tooltip>Direction de l'Analyse et de la Prévision des Statistiques Agricoles</tooltip>
+    </details>
+    <node id="231" name="DAPSA">
+      <details lCode="fr">
+        <title>DAPSA</title>
+        <tooltip>Direction de l'Analyse et de la Prévision des Statistiques Agricoles</tooltip>
+      </details>
+      <table id="500" file="195IVA010" />
+      <table id="504" file="195IVA020" />
+      <table id="507" file="195IPR010" />
+      <table id="509" file="195ILI015" />
+      <table id="1182" file="195WIP005" />
+      <table id="1188" file="195WIP012" />
+    </node>
+  </node>
+  <node id="6" name="Partenaires internationaux" cod="I" />
+</tree>

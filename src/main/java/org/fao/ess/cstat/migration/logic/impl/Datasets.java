@@ -202,59 +202,75 @@ public class Datasets implements Logic {
 
         int totalSize = goodUids.size()+errors.keySet().size();
 
-        csLogManager.writeBothMessage(LOGGER,3, "************ REPORT RESULT*****************");
+        csLogManager.writeBothMessage(LOGGER,3, "************ REPORT RESULTS *****************");
         csLogManager.writeBothMessage(LOGGER, 3, "\n");
         csLogManager.writeBothMessage(LOGGER, 3, "\n");
 
-        csLogManager.writeBothMessage(LOGGER, 3, "+++++"+"\n");
-        csLogManager.writeBothMessage(LOGGER, 3, "\n");
+        if(totalSize >0) {
 
-        csLogManager.writeBothMessage(LOGGER,3, "The total number of datasets processed was :"+ totalSize+"\n");
-        csLogManager.writeBothMessage(LOGGER, 3, "\n");
+            csLogManager.writeBothMessage(LOGGER, 3, "+++++" + "\n");
+            csLogManager.writeBothMessage(LOGGER, 3, "\n");
 
-        csLogManager.writeBothMessage(LOGGER, 3, "+++++"+"\n");
-        csLogManager.writeBothMessage(LOGGER, 3, "\n");
+            csLogManager.writeBothMessage(LOGGER, 3, "The total number of datasets processed was :" + totalSize + "\n");
+            csLogManager.writeBothMessage(LOGGER, 3, "\n");
 
-        csLogManager.writeBothMessage(LOGGER,3, "The successful saved datasets are: :");
+            csLogManager.writeBothMessage(LOGGER, 3, "+++++" + "\n");
+            csLogManager.writeBothMessage(LOGGER, 3, "\n");
+            csLogManager.writeBothMessage(LOGGER, 3, "\n");
 
-        Iterator<String> uids = goodUids.iterator();
-        StringBuilder stringBuilder = new StringBuilder();
-        while (uids.hasNext())
-            stringBuilder.append(uids.next() + ", ");
-        if(stringBuilder.length()>2)
-            stringBuilder.setLength(stringBuilder.length() - 2);
-
-        csLogManager.writeBothMessage(LOGGER, 3, stringBuilder.toString()+"\n");
-
-        csLogManager.writeBothMessage(LOGGER, 3, "+++++"+"\n");
-
-        csLogManager.writeBothMessage(LOGGER, 3, "\n");
-        csLogManager.writeBothMessage(LOGGER, 3, "\n");
+            csLogManager.writeBothMessage(LOGGER, 3, "The number of datasets successful saved is: :" + goodUids.size());
+            csLogManager.writeBothMessage(LOGGER, 3, "\n");
+            csLogManager.writeBothMessage(LOGGER, 3, "\n");
 
 
-        csLogManager.writeBothMessage(LOGGER, 3, "These are the dataset that have not been saved into the D3S");
-        csLogManager.writeBothMessage(LOGGER, 3, "\n");
-
-
-        for(String uid: errors.keySet()) {
-            if (errors.get(uid).size() > 0) {
-                csLogManager.writeBothMessage(LOGGER, 3, "==========================================================================");
-                csLogManager.writeBothMessage(LOGGER, 3, "\n");
-                csLogManager.writeBothMessage(LOGGER, 3, "DATASET : " + uid + "  \n");
-
-                for (int i=0, size = errors.get(uid).size(); i<size; i++) {
-                    csLogManager.writeBothMessage(LOGGER, 3, "\n");
-                    csLogManager.writeBothMessage(LOGGER, 3, i+1 +")" + "\n");
-                    csLogManager.writeBothMessage(LOGGER, 3, errors.get(uid).get(i) + "\n");
-                    csLogManager.writeBothMessage(LOGGER, 3, "--------");
-                }
-                csLogManager.writeBothMessage(LOGGER, 3, "\n");
-                csLogManager.writeBothMessage(LOGGER, 3, "==========================================================================");
-                csLogManager.writeBothMessage(LOGGER, 3, "\n");
-                csLogManager.writeBothMessage(LOGGER, 3, "\n");
-                csLogManager.writeBothMessage(LOGGER, 3, "\n");
-                csLogManager.writeBothMessage(LOGGER, 3, "\n");
+            if (goodUids.size() > 0) {
+                csLogManager.writeBothMessage(LOGGER, 3, "The successful saved datasets are: :");
+                Iterator<String> uids = goodUids.iterator();
+                StringBuilder stringBuilder = new StringBuilder();
+                while (uids.hasNext())
+                    stringBuilder.append(uids.next() + ", ");
+                if (stringBuilder.length() > 2)
+                    stringBuilder.setLength(stringBuilder.length() - 2);
+                csLogManager.writeBothMessage(LOGGER, 3, stringBuilder.toString() + "\n");
             }
+
+            csLogManager.writeBothMessage(LOGGER, 3, "+++++" + "\n");
+
+            csLogManager.writeBothMessage(LOGGER, 3, "\n");
+            csLogManager.writeBothMessage(LOGGER, 3, "\n");
+
+
+            csLogManager.writeBothMessage(LOGGER, 3, "These are the dataset that have not been saved into the D3S");
+            csLogManager.writeBothMessage(LOGGER, 3, "\n");
+
+
+            for (String uid : errors.keySet()) {
+                if (errors.get(uid).size() > 0) {
+                    csLogManager.writeBothMessage(LOGGER, 3, "==========================================================================");
+                    csLogManager.writeBothMessage(LOGGER, 3, "\n");
+                    csLogManager.writeBothMessage(LOGGER, 3, "DATASET : " + uid + "  \n");
+
+                    for (int i = 0, size = errors.get(uid).size(); i < size; i++) {
+                        csLogManager.writeBothMessage(LOGGER, 3, "\n");
+                        csLogManager.writeBothMessage(LOGGER, 3, i + 1 + ")" + "\n");
+                        csLogManager.writeBothMessage(LOGGER, 3, errors.get(uid).get(i) + "\n");
+                        csLogManager.writeBothMessage(LOGGER, 3, "--------");
+                    }
+                    csLogManager.writeBothMessage(LOGGER, 3, "\n");
+                    csLogManager.writeBothMessage(LOGGER, 3, "==========================================================================");
+                    csLogManager.writeBothMessage(LOGGER, 3, "\n");
+                    csLogManager.writeBothMessage(LOGGER, 3, "\n");
+                    csLogManager.writeBothMessage(LOGGER, 3, "\n");
+                    csLogManager.writeBothMessage(LOGGER, 3, "\n");
+                }
+            }
+        }else{
+            csLogManager.writeBothMessage(LOGGER, 3, "\n");
+
+            csLogManager.writeBothMessage(LOGGER, 3, "There isn't any dataset to process for this country");
+            csLogManager.writeBothMessage(LOGGER, 3, "\n");
+
+
         }
         csLogManager.writeBothMessage(LOGGER,3, "********************  END   ********************");
 

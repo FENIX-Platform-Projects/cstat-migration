@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<tree>
+  <lastID>218</lastID>
+  <node id="1" name="National Core" cod="C">
+    <node id="7" name="Production" cod="CPD">
+      <table id="102" file="251cpd015" />
+      <table id="100" file="251cpd016" />
+      <table id="103" file="251cpd035" />
+      <table id="145" file="251CPD045" />
+      <table id="171" file="251cpd010" />
+    </node>
+    <node id="8" name="Trade" cod="CTR">
+      <table id="104" file="251ctr015" />
+      <table id="106" file="251ctr030" />
+      <table id="107" file="251ctr040" />
+      <table id="173" file="251CTR010" />
+      <table id="174" file="251CTR045" />
+      <table id="175" file="251CTR025" />
+      <table id="195" file="251CTR055" />
+    </node>
+    <node id="9" name="Food Availability" cod="CFA">
+      <table id="110" file="251cfa010" />
+      <table id="217" file="251CFA025" />
+    </node>
+    <node id="10" name="Prices" cod="CPR">
+      <table id="114" file="251cpr010" />
+      <table id="115" file="251cpr040" />
+    </node>
+    <node id="11" name="Land Use" cod="CLI" />
+    <node id="12" name="Population" cod="CPO">
+      <table id="116" file="251cpo010" />
+    </node>
+    <node id="13" name="Labor" cod="CLA">
+      <table id="117" file="251CLA010" />
+    </node>
+    <node id="14" name="Fertilizers" cod="CFE">
+      <table id="191" file="251CFE015" />
+      <table id="192" file="251CFE020" />
+    </node>
+    <node id="15" name="Pesticides" cod="CPE">
+      <table id="179" file="251CPE015" />
+      <table id="180" file="251CPE020" />
+    </node>
+    <node id="16" name="Machinery" cod="CMA">
+      <table id="122" file="251CMA015" />
+      <table id="123" file="251CMA020" />
+      <table id="124" file="251CMA025" />
+      <table id="125" file="251CMA030" />
+    </node>
+    <node id="17" name="Forestry" cod="CFO">
+      <table id="143" file="251CFO010" />
+    </node>
+    <node id="18" name="Fisheries" cod="CFI">
+      <table id="126" file="251CFI010" />
+      <table id="141" file="251CFI020" />
+      <table id="127" file="251CFI030" />
+      <table id="140" file="251CFI040" />
+      <table id="142" file="251CFI070" />
+      <table id="130" file="251CFI080" />
+    </node>
+    <node id="19" name="Water" cod="CWA" />
+    <node id="20" name="Value Added" cod="CVA">
+      <table id="131" file="251CVA010" />
+      <table id="132" file="251CVA020" />
+    </node>
+    <node id="216" name="Government Expenditure" cod="CGE" />
+  </node>
+  <node id="2" name="Sub-National" cod="S">
+    <node id="21" name="Production" cod="SPD">
+      <table id="135" file="251SPD035" />
+      <table id="213" file="251SPD016" />
+      <table id="214" file="251SPD015" />
+      <table id="215" file="251SPD010" />
+    </node>
+    <node id="22" name="Trade" cod="STR" />
+    <node id="23" name="Food Availability" cod="SFA" />
+    <node id="24" name="Prices" cod="SPR" />
+    <node id="25" name="Land Use" cod="SLI" />
+    <node id="26" name="Population" cod="SPO">
+      <table id="136" file="251SPO010" />
+    </node>
+    <node id="27" name="Labor" cod="SLA">
+      <table id="137" file="251SLA110" />
+      <table id="210" file="251SLA010" />
+    </node>
+    <node id="28" name="Fertilizers" cod="SFA" />
+    <node id="29" name="Pesticides" cod="SPE" />
+    <node id="30" name="Machinery" cod="SMA" />
+    <node id="31" name="Forestry" cod="SFO" />
+    <node id="32" name="Fisheries" cod="SFI">
+      <table id="138" file="251SFI010" />
+      <table id="139" file="251SFI030" />
+    </node>
+    <node id="33" name="Water" cod="SWA" />
+    <node id="34" name="Value Added" cod="SVA" />
+  </node>
+  <node id="3" name="Global Strategy Minimum set of Core Data" cod="G">
+    <node id="35" name="Economic">
+      <node id="36" name="Output">
+        <table id="147" file="251CFI010" />
+        <table id="148" file="251CFI030" />
+        <table id="150" file="251CPD015" />
+        <table id="151" file="251CPD016" />
+        <table id="152" file="251CPD045" />
+        <table id="172" file="251cpd010" />
+      </node>
+      <node id="37" name="Trade">
+        <table id="153" file="251CFI080" />
+        <table id="154" file="251CTR015" />
+        <table id="155" file="251CTR025" />
+        <table id="156" file="251CTR030" />
+        <table id="157" file="251CTR040" />
+        <table id="158" file="251CTR050" />
+        <table id="196" file="251CTR055" />
+      </node>
+      <node id="38" name="Stock of Resources">
+        <table id="160" file="251CPD035" />
+      </node>
+      <node id="39" name="Inputs" />
+      <node id="40" name="Agro Processing" />
+      <node id="41" name="Prices">
+        <table id="161" file="251CPR010" />
+      </node>
+      <node id="42" name="Final Expenditure">
+        <table id="162" file="251CFA010" />
+        <table id="163" file="251CFA015" />
+        <table id="164" file="251CFA020" />
+      </node>
+      <node id="43" name="Rural Infrastructure(Capital stock)" />
+      <node id="44" name="International Transfer" />
+    </node>
+    <node id="45" name="Social">
+      <node id="46" name="Demographics of Urban and Rural Population" />
+    </node>
+    <node id="47" name="Environmental">
+      <node id="48" name="Land" />
+      <node id="49" name="Water" />
+      <node id="50" name="Air" />
+    </node>
+    <node id="51" name="Geographic Location">
+      <node id="52" name="GIS coordinates" />
+      <node id="53" name="Degree of urbanization" />
+    </node>
+  </node>
+  <node id="55" name="Agricultural Censuses and Surveys">
+    <node id="167" name="Censuses" />
+    <node id="168" name="Surveys" />
+  </node>
+  <node id="56" name="Statistical Yearbooks" />
+  <node id="54" name="Food Balance Sheets">
+    <table id="218" file="251CFA025" />
+  </node>
+  <node id="4" name="Thematic Modules" cod="T">
+    <node id="166" name="Government Expenditure" />
+    <node id="197" name="">
+      <table id="198" file="251cfe036" />
+      <table id="199" file="251cfe041" />
+      <table id="200" file="251CPD010" />
+      <table id="201" file="251CPO010" />
+      <table id="202" file="251CPR040" />
+    </node>
+    <node id="207" name="department of fisheries">
+      <table id="208" file="251PFI001" />
+      <table id="209" file="251PFI002" />
+    </node>
+  </node>
+  <node id="5" name="National Institutions" cod="N">
+    <node id="176" name="Central Statistics Office">
+      <table id="177" file="251IVA010" />
+      <table id="178" file="251IVA020" />
+      <table id="184" file="251CFE036" />
+      <table id="186" file="251CFE041" />
+      <table id="187" file="251ITR010" />
+      <table id="188" file="251ITR015" />
+      <table id="189" file="251ITR040" />
+      <table id="190" file="251ITR045" />
+    </node>
+  </node>
+  <node id="6" name="International Partners" cod="I" />
+</tree>

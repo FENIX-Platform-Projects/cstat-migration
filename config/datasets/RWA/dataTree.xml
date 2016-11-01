@@ -1,0 +1,249 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<tree>
+  <lastID>290</lastID>
+  <node id="1" name="National Core" cod="C">
+    <node id="7" name="Production" cod="CPD">
+      <table id="100" file="184CPD010" />
+      <table id="101" file="184CPD015" />
+      <table id="102" file="184CPD020" />
+      <table id="103" file="184CPD035" />
+      <table id="104" file="184CPD045" />
+      <table id="105" file="184CPD050" />
+      <table id="106" file="184CPD070" />
+      <table id="166" file="184CPD060" />
+      <table id="167" file="184CPD016" />
+      <table id="168" file="184CPD075" />
+    </node>
+    <node id="8" name="Trade" cod="CTR">
+      <table id="107" file="184CTR010" />
+      <!--table id="108" file="184CTR015" /-->
+      <table id="110" file="184CTR030" />
+      <!--table id="111" file="184CTR040" /-->
+      <table id="112" file="184CTR045" />
+    </node>
+    <node id="9" name="Food Availability" cod="CFA">
+      <table id="114" file="184CFA010" />
+      <table id="115" file="184CFA015" />
+      <table id="116" file="184CFA020" />
+      <table id="117" file="184CFA025" />
+      <table id="118" file="184CFA030" />
+      <table id="119" file="184CFA035" />
+    </node>
+    <node id="10" name="Prices" cod="CPR">
+      <table id="120" file="184CPR010" />
+      <!--table id="122" file="184CPR015" /-->
+      <table id="125" file="184CPR050" />
+      <table id="237" file="184CPR040" />
+      <table id="252" file="184CPR020" />
+    </node>
+    <node id="11" name="Land Use" cod="CLI" />
+    <node id="12" name="Population" cod="CPO">
+      <table id="126" file="184CPO010" />
+      <table id="284" file="184CPO015" />
+      <table id="285" file="184CPO020" />
+    </node>
+    <node id="13" name="Labor" cod="CLA">
+      <table id="127" file="184CLA010" />
+    </node>
+    <node id="14" name="Fertilizers" cod="CFE">
+      <table id="129" file="184CFE015" />
+    </node>
+    <node id="15" name="Pesticides" cod="CPE" />
+    <node id="16" name="Machinery" cod="CMA">
+      <table id="130" file="184CMA020" />
+    </node>
+    <node id="17" name="Forestry" cod="CFO">
+      <table id="131" file="184CFO015" />
+      <table id="132" file="184CFO025" />
+    </node>
+    <node id="18" name="Fisheries" cod="CFI" />
+    <node id="19" name="Water" cod="CWA">
+    </node>
+    <node id="20" name="Value Added" cod="CVA">
+      <table id="242" file="184CVA010" />
+      <table id="257" file="184CVA020" />
+    </node>
+    <node id="283" name="Government Expenditure" cod="CGE" />
+  </node>
+  <node id="2" name="Sub-National" cod="S">
+    <node id="21" name="Production" cod="SPD">
+      <!--table id="136" file="184SPD018" /-->
+      <table id="137" file="184SPD115" />
+      <table id="290" file="184SPD110" />
+    </node>
+    <node id="22" name="Trade" cod="STR" />
+    <node id="23" name="Food Availability" cod="SFA" />
+    <node id="24" name="Prices" cod="SPR">
+      <table id="139" file="184SPR011" />
+    </node>
+    <node id="25" name="Land Use" cod="SLI" />
+    <node id="26" name="Population" cod="SPO">
+      <table id="140" file="184SPO010" />
+    </node>
+    <node id="27" name="Labor" cod="SLA" />
+    <node id="28" name="Fertilizers" cod="SFE" />
+    <node id="29" name="Pesticides" cod="SPE" />
+    <node id="30" name="Machinery" cod="SMA" />
+    <node id="31" name="Forestry" cod="SFO" />
+    <node id="32" name="Fisheries" cod="SFI" />
+    <node id="33" name="Water" cod="SWA">
+      <table id="141" file="184SWA115" />
+    </node>
+    <node id="34" name="Value Added" cod="SVA" />
+  </node>
+  <node id="3" name="Global Strategy Minimum set of Core Data" cod="G">
+    <node id="35" name="Economic">
+      <node id="36" name="Output">
+        <table id="142" file="184CPD010" />
+        <table id="143" file="184CPD015" />
+        <table id="144" file="184CPD045" />
+        <table id="145" file="184CPD050" />
+        <table id="146" file="184CPD070" />
+      </node>
+      <node id="37" name="Trade">
+        <table id="147" file="184CTR010" />
+        <!--table id="148" file="184CTR015" /-->
+        <table id="149" file="184CTR030" />
+        <!--table id="150" file="184CTR040" /-->
+        <table id="151" file="184CTR045" />
+      </node>
+      <node id="38" name="Stock of Resources" />
+      <node id="39" name="Inputs">
+        <table id="152" file="184CPD020" />
+      </node>
+      <node id="40" name="Agro Processing" />
+      <node id="41" name="Prices">
+        <table id="153" file="184CPR010" />
+      </node>
+      <node id="42" name="Final Expenditure">
+        <table id="154" file="184CFA010" />
+        <table id="155" file="184CFA015" />
+        <table id="156" file="184CFA020" />
+        <table id="157" file="184CFA025" />
+        <table id="158" file="184CFA030" />
+        <table id="159" file="184CFA035" />
+      </node>
+      <node id="43" name="Rural Infrastructure(Capital stock)" />
+      <node id="44" name="International Transfer" />
+    </node>
+    <node id="45" name="Social">
+      <node id="46" name="Demographics of Urban and Rural Population" />
+    </node>
+    <node id="47" name="Environmental">
+      <node id="48" name="Land" />
+      <node id="49" name="Water" />
+      <node id="50" name="Air" />
+    </node>
+    <node id="51" name="Geographic Location">
+      <node id="52" name="GIS coordinates" />
+      <node id="53" name="Degree of urbanization" />
+    </node>
+  </node>
+  <node id="55" name="Censuses and Surveys">
+    <node id="164" name="Censuses">
+      <node id="174" name="General housing and population census 2012">
+        <table id="183" file="184POP02" />
+        <table id="184" file="184POP03" />
+        <table id="185" file="184POP04" />
+        <table id="186" file="184POP05" />
+        <table id="187" file="184POP06" />
+        <table id="188" file="184POP07" />
+      </node>
+      <node id="179" name="General Housing and Population Census 2002" />
+    </node>
+    <node id="165" name="Surveys">
+      <node id="172" name="Household Integrated Living Conditions Survey (EICV)">
+        <table id="189" file="184FS002" />
+        <table id="190" file="184FS003" />
+        <table id="191" file="184FS004" />
+        <table id="192" file="184FS005" />
+        <table id="193" file="184FS006" />
+        <table id="194" file="184FS009" />
+        <table id="195" file="184FS010" />
+        <table id="196" file="184FS011" />
+      </node>
+      <node id="173" name="Demographic and Health Survey (DHS)" />
+      <node id="175" name="National Agricultural Survey" />
+    </node>
+  </node>
+  <node id="56" name="Statistical Yearbooks">
+    <table id="220" file="184PR001" />
+    <table id="221" file="184PR002" />
+    <table id="222" file="184PR003" />
+    <table id="223" file="184PR004" />
+    <table id="224" file="184PD003" />
+    <table id="225" file="184PD004" />
+    <table id="226" file="184PD005" />
+    <table id="227" file="184PD006" />
+    <table id="228" file="184TR001" />
+    <table id="229" file="184TR002" />
+    <table id="230" file="184ED001" />
+    <table id="231" file="184ED002" />
+    <table id="232" file="184ED003" />
+    <table id="233" file="184ED005" />
+    <table id="240" file="184CPR001" />
+  </node>
+  <node id="54" name="Food Balance Sheets" />
+  <node id="4" name="Thematic Modules" cod="T">
+    <node id="163" name="Government Expenditure" />
+    <node id="253" name="Other">
+      <table id="254" file="184POP01" />
+    </node>
+  </node>
+  <node id="5" name="National Institutions" cod="N">
+    <node id="160" name="INSR_National Institute of Statistics of Rwanda">
+      <table id="162" file="184CLA015" />
+      <table id="273" file="184EDU002" />
+      <table id="274" file="184POP002" />
+      <table id="275" file="184FSC002" />
+      <table id="276" file="184FSC003" />
+      <table id="277" file="184FSC004" />
+      <table id="278" file="184FSC005" />
+      <table id="279" file="184FSC006" />
+      <table id="280" file="184FSC009" />
+      <table id="281" file="184FSC010" />
+      <table id="282" file="184FSC011" />
+    </node>
+    <node id="180" name="National Bank of Rwanda">
+      <table id="215" file="184IVA010" />
+      <table id="234" file="184PR009" />
+      <table id="246" file="184IPR011" />
+      <table id="247" file="184IPR001" />
+      <table id="249" file="184itr015" />
+      <table id="250" file="184iTR046" />
+      <table id="251" file="184CPR020" />
+    </node>
+    <node id="243" name="Meteorological service; Ministry of infrastructure">
+      <table id="248" file="184IWA015" />
+      <table id="263" file="184RAIN001" />
+    </node>
+    <node id="260" name="MINAGRI">
+      <table id="261" file="184MIN001" />
+      <table id="262" file="184POP001" />
+      <table id="287" file="184SPD011" />
+      <table id="289" file="184SPD311" />
+    </node>
+  </node>
+  <node id="6" name="International Partners" cod="I">
+    <node id="171" name="WFP">
+      <node id="176" name="CFSVA 2006" />
+      <node id="177" name="CFSVA 2009" />
+      <node id="178" name="CFSVA 2012">
+        <table id="197" file="184FS012" />
+        <table id="198" file="184FS013" />
+        <table id="199" file="184FS014" />
+        <table id="200" file="184FS015" />
+        <table id="201" file="184FS016" />
+        <table id="202" file="184FS017" />
+        <table id="203" file="184FS018" />
+        <table id="204" file="184FS019" />
+        <table id="205" file="184FS020" />
+        <table id="206" file="184FS021" />
+        <table id="216" file="184FS022" />
+        <table id="217" file="184FS023" />
+        <table id="218" file="184FS024" />
+        <table id="219" file="184FS025" />
+      </node>
+    </node>
+  </node>
+</tree>
