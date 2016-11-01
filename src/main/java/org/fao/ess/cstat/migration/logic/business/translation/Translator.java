@@ -12,6 +12,7 @@ import org.fao.fenix.commons.msd.dto.data.Resource;
 import org.fao.fenix.commons.msd.dto.full.*;
 import org.fao.fenix.commons.msd.dto.type.DataType;
 import org.fao.fenix.commons.msd.dto.type.RepresentationType;
+import org.fao.fenix.commons.utils.StringUtils;
 
 import java.util.*;
 
@@ -180,7 +181,6 @@ public class Translator {
                     }
                     else {  // if it is not a virtual column
 
-
                         // check the codelist has the id
                         if (csColumn.getCodeSystem().getSystem() == null)
                             handleErrors(errors, uid,"DSD ERROR: codelist on columns:" + column.getId() + " should have an id to be identified");
@@ -333,5 +333,18 @@ public class Translator {
 
     public boolean isErrorsOnDSD() {
         return errorsOnDSD;
+    }
+
+    public DSDDataset handleColumnTitles (DSDDataset oldDataset) {
+
+        DSDDataset dsdDataset = new DSDDataset();
+        dsdDataset.setColumns(oldDataset.getColumns());
+
+        for(DSDColumn column: dsdDataset.getColumns())
+            if(org.apache.commons.lang.StringUtils.isNumeric(column.getId().substring(0,1)))
+                column.setId(column.getSubject().toUpperCase());
+
+        return dsdDataset;
+
     }
 }

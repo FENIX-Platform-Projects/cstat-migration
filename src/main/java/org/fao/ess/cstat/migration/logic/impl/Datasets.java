@@ -144,6 +144,8 @@ public class Datasets implements Logic {
                     }
                     // delete the table
                     dbAdapter.deleteTable(resource.getMetadata().getUid());
+
+                    translator.handleColumnTitles(resource.getMetadata().getDsd());
                     resources.add(resource);
                     System.out.println("Delete table : "+resource.getMetadata().getUid());
 
@@ -164,6 +166,7 @@ public class Datasets implements Logic {
             if(!errors.containsKey(s))
                 goodUids.add(s);
         }
+
 
 
         printFinalReport();
