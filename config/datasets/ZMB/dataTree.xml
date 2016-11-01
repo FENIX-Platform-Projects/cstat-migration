@@ -10,9 +10,9 @@
       <table id="171" file="251cpd010" />
     </node>
     <node id="8" name="Trade" cod="CTR">
-      <table id="104" file="251ctr015" />
-      <table id="106" file="251ctr030" />
-      <table id="107" file="251ctr040" />
+      <table id="104" file="251CTR015" />
+      <table id="106" file="251CTR030" />
+      <table id="107" file="251CTR040" />
       <table id="173" file="251CTR010" />
       <table id="174" file="251CTR045" />
       <table id="175" file="251CTR025" />
