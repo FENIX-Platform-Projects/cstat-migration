@@ -243,7 +243,10 @@ public class Datasets implements Logic {
             csLogManager.writeBothMessage(LOGGER, 3, "\n");
 
 
-            csLogManager.writeBothMessage(LOGGER, 3, "These are the dataset that have not been saved into the D3S");
+            csLogManager.writeBothMessage(LOGGER, 3, "The number of datasets that have not been saved in the D3S is: "+errors.size());
+            csLogManager.writeBothMessage(LOGGER, 3, "\n");
+
+            csLogManager.writeBothMessage(LOGGER, 3, "These are the datasets that have not been saved into the D3S");
             csLogManager.writeBothMessage(LOGGER, 3, "\n");
 
 
