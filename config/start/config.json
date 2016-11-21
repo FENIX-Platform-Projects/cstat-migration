@@ -1,5 +1,5 @@
 {
-  "country":"BFA",
+  "country":"CMR",
   "logics":{
     "overrideCL":true,
     "overrideDS":true
@@ -14,5 +14,20 @@
       "excludedID":[]
     }
   },
-  "language":"EN"
+  "language":"EN",
+  "datasetsToFill":[
+    "PE015",
+    "PE020",
+    "FO025",
+    "FO015",
+    "FO030",
+    "FO020",
+    "MA020",
+    "MA030",
+    "MA015",
+    "MA025",
+    "FE015",
+    "FE020"],
+
+  "forceDatasets":true
 }

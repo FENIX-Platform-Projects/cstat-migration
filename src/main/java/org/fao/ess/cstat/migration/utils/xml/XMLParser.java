@@ -136,7 +136,7 @@ public class XMLParser {
                     && nodeList.item(j).hasChildNodes() && nodeList.item(j).getChildNodes().getLength() > 0) {
 
                 // ONLY TRADE datasets
-                if (nodeList.item(j).getAttributes().getNamedItem("cod").getNodeValue().equals("CTR")) {
+                if (nodeList.item(j).getAttributes().getNamedItem("cod").getNodeValue().equals("CPD")) {
                     System.out.println("hh");
                     result.put(nodeList.item(j).getAttributes().getNamedItem("cod").getNodeValue(), getDatasets(nodeList.item(j).getChildNodes()));
 

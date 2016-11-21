@@ -72,6 +72,18 @@ public class Datasets implements Logic {
                         csConfig.getFilters().getDataset().getIncludedID()) :
                 XMLParser.trasformFlatData(XMLParser.getAllDatasetFromSchema(csConfig.getCountry()));
 
+
+
+        if(csConfig.isForceDatasets()) {
+
+            String country = datasets.get(datasets.keySet().iterator().next()).get(0);
+
+            if(country == null || country.length()<3)
+                throw new Exception("ERROR: have a look at the country");
+            datasets = fillOtherDatasets(country.substring(0,3),csConfig.getDatasetsToFill());
+
+        }
+
        /* // PROBLEM with XML
         if (datasets.keySet().size() != 2)
             throw new Exception("XML PARSER PROBLEM: there should be at least two domain in the dataset taken");
@@ -154,19 +166,19 @@ public class Datasets implements Logic {
             }
         }
 
-        Set<String> toBeSaved = new HashSet<>();
+      /*  Set<String> toBeSaved = new HashSet<>();
         for(Resource dataset: resources ){
             if(!errors.containsKey(dataset.getMetadata().getUid())) {
                 if(outputDao.storeDataset(dataset, csConfig.getLogics().isOverrideDS(), errors))
                     toBeSaved.add(dataset.getMetadata().getUid());
             }
-        }
+        }*/
 
-        for(String s: toBeSaved) {
+     /*   for(String s: toBeSaved) {
             if(!errors.containsKey(s))
                 goodUids.add(s);
         }
-
+*/
 
 
         printFinalReport();
@@ -282,4 +294,21 @@ public class Datasets implements Logic {
 
 
     }
+
+
+
+    private Map<String, List<String>> fillOtherDatasets ( String country, String[] tmpDatasets) {
+
+        Map<String, List<String>> result= new HashMap<>();
+
+        List<String> datasets = new LinkedList<>();
+
+        for(String tmp: tmpDatasets)
+            datasets.add(country+tmp);
+        result.put("TMP", datasets);
+        return result;
+    }
 }
+
+
+

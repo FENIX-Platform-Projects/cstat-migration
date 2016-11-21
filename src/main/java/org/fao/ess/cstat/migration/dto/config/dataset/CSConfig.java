@@ -4,12 +4,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class CSConfig {
 
-     @JsonProperty private String country;
-     @JsonProperty private CSLogic logics;
-     @JsonProperty private CSFilter filters;
-     @JsonProperty private String language;
-
-
+    @JsonProperty private String country;
+    @JsonProperty private CSLogic logics;
+    @JsonProperty private CSFilter filters;
+    @JsonProperty private String language;
+    @JsonProperty private String[] datasetsToFill;
+    @JsonProperty private boolean forceDatasets;
 
     public String getCountry() {
         return country;
@@ -43,5 +43,19 @@ public class CSConfig {
         this.language = language;
     }
 
+    public String[] getDatasetsToFill() {
+        return datasetsToFill;
+    }
 
+    public void setDatasetsToFill(String[] datasetsToFill) {
+        this.datasetsToFill = datasetsToFill;
+    }
+
+    public boolean isForceDatasets() {
+        return forceDatasets;
+    }
+
+    public void setForceDatasets(boolean forceDatasets) {
+        this.forceDatasets = forceDatasets;
+    }
 }

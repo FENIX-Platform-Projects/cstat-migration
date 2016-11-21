@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<tree>
+  <lastID>1191</lastID>
+  <node id="1" name="Statistiques nationales - module de base" cod="C">
+    <node id="7" name="Production" cod="CPD">
+      <table id="100" file="215CPD010" />
+      <table id="101" file="215CPD015" />
+      <table id="103" file="215CPD035" />
+    </node>
+    <node id="8" name="Commerce" cod="CTR">
+      <table id="110" file="215CTR010" />
+      <table id="111" file="215CTR015" />
+      <table id="112" file="215CTR025" />
+    </node>
+    <node id="9" name="Disponibilité alimentaire" cod="CFA">
+      <table id="116" file="215CFA010" />
+    </node>
+  </node>
+</tree>
