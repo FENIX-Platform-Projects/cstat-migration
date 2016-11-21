@@ -73,11 +73,11 @@ public class Datasets implements Logic {
                 XMLParser.trasformFlatData(XMLParser.getAllDatasetFromSchema(csConfig.getCountry()));
 
 
-
         if(csConfig.isForceDatasets()) {
 
             String country = datasets.get(datasets.keySet().iterator().next()).get(0);
 
+            // for LAST datasets to fill
             if(country == null || country.length()<3)
                 throw new Exception("ERROR: have a look at the country");
             datasets = fillOtherDatasets(country.substring(0,3),csConfig.getDatasetsToFill());
@@ -166,19 +166,18 @@ public class Datasets implements Logic {
             }
         }
 
-      /*  Set<String> toBeSaved = new HashSet<>();
+        Set<String> toBeSaved = new HashSet<>();
         for(Resource dataset: resources ){
             if(!errors.containsKey(dataset.getMetadata().getUid())) {
                 if(outputDao.storeDataset(dataset, csConfig.getLogics().isOverrideDS(), errors))
                     toBeSaved.add(dataset.getMetadata().getUid());
             }
-        }*/
+        }
 
-     /*   for(String s: toBeSaved) {
+        for(String s: toBeSaved) {
             if(!errors.containsKey(s))
                 goodUids.add(s);
         }
-*/
 
 
         printFinalReport();
@@ -304,7 +303,7 @@ public class Datasets implements Logic {
         List<String> datasets = new LinkedList<>();
 
         for(String tmp: tmpDatasets)
-            datasets.add(country+tmp);
+            datasets.add(country+"C"+tmp);
         result.put("TMP", datasets);
         return result;
     }

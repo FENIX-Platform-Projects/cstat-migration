@@ -3,11 +3,11 @@ package org.fao.ess.cstat.migration.logic.business.transcode;
 
 public enum CodelistD3S {
 
-    CS_Machinery(new String[]{"CS_Machinery", "2014"}),
+    CS_Machinery(new String[]{"HS", "full"}),
     CS_Prod_Trade(new String[]{"HS", "full"}),
     CS_Population(new String[]{"CS_Population", "2014"}),
     CS_Prices(new String[]{"CS_Prices", "2014"}),
-    CS_Fertilizers(new String[]{"CS_Fertilizers", "2014"}),
+    CS_Fertilizers(new String[]{"HS", "full"}),
     CS_Fisheries(new String[]{"CS_Fisheries", "2014"}),
     CS_Labour(new String[]{"CS_Labour", "2014"}),
     CS_Land(new String[]{"CS_Land", "2014"}),
@@ -15,7 +15,7 @@ public enum CodelistD3S {
     CS_Water(new String[]{"CS_Water", "2014"}),
     CS_Forestry(new String[]{"CS_Forestry", "2014"}),
     CS_CPI(new String[]{"CS_CPI", "2014"}),
-    CS_Pesticides(new String[]{"CS_Pesticides", "2014"}),
+    CS_Pesticides(new String[]{"HS", "full"}),
     CS_PPI(new String[]{"CS_PPI", "2014"}),
     CS_FoodSupply(new String[]{"CS_FoodSupply", "2014"}),
     HS(new String[]{"HS", "full"}),

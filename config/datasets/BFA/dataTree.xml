@@ -2,7 +2,19 @@
 <tree>
   <lastID>931</lastID>
   <node id="1" name="Statistiques nationales - module de base" cod="C">
-
+    <node id="7" name="Production" cod="CPD">
+      <table id="59" file="233CPD020" />
+      <table id="352" file="233CPD070" />
+      <table id="353" file="233CPD060" />
+      <table id="354" file="233CPD055" />
+      <table id="355" file="233CPD050" />
+      <table id="356" file="233CPD045" />
+      <table id="357" file="233CPD035" />
+      <table id="649" file="233CPD065" />
+      <table id="650" file="233CPD040" />
+      <table id="701" file="233CPD016" />
+      <table id="702" file="233CPD010" />
+    </node>
     <node id="8" name="Commerce" cod="CTR">
       <table id="62" file="233CTR055" />
       <table id="653" file="233CTR045" />
@@ -10,8 +22,38 @@
       <table id="657" file="233CTR015" />
       <table id="659" file="233CTR010" />
     </node>
-
-
+    <node id="9" name="Disponibilité alimentaire" cod="CFA" />
+    <node id="10" name="Prix" cod="CPR">
+      <table id="63" file="233CPR010" />
+    </node>
+    <node id="11" name="Terres et irrigation" cod="CLI">
+      <table id="661" file="233CLI010" />
+    </node>
+    <node id="12" name="Population" cod="CPO">
+      <table id="651" file="233CPO010" />
+    </node>
+    <node id="13" name="Travail" cod="CLA">
+      <table id="65" file="233CLA010" />
+    </node>
+    <node id="14" name="Engrais" cod="CFE">
+      <table id="66" file="233CFE030" />
+    </node>
+    <node id="15" name="Pesticides" cod="CPE"></node>
+    <node id="16" name="Machines" cod="CMA">
+      <table id="68" file="233CMA010" />
+    </node>
+    <node id="17" name="Forêts" cod="CFO" />
+    <node id="18" name="Pêches" cod="CFI">
+      <table id="69" file="233CFI010" />
+      <table id="70" file="233CFI030" />
+    </node>
+    <node id="19" name="Eau" cod="CWA">
+      <table id="678" file="233CWA015" />
+    </node>
+    <node id="20" name="Valeur ajoutée" cod="CVA">
+      <table id="676" file="233CVA010" />
+      <table id="677" file="233CVA020" />
+    </node>
   </node>
 
 
@@ -364,7 +406,7 @@
             <title>Filière Coton</title>
           </details>
         </node>
-       
+
       </node>
     </node>
     <node id="833" name="tables - work in progress">

@@ -1,5 +1,5 @@
 {
-  "country":"CMR",
+  "country":"UGA",
   "logics":{
     "overrideCL":true,
     "overrideDS":true
@@ -16,6 +16,18 @@
   },
   "language":"EN",
   "datasetsToFill":[
+    "TR010",
+    "TR040",
+    "TR035",
+    "TR015",
+    "TR050",
+    "TR030",
+    "TR065",
+    "TR055",
+    "TR020",
+    "TR045",
+    "TR025",
+    "TR060",
     "PE015",
     "PE020",
     "FO025",
@@ -27,7 +39,7 @@
     "MA015",
     "MA025",
     "FE015",
-    "FE020"],
-
+    "FE020"
+  ],
   "forceDatasets":true
 }

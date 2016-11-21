@@ -13,11 +13,11 @@ import java.util.Map;
 
 public class OutputDao {
     @Inject  RESTClient client;
-/*
     private static final String URL_RESOURCES = "http://fenixservices.fao.org/d3s/msd/resources";
-*/
 
+/*
     private static final String URL_RESOURCES = "http://localhost:7777/v2/msd/resources";
+*/
 
     Collection<String> getList(String context) throws Exception {
         return null;

@@ -238,10 +238,10 @@ public class Translator {
                 // PROBLEM WITH ARRAY
                 if (val instanceof List) {
                     List<Object> arrayVal = (List<Object>) val;
-                    if (arrayVal.size() > 1) {
+                   /* if (arrayVal.size() > 1) {
                         handleErrors(errors, uid,"The size of the value for the column " + rowsDSD.get(j).getId() + "  at row: " + i + " , is greater than 1");
                         throw new Exception("The size of the value for the column " + rowsDSD.get(j).getId() + "  at row: " + i + " , is greater than 1");
-                    }
+                    }*/
                     val = arrayVal.get(0);
                 }
                 newRow[j] = val;
