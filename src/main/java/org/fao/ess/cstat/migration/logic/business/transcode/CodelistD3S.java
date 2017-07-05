@@ -22,7 +22,7 @@ public enum CodelistD3S {
     GAUL(new String[]{"GAUL", "2014"}),
     CS_Indicator(new String[]{"CountrySTAT_Indicators", null}),
     CS_Units(new String[]{"CountrySTAT_UM", null}),
-    CS_Flags(new String[]{"Flag", "1.0"}),
+    CS_Flags(new String[]{"Flag", null}),
     FAOSTAT_CoveregeSectors(new String[]{"FAOSTAT_CoveregeSectors", "1.0"});
 
     private String[] codelist;
